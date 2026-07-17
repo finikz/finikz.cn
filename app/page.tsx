@@ -6,18 +6,21 @@ const projects = [
     name: "非你可思",
     type: "PERSONAL SIGNAL",
     description: "从文化、商业与技术的交叉处，记录值得被重新理解的日常信号。",
+    href: "/articles",
   },
   {
     index: "02",
     name: "智神AI",
     type: "AI STRATEGY",
     description: "为已经意识到 AI 重要的团队，先筛选真正值得开始的业务问题。",
+    href: "#work",
   },
   {
     index: "03",
-    name: "译作与项目",
+    name: "酒神三部曲",
     type: "CROSS-CULTURAL WORK",
-    description: "连接语言、审美与现场经验，把复杂内容带到准确而自然的另一种语境。",
+    description: "2026 年出版的三册法语译作：在酒、风土与自由之间，铺开一条感官与思想的路径。",
+    href: "/works/dionysus-trilogy",
   },
 ];
 
@@ -69,12 +72,12 @@ export default function Home() {
         <div className="section-heading"><p>SELECTED PRACTICE</p><span>01 / 作品</span></div>
         <div className="project-list">
           {projects.map((project) => (
-            <article className="project" key={project.index}>
+            <a className="project" href={project.href} key={project.index}>
               <span className="project-index">{project.index}</span>
               <div><p className="project-type">{project.type}</p><h2>{project.name}</h2></div>
               <p className="project-description">{project.description}</p>
               <span className="project-arrow">↗</span>
-            </article>
+            </a>
           ))}
         </div>
       </section>

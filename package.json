@@ -13,7 +13,8 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
     "sync:articles": "node scripts/sync-articles.mjs",
-    "use:webp": "node scripts/use-webp-assets.mjs"
+    "use:webp": "node scripts/use-webp-assets.mjs",
+    "flatten:gifs": "node scripts/flatten-gifs.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

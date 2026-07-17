@@ -1,3 +1,5 @@
+import { articles } from "@/lib/articles";
+
 const projects = [
   {
     index: "01",
@@ -19,12 +21,6 @@ const projects = [
   },
 ];
 
-const notes = [
-  ["01", "先判断，再动手：AI 落地不该从工具开始"],
-  ["02", "当内容成为一种可复利的工作流"],
-  ["03", "翻译不只是换一种语言，而是重建理解"],
-];
-
 export default function Home() {
   return (
     <main>
@@ -35,7 +31,7 @@ export default function Home() {
         <div className="nav-links">
           <a href="#work">作品</a>
           <a href="#about">经历</a>
-          <a href="#notes">文章</a>
+          <a href="/articles">文章</a>
         </div>
         <span className="nav-index">CN / 01</span>
       </nav>
@@ -96,9 +92,9 @@ export default function Home() {
       </section>
 
       <section className="notes section" id="notes">
-        <div className="section-heading"><p>RECENT NOTES</p><span>03 / 文章</span></div>
+        <div className="section-heading"><p>RECENT NOTES</p><a href="/articles">03 / 全部文章 ↗</a></div>
         <div className="note-list">
-          {notes.map(([number, title]) => <a href="#notes" className="note" key={number}><span>{number}</span><h2>{title}</h2><b>READ ↗</b></a>)}
+          {articles.slice(0, 3).map((article, index) => <a href={`/articles/${article.slug}`} className="note" key={article.slug}><span>{String(index + 1).padStart(2, "0")}</span><h2>{article.title}</h2><b>READ ↗</b></a>)}
         </div>
       </section>
 

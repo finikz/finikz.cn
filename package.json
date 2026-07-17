@@ -12,7 +12,8 @@
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
-    "sync:articles": "node scripts/sync-articles.mjs"
+    "sync:articles": "node scripts/sync-articles.mjs",
+    "use:webp": "node scripts/use-webp-assets.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

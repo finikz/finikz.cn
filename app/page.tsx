@@ -1,111 +1,22 @@
 import { articles } from "@/lib/articles";
 
-const projects = [
-  {
-    index: "01",
-    name: "非你可思",
-    type: "PERSONAL SIGNAL",
-    description: "从文化、商业与技术的交叉处，记录值得被重新理解的日常信号。",
-    href: "/articles",
-  },
-  {
-    index: "02",
-    name: "智神AI",
-    type: "AI STRATEGY",
-    description: "为已经意识到 AI 重要的团队，先筛选真正值得开始的业务问题。",
-    href: "#work",
-  },
-  {
-    index: "03",
-    name: "酒神三部曲",
-    type: "CROSS-CULTURAL WORK",
-    description: "2026 年出版的三册法语译作：在酒、风土与自由之间，铺开一条感官与思想的路径。",
-    href: "/works/dionysus-trilogy",
-  },
+const practices = [
+  { no: "01 / PROJECT", name: "非你可思", description: "从文化、小知识与日常观察出发，给习以为常的事物多一个值得转发和讨论的角度。", href: "/articles" },
+  { no: "02 / PROJECT", name: "智神AI", description: "为销售获客与真实业务场景筛选 AI 的落地方式：少一点工具焦虑，多一点判断与路径。", href: "#about" },
+  { no: "03 / TRANSLATION", name: "文章与译作", description: "关于人工智能、内容、商业与文化；也保存经得起回看的问题与跨文化的作品。", href: "/works/dionysus-trilogy" },
 ];
 
 export default function Home() {
-  return (
-    <main>
-      <nav className="nav" aria-label="主导航">
-        <a className="brand" href="#top" aria-label="Finikz 首页">
-          FINIKZ<span className="brand-dot">.</span>
-        </a>
-        <div className="nav-links">
-          <a href="#work">作品</a>
-          <a href="#about">经历</a>
-          <a href="/articles">文章</a>
-        </div>
-        <span className="nav-index">CN / 01</span>
-      </nav>
-
-      <section className="hero" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow"><span /> INDEPENDENT PRACTICE · 2026</p>
-          <h1>
-            把判断沉淀成<br />
-            <em>可复利的</em>数字资产。
-          </h1>
-          <p className="intro">
-            我是张凤鸣，Finikz。做翻译、企业 AI 落地咨询与个人品牌运营；也持续搭建一套让内容、经验和方法能够彼此连接的工作系统。
-          </p>
-          <a className="text-link" href="#work">查看正在发生的实践 <b>↘</b></a>
-        </div>
-        <div className="signal-field" aria-hidden="true">
-          <div className="grid" />
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
-          <div className="orbit orbit-three" />
-          <i className="node node-a" /><i className="node node-b" /><i className="node node-c" />
-          <p className="field-label">SIGNAL / JUDGEMENT / SYSTEM</p>
-          <p className="field-number">01—03</p>
-        </div>
-      </section>
-
-      <section className="signal-strip" aria-label="核心能力">
-        <p>语言与跨文化表达</p><i />
-        <p>AI 业务判断</p><i />
-        <p>内容与工作流系统</p>
-      </section>
-
-      <section className="work section" id="work">
-        <div className="section-heading"><p>SELECTED PRACTICE</p><span>01 / 作品</span></div>
-        <div className="project-list">
-          {projects.map((project) => (
-            <a className="project" href={project.href} key={project.index}>
-              <span className="project-index">{project.index}</span>
-              <div><p className="project-type">{project.type}</p><h2>{project.name}</h2></div>
-              <p className="project-description">{project.description}</p>
-              <span className="project-arrow">↗</span>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section className="about section" id="about">
-        <div className="section-heading"><p>ABOUT THE PRACTICE</p><span>02 / 经历</span></div>
-        <div className="about-grid">
-          <h2>不把复杂性<br /><em>伪装成简单。</em></h2>
-          <div className="about-copy">
-            <p>我的优势在信息与判断：三语能力、审美、写作、AI 工具应用，以及一线项目中的观察。它们不是彼此分散的技能，而是一套用来理解问题、设计方案、沉淀方法的工作方式。</p>
-            <p>目前，我把重心放在数字产品、跨文化内容和能够长期生长的内容资产上。</p>
-            <dl><div><dt>ROLE</dt><dd>翻译者 / AI 顾问 / 内容创作者</dd></div><div><dt>FOCUS</dt><dd>方案、框架、工作流与方法论</dd></div></dl>
-          </div>
-        </div>
-      </section>
-
-      <section className="notes section" id="notes">
-        <div className="section-heading"><p>RECENT NOTES</p><a href="/articles">03 / 全部文章 ↗</a></div>
-        <div className="note-list">
-          {articles.slice(0, 3).map((article, index) => <a href={`/articles/${article.slug}`} className="note" key={article.slug}><span>{String(index + 1).padStart(2, "0")}</span><h2>{article.title}</h2><b>READ ↗</b></a>)}
-        </div>
-      </section>
-
-      <footer>
-        <p>FINIKZ / 张凤鸣</p>
-        <p>持续接收新的信号。</p>
-        <a href="mailto:hello@finikz.cn">HELLO@FINIKZ.CN ↗</a>
-      </footer>
-    </main>
-  );
+  const latest = articles[0];
+  return <main className="studio-home" id="top">
+    <nav className="nav" aria-label="主导航"><a className="brand" href="#top">FINIK<span className="brand-dot">Z</span><small>张凤鸣 / PERSONAL STUDIO</small></a><div className="nav-links"><a href="#top">首页</a><a href="#work">作品</a><a href="#about">经历</a><a href="/articles">文章</a><a href="mailto:hello@finikz.cn">联系</a></div></nav>
+    <section className="studio-hero">
+      <div><p className="kicker">THINKING, MADE USEFUL — 2026</p><h1>把判断沉淀成<br /><em>可复利的</em>数字资产</h1><p className="studio-intro">Finikz，张凤鸣。译者、企业 AI 落地顾问与个人品牌操盘者。关注技术如何进入真实的工作与生活，也持续把复杂经验整理成可理解、可使用、可传递的内容系统。</p></div>
+      <aside className="hero-meta">翻译 / 企业 AI 落地<br />内容策略 / 知识系统<br />个人品牌 / 长期主义</aside>
+      <div className="seal"><span>EST.<br />2016</span><b>凤鸣</b><span>FINIKZ<br />STUDIO</span></div><i className="hero-rule" />
+    </section>
+    <section className="studio-work" id="work"><div className="studio-label">SELECTED PRACTICE<strong>正在做的事</strong></div><div className="practice-cards">{practices.map((item) => <a className="practice-card" href={item.href} key={item.no}><span>{item.no}</span><h2>{item.name}</h2><p>{item.description}</p><b>↗</b></a>)}</div></section>
+    <section className="studio-bottom" id="about"><div className="studio-label">LATEST NOTES<strong>最近文章</strong></div>{latest && <a className="latest-note" href={`/articles/${latest.slug}`}><span>ESSAY / {latest.date.slice(5).replace("-", ".")}</span><h2>{latest.title}</h2><b>↗</b></a>}<p className="studio-bio"><strong>FINIKZ / 张凤鸣</strong><br />关注知识如何被组织、经验如何被表达，以及一个人如何用长期的作品建立自己的坐标。</p></section>
+    <footer><p>© FINIKZ / SHANGHAI</p><p>翻译 · AI · 内容系统</p><a href="mailto:hello@finikz.cn">HELLO@FINIKZ.CN ↗</a></footer>
+  </main>;
 }

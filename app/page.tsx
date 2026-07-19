@@ -17,6 +17,6 @@ export default function Home() {
     </section>
     <section className="studio-work" id="work"><div className="studio-label">SELECTED PRACTICE<strong>正在做的事</strong></div><div className="practice-cards">{practices.map((item) => <a className="practice-card" href={item.href} key={item.label}><span>{item.label}</span><h2>{item.name}</h2><p>{item.description}<i className="card-arrow" aria-hidden="true"> ↗</i></p></a>)}</div></section>
     <section className="studio-bottom" id="about"><div className="studio-label">LATEST NOTES<strong>最近文章</strong></div>{latest && <a className="latest-note" href={`/articles/${latest.slug}`}><span>ESSAY / {latest.date.slice(5).replace("-", ".")}</span><h2>{latest.title}</h2><b>↗</b></a>}<p className="studio-bio"><strong>FINIKZ / 张凤鸣</strong><br />译者、企业 AI 落地顾问与个人品牌操盘者。关注知识如何被组织、经验如何被表达，以及一个人如何用长期的作品建立自己的坐标。<br /><a href="/about">认识 Finikz ↗</a></p></section>
-    <footer><p>© FINIKZ</p><p>翻译 · AI · 内容系统</p><a href="mailto:hello@finikz.cn">HELLO@FINIKZ.CN ↗</a></footer>
+    <footer><p>© FINIKZ</p><p>翻译 · AI · 内容系统</p><a href="mailto:mail@finikz.com">MAIL@FINIKZ.COM ↗</a></footer>
   </main>;
 }

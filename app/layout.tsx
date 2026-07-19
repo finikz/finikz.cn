@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./editorial.css";
+import "./brand-black.css";
 
 export const metadata: Metadata = {
   title: "Finikz｜张凤鸣",

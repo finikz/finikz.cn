@@ -1,0 +1,7 @@
+.work-link {
+  color: var(--red);
+  font-family: Arial, "PingFang SC", sans-serif;
+  font-size: .78em;
+  letter-spacing: .05em;
+  white-space: nowrap;
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./editorial.css";
 import "./brand-black.css";
+import "./work-link.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://finikz.github.io"),

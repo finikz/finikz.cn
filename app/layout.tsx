@@ -4,6 +4,7 @@ import "./editorial.css";
 import "./brand-black.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://finikz.github.io"),
   title: "Finikz｜张凤鸣",
   description: "Finikz 张凤鸣的个人品牌主页：翻译、企业 AI 落地咨询与内容工作流。",
   openGraph: {

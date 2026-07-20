@@ -1,0 +1,97 @@
+:root {
+  --paper: #f5f4ef;
+  --ink: #17232d;
+  --muted: #66717a;
+  --red: #a43b2f;
+  --line: #cfd4d3;
+  --card: #fbfbf8;
+}
+
+body {
+  background-image: linear-gradient(90deg, rgba(23, 35, 45, .025) 1px, transparent 1px), linear-gradient(rgba(23, 35, 45, .025) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.nav {
+  height: 78px;
+  padding: 0 7vw;
+  background: rgba(245, 244, 239, .92);
+  backdrop-filter: blur(10px);
+}
+
+.brand { font-size: 18px; }
+.brand small { color: var(--muted); }
+.nav-links { gap: 34px; font-size: 11px; }
+.nav-links a { position: relative; padding: 30px 0 27px; }
+.nav-links a:hover::after, .nav-links a.active::after { content: ""; position: absolute; right: 0; bottom: 20px; left: 0; height: 2px; background: var(--red); }
+
+.studio-hero {
+  min-height: 620px;
+  padding: 118px 12vw 72px;
+  grid-template-columns: minmax(0, 1.3fr) minmax(240px, .7fr);
+  background: linear-gradient(115deg, rgba(255,255,255,.58), rgba(245,244,239,.34));
+}
+.kicker, .eyebrow { color: #385766; font-weight: 700; }
+.studio-hero h1 { max-width: 900px; font-size: clamp(64px, 7vw, 112px); line-height: .98; letter-spacing: -.08em; }
+.studio-hero h1 em, .page-hero h1 em, .archive-hero h1 em { color: var(--red); }
+.studio-intro { max-width: 650px; font-size: 19px; line-height: 1.8; color: #32414a; }
+.hero-meta { margin-bottom: 15px; padding: 20px 0 0 28px; border-left: 2px solid #385766; font: 14px/2.1 Arial, "PingFang SC", sans-serif; letter-spacing: .02em; color: #53616a; }
+.hero-rule { left: 12vw; width: 150px; background: #385766; }
+
+.studio-work { grid-template-columns: 220px 1fr; padding: 78px 12vw 0; }
+.studio-label { color: #385766; font-weight: 700; }
+.studio-label strong { font-size: 27px; }
+.practice-cards { border-top: 2px solid var(--ink); }
+.practice-card { min-height: 275px; padding: 28px 30px; background: rgba(255,255,255,.2); transition: background .2s ease, transform .2s ease; }
+.practice-card:hover { background: #fff; transform: translateY(-4px); }
+.practice-card span, .latest-note span { color: #385766; font-weight: 700; }
+.practice-card h2 { margin-top: 58px; font-size: 28px; line-height: 1.16; }
+.practice-card p { max-width: 285px; font-size: 15px; color: #56616a; }
+.card-arrow { color: var(--red); }
+
+.studio-bottom { grid-template-columns: 220px minmax(0, 1fr) 300px; margin-top: 78px; }
+.latest-note { border-left-color: var(--red); }
+.latest-note h2 { font-size: 25px; line-height: 1.35; }
+.studio-bio { font-size: 15px; color: #53616a; }
+.studio-bio strong { color: #385766; }
+
+.page-hero, .archive-hero { padding: 10vw 12vw 6vw; background: linear-gradient(120deg, rgba(255,255,255,.64), transparent); }
+.page-hero h1 { font-size: clamp(60px, 8vw, 122px); }
+.page-hero>p:last-child { max-width: 620px; font-size: 18px; color: #46545d; }
+.project-list { padding-top: 64px; }
+.project-row { grid-template-columns: 70px minmax(210px, .8fr) minmax(0, 1.8fr) 110px; gap: 34px; padding: 46px 0; }
+.project-row>span { color: #385766; font-weight: 700; }
+.project-row h2 { font-size: 29px; line-height: 1.15; }
+.project-row p { max-width: 600px; font-size: 16px; line-height: 1.95; color: #4d5961; }
+.project-row>b { text-align: right; color: #869198; }
+.work-link { color: var(--red); font-weight: 700; }
+
+.about-content { gap: 10vw; }
+.about-content h2 { font-size: 46px; }
+.placeholder-copy { max-width: 500px; font-size: 16px; color: #4d5961; }
+.about-contact { border-left-color: #385766; }
+.about-contact>a, .social-links a:hover { color: var(--red); }
+
+.archive-hero h1 { font-size: clamp(56px, 7vw, 110px); }
+.archive-item:hover { background: rgba(56, 87, 102, .06); }
+.filters .active, .filters button:hover { background: #385766; border-color: #385766; }
+.article-body { color: #27343b; }
+footer { padding: 34px 7vw; background: #17232d; border-color: #17232d; color: #c9d0d1; }
+footer a { color: #f2b19b; }
+
+@media (max-width: 720px) {
+  .nav { height: auto; min-height: 62px; padding: 13px 20px; }
+  .nav-links a { padding: 8px 0; }
+  .nav-links a:hover::after, .nav-links a.active::after { bottom: 2px; }
+  .studio-hero { min-height: 570px; padding: 100px 22px 62px; }
+  .studio-hero h1 { font-size: clamp(53px, 14vw, 76px); }
+  .studio-intro { font-size: 16px; }
+  .studio-work { padding-top: 58px; }
+  .practice-card { min-height: 0; padding: 30px 0; }
+  .practice-card h2 { margin-top: 34px; }
+  .studio-bottom { margin-top: 56px; }
+  .page-hero, .archive-hero { padding-top: 78px; }
+  .project-row { gap: 10px 18px; padding: 34px 0; }
+  .project-row p { font-size: 15px; }
+  footer { padding: 28px 22px; }
+}

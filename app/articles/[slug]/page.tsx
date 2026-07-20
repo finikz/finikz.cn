@@ -17,7 +17,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const article = articles.find((item) => item.slug === slug);
   if (!article) notFound();
   return <main className="article-page">
-    <nav className="nav" aria-label="主导航"><a className="brand" href="/">FINIKZ<small>张凤鸣 / PERSONAL STUDIO</small></a><div className="nav-links"><a href="/">首页</a><a href="/works">译作</a><a href="/projects">项目</a><a href="/articles">文章</a><a href="/about">关于</a></div></nav>
+    <nav className="nav" aria-label="主导航"><a className="brand" href="/">FINIKZ<small>张凤鸣 / PERSONAL STUDIO</small></a><div className="nav-links"><a href="/about">About</a><a href="/works">Works</a><a href="/articles">Notes</a></div></nav>
     <article className="article-shell">
       <header className="article-header"><p className="eyebrow"><span /> {article.collection.toUpperCase()}</p><h1>{article.title}</h1><time>{article.date}</time>{article.sourceUrl && <a className="source-link" href={article.sourceUrl} target="_blank" rel="noreferrer">查看原始发布 ↗</a>}</header>
       <div className="article-body"><ReactMarkdown remarkPlugins={[remarkGfm]}>{article.body}</ReactMarkdown></div>

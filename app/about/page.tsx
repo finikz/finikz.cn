@@ -36,12 +36,6 @@ export default function AboutPage() {
         <p><strong>AI 与营销战略顾问 ｜ 跨文化内容创作者</strong><br />中山大学法语系毕业，用中英法三种语言工作，在文化、商业与技术的交界处做判断。</p>
       </header>
 
-      <section className="about-profile" aria-labelledby="profile-title">
-        <p className="eyebrow">PROFILE</p>
-        <h2 id="profile-title">把不同领域的判断，<br />变成可执行的系统。</h2>
-        <p>“智神AI”（Pallas AI）联合创办人，面向企业提供 AI 落地与营销战略顾问服务；作为个人，持续从事翻译与内容创作。</p>
-      </section>
-
       <section className="about-workstreams" aria-labelledby="workstreams-title">
         <div className="about-section-label"><p className="eyebrow">WORKSTREAMS</p><h2 id="workstreams-title">工作主线</h2></div>
         <div className="about-stream-list">

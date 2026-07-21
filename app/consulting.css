@@ -21,7 +21,7 @@ body {
 
 .brand { display: flex; align-items: baseline; gap: 11px; font-size: 22px; line-height: 1; }
 .brand-subtitle { color: #6f7880; font: 400 9px/1.2 Arial, "PingFang SC", sans-serif; letter-spacing: .1em; white-space: nowrap; }
-.nav-links { gap: 34px; font-size: 11px; }
+.nav-links { margin-left: auto; justify-content: flex-end; gap: 34px; font-size: 11px; }
 .nav-links a { position: relative; padding: 26px 0 23px; }
 .nav-links a:hover::after, .nav-links a.active::after { content: ""; position: absolute; right: 0; bottom: 15px; left: 0; height: 2px; background: var(--red); }
 .nav-links a:first-child { color: inherit; }
@@ -123,6 +123,7 @@ footer a { color: #f2b19b; }
   .nav { height: auto; min-height: 58px; padding: 11px 20px; }
   .brand { gap: 7px; font-size: 18px; }
   .brand-subtitle { font-size: 7px; letter-spacing: .06em; }
+  .nav-links { flex: 0 0 auto; justify-content: flex-end; }
   .nav-links a { padding: 8px 0; }
   .nav-links a:hover::after, .nav-links a.active::after { bottom: 2px; }
   .studio-hero { min-height: 570px; padding: 100px 22px 62px; }

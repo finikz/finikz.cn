@@ -92,6 +92,11 @@ body {
 .archive-item:hover { background: rgba(56, 87, 102, .06); }
 .filters .active, .filters button:hover { background: #385766; border-color: #385766; }
 .article-body { color: #27343b; }
+.article-navigation { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; margin-top: 82px; padding-top: 25px; border-top: 2px solid var(--ink); }
+.article-navigation a:last-child { text-align: right; }
+.article-navigation span { display: block; margin-bottom: 10px; color: #385766; font: 700 11px Arial, "PingFang SC", sans-serif; letter-spacing: .12em; }
+.article-navigation strong { display: block; font-size: 17px; font-weight: 500; line-height: 1.55; }
+.article-navigation a:hover strong { color: var(--red); }
 footer { padding: 34px 7vw; background: #17232d; border-color: #17232d; color: #c9d0d1; }
 footer a { color: #f2b19b; }
 
@@ -109,6 +114,8 @@ footer a { color: #f2b19b; }
   .page-hero, .archive-hero { padding-top: 78px; }
   .project-row { gap: 10px 18px; padding: 34px 0; }
   .project-row p { font-size: 15px; }
+  .article-navigation { gap: 18px; margin-top: 55px; }
+  .article-navigation strong { font-size: 15px; }
   .about-profile, .about-workstreams { display: block; padding: 55px 22px; }
   .about-profile .eyebrow { margin: 0 0 24px; }
   .about-profile h2 { font-size: 38px; }

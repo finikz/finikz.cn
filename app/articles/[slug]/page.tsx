@@ -17,11 +17,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const article = articles.find((item) => item.slug === slug);
   if (!article) notFound();
+  const chronologicalArticles = [...articles].sort((a, b) => a.date.localeCompare(b.date) || a.title.localeCompare(b.title, "zh-CN"));
+  const articleIndex = chronologicalArticles.findIndex((item) => item.slug === article.slug);
+  const previousArticle = chronologicalArticles[articleIndex - 1];
+  const nextArticle = chronologicalArticles[articleIndex + 1];
   return <main className="article-page">
     <SiteNav active="notes" />
     <article className="article-shell">
       <header className="article-header"><p className="eyebrow"><span /> {article.collection.toUpperCase()}</p><h1>{article.title}</h1><time>{article.date}</time>{article.sourceUrl && <a className="source-link" href={article.sourceUrl} target="_blank" rel="noreferrer">查看原始发布 ↗</a>}</header>
       <div className="article-body"><ReactMarkdown remarkPlugins={[remarkGfm]}>{article.body}</ReactMarkdown></div>
+      <nav className="article-navigation" aria-label="文章导航">
+        {previousArticle ? <a href={`/articles/${previousArticle.slug}`}><span>上一篇</span><strong>{previousArticle.title}</strong></a> : <span />}
+        {nextArticle ? <a href={`/articles/${nextArticle.slug}`}><span>下一篇</span><strong>{nextArticle.title}</strong></a> : <span />}
+      </nav>
     </article>
     <footer><p>FINIKZ / 张凤鸣</p><p>写作归档</p><a href="/articles">返回文章库 ↗</a></footer>
   </main>;

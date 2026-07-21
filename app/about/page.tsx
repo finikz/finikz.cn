@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SiteNav from "@/components/SiteNav";
 
 export const metadata: Metadata = {
   title: "About｜Finikz",
@@ -27,10 +28,7 @@ const workstreams = [
 export default function AboutPage() {
   return (
     <main className="about-page">
-      <nav className="nav" aria-label="主导航">
-        <a className="brand" href="/">FINIK<span className="brand-dot">Z</span><small>张凤鸣 / PERSONAL STUDIO</small></a>
-        <div className="nav-links"><a className="active" href="/about">About</a><a href="/works">Works</a><a href="/articles">Notes</a></div>
-      </nav>
+      <SiteNav active="about" />
 
       <header className="page-hero about-hero">
         <p className="eyebrow">ABOUT / FINIKZ</p>

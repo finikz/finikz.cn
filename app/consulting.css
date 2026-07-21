@@ -24,6 +24,8 @@ body {
 .nav-links { gap: 34px; font-size: 11px; }
 .nav-links a { position: relative; padding: 30px 0 27px; }
 .nav-links a:hover::after, .nav-links a.active::after { content: ""; position: absolute; right: 0; bottom: 20px; left: 0; height: 2px; background: var(--red); }
+.nav-links a:first-child { color: inherit; }
+.nav-links a.active { color: var(--red); }
 
 .studio-hero {
   min-height: 620px;

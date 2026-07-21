@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { articles } from "@/lib/articles";
+import SiteNav from "@/components/SiteNav";
 
 export function generateStaticParams() { return articles.map((article) => ({ slug: article.slug })); }
 
@@ -17,7 +18,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const article = articles.find((item) => item.slug === slug);
   if (!article) notFound();
   return <main className="article-page">
-    <nav className="nav" aria-label="主导航"><a className="brand" href="/">FINIKZ<small>张凤鸣 / PERSONAL STUDIO</small></a><div className="nav-links"><a href="/about">About</a><a href="/works">Works</a><a href="/articles">Notes</a></div></nav>
+    <SiteNav active="notes" />
     <article className="article-shell">
       <header className="article-header"><p className="eyebrow"><span /> {article.collection.toUpperCase()}</p><h1>{article.title}</h1><time>{article.date}</time>{article.sourceUrl && <a className="source-link" href={article.sourceUrl} target="_blank" rel="noreferrer">查看原始发布 ↗</a>}</header>
       <div className="article-body"><ReactMarkdown remarkPlugins={[remarkGfm]}>{article.body}</ReactMarkdown></div>

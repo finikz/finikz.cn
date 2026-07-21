@@ -19,8 +19,8 @@ body {
   backdrop-filter: blur(10px);
 }
 
-.brand { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; font-size: 18px; line-height: 1; }
-.brand-subtitle { color: #6f7880; font: 400 8px/1.2 Arial, "PingFang SC", sans-serif; letter-spacing: .11em; white-space: nowrap; }
+.brand { display: flex; align-items: baseline; gap: 11px; font-size: 22px; line-height: 1; }
+.brand-subtitle { color: #6f7880; font: 400 9px/1.2 Arial, "PingFang SC", sans-serif; letter-spacing: .1em; white-space: nowrap; }
 .nav-links { gap: 34px; font-size: 11px; }
 .nav-links a { position: relative; padding: 30px 0 27px; }
 .nav-links a:hover::after, .nav-links a.active::after { content: ""; position: absolute; right: 0; bottom: 20px; left: 0; height: 2px; background: var(--red); }
@@ -61,7 +61,7 @@ body {
 .page-hero, .archive-hero { padding: 10vw 12vw 6vw; background: linear-gradient(120deg, rgba(255,255,255,.64), transparent); }
 .page-hero h1 { font-size: clamp(60px, 8vw, 122px); }
 .page-hero>p:last-child { max-width: 620px; font-size: 18px; color: #46545d; }
-.about-hero { display: grid; grid-template-columns: minmax(0, 650px) minmax(260px, 1fr); gap: 6vw; align-items: end; }
+.about-hero { display: grid; grid-template-columns: minmax(0, 650px) minmax(260px, 1fr); gap: 6vw; align-items: end; padding-top: 7vw; padding-bottom: 4vw; }
 .about-hero .about-hero-copy>p { max-width: 620px; margin: 0; font-size: 18px; line-height: 1.9; color: #46545d; }
 .about-hero .hero-meta { justify-self: end; margin: 0 0 7px; max-width: 330px; }
 .project-list { padding-top: 64px; }
@@ -85,7 +85,9 @@ body {
 .about-stream { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 25px; padding: 35px 0; border-bottom: 1px solid var(--line); }
 .about-stream>span { color: #385766; font: 700 12px Arial, "PingFang SC", sans-serif; letter-spacing: .12em; }
 .about-stream h3 { margin: 0 0 15px; font-size: 28px; font-weight: 500; letter-spacing: -.05em; }
-.about-stream ul { max-width: 720px; margin: 0; padding-left: 1.2em; color: #4d5961; font-size: 16px; line-height: 1.95; }
+.about-stream ul { max-width: 720px; margin: 0; padding: 0; list-style: none; color: #4d5961; font-size: 16px; line-height: 1.95; }
+.about-stream li::before { content: "·"; display: inline-block; width: 1em; color: var(--red); }
+.about-contact .placeholder-copy { max-width: none; font-size: 14px; white-space: nowrap; }
 .about-stream .work-link { display: inline-block; margin-top: 14px; }
 
 .archive-hero h1 { font-size: clamp(56px, 7vw, 110px); }
@@ -102,15 +104,17 @@ footer a { color: #f2b19b; }
 
 @media (max-width: 720px) {
   .nav { height: auto; min-height: 62px; padding: 13px 20px; }
-  .brand-subtitle { font-size: 7px; letter-spacing: .08em; }
+  .brand { gap: 7px; font-size: 18px; }
+  .brand-subtitle { font-size: 7px; letter-spacing: .06em; }
   .nav-links a { padding: 8px 0; }
   .nav-links a:hover::after, .nav-links a.active::after { bottom: 2px; }
   .studio-hero { min-height: 570px; padding: 100px 22px 62px; }
   .studio-hero h1 { font-size: clamp(44px, 12vw, 76px); }
   .about-hero h1 { font-size: clamp(44px, 12vw, 76px); }
-  .about-hero { display: block; }
+  .about-hero { display: block; padding: 64px 22px 36px; }
   .about-hero .about-hero-copy>p { font-size: 16px; }
   .about-hero .hero-meta { margin: 28px 0 0; max-width: none; }
+  .about-contact .placeholder-copy { font-size: 12px; }
   .studio-intro { margin-top: 22px; font-size: 16px; }
   .hero-meta { margin-top: 22px; padding-left: 18px; font-size: 13px; }
   .studio-work { padding-top: 58px; }

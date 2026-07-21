@@ -31,6 +31,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         {nextArticle ? <a href={`/articles/${nextArticle.slug}`}><span>下一篇</span><strong>{nextArticle.title}</strong></a> : <span />}
       </nav>
     </article>
-    <footer><p>FINIKZ / 张凤鸣</p><p>写作归档</p><a href="/articles">返回文章库 ↗</a></footer>
+    <footer><p>FINIKZ / 张凤鸣</p><p>AI · STRATEGY · CULTURE</p><a href="/articles">返回文章库 ↗</a></footer>
   </main>;
 }

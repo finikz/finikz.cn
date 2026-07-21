@@ -7,6 +7,7 @@ const vault = path.dirname(path.dirname(source));
 const output = path.resolve("content/articles.json");
 const assetOutput = path.resolve("public/articles/images");
 const collections = { "111 非你可思公众号": "非你可思", "112 智神AI战略": "智神AI", "奇遇作品": "奇遇作品", "非法教学": "非法教学" };
+const excludedArticleSlugs = new Set(["e4b76d5720b1", "f726d0cd197b", "32be52930e07"]);
 
 async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -81,8 +82,10 @@ for (const file of files) {
   const collectionKey = relative.split(path.sep)[0];
   const clean = cleanBody(body);
   if (!clean) continue;
+  const slug = createHash("sha1").update(relative).digest("hex").slice(0, 12);
+  if (excludedArticleSlugs.has(slug)) continue;
   articles.push({
-    slug: createHash("sha1").update(relative).digest("hex").slice(0, 12),
+    slug,
     title: titleFrom(file, clean),
     collection: collections[collectionKey] || collectionKey,
     date: articleDate(file, clean),

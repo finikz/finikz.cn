@@ -126,7 +126,7 @@ footer a { color: #f2b19b; }
   .about-hero { display: block; padding: 56px 22px 32px; }
   .about-hero .about-hero-copy>p { font-size: 16px; }
   .about-hero .hero-meta { margin: 28px 0 0; max-width: none; }
-  .about-contact .placeholder-copy { font-size: 12px; }
+  .about-contact .placeholder-copy { font-size: 12px; white-space: normal; }
   .studio-intro { margin-top: 22px; font-size: 16px; }
   .hero-meta { margin-top: 22px; padding-left: 18px; font-size: 13px; }
   .studio-work { padding-top: 58px; }

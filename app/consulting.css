@@ -34,8 +34,9 @@ body {
   background: linear-gradient(115deg, rgba(255,255,255,.58), rgba(245,244,239,.34));
 }
 .kicker, .eyebrow { color: #385766; font-weight: 700; }
-.studio-hero h1 { max-width: 900px; font-size: clamp(64px, 7vw, 112px); line-height: .98; letter-spacing: -.08em; }
+.studio-hero h1 { max-width: 900px; font-size: clamp(64px, 7vw, 112px); line-height: .98; letter-spacing: -.08em; white-space: nowrap; }
 .studio-hero h1 em, .page-hero h1 em, .archive-hero h1 em { color: var(--red); }
+.works-hero h1, .about-hero h1 { white-space: nowrap; }
 .studio-intro { max-width: 650px; font-size: 19px; line-height: 1.8; color: #32414a; }
 .hero-meta { margin-bottom: 15px; padding: 20px 0 0 28px; border-left: 2px solid #385766; font: 14px/2.1 Arial, "PingFang SC", sans-serif; letter-spacing: .02em; color: #53616a; }
 .hero-rule { left: 12vw; width: 150px; background: #385766; }
@@ -101,7 +102,8 @@ footer a { color: #f2b19b; }
   .nav-links a { padding: 8px 0; }
   .nav-links a:hover::after, .nav-links a.active::after { bottom: 2px; }
   .studio-hero { min-height: 570px; padding: 100px 22px 62px; }
-  .studio-hero h1 { font-size: clamp(53px, 14vw, 76px); }
+  .studio-hero h1 { font-size: clamp(44px, 12vw, 76px); }
+  .about-hero h1 { font-size: clamp(44px, 12vw, 76px); }
   .studio-intro { font-size: 16px; }
   .studio-work { padding-top: 58px; }
   .practice-card { min-height: 0; padding: 30px 0; }

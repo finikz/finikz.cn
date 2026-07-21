@@ -32,7 +32,7 @@ export default function AboutPage() {
 
       <header className="page-hero about-hero">
         <p className="eyebrow">ABOUT / FINIKZ</p>
-        <h1>张凤鸣<br /><em>Finikz</em></h1>
+        <h1>张凤鸣<em> Finikz</em></h1>
         <p><strong>AI 与营销战略顾问 ｜ 跨文化内容创作者</strong><br />中山大学法语系毕业，用中英法三种语言工作，在文化、商业与技术的交界处做判断。</p>
       </header>
 

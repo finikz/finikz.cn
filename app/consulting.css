@@ -37,7 +37,7 @@ body {
 .studio-hero h1 { max-width: 900px; font-size: clamp(64px, 7vw, 112px); line-height: .98; letter-spacing: -.08em; white-space: nowrap; }
 .studio-hero h1 em, .page-hero h1 em, .archive-hero h1 em { color: var(--red); }
 .works-hero h1, .about-hero h1 { white-space: nowrap; }
-.about-hero h1 em { color: var(--ink); font-family: Arial, "PingFang SC", sans-serif; font-weight: 700; letter-spacing: -.06em; }
+.about-hero h1 em { color: var(--ink); font-family: "Arial Rounded MT Bold", "Arial Rounded MT", ui-rounded, Arial, "PingFang SC", sans-serif; font-weight: 700; letter-spacing: -.06em; }
 .studio-intro { max-width: 650px; margin-top: 30px; font-size: 19px; line-height: 1.8; color: #32414a; }
 .studio-intro strong { display: block; color: #243642; }
 .studio-intro p { margin: 12px 0 0; }

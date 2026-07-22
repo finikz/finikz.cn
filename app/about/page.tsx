@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SiteNav from "@/components/SiteNav";
 
 export const metadata: Metadata = {
-  title: "About｜Finikz",
+  title: "Finikz｜非你可思",
   description: "张凤鸣 Finikz：企业 AI 与营销战略顾问、跨文化内容创作者。",
 };
 
@@ -46,8 +46,8 @@ export default function AboutPage() {
 
       <header className="page-hero about-hero">
         <div className="about-hero-copy">
-          <h1>张凤鸣<em> Finikz</em></h1>
-          <p><strong>AI 与营销战略顾问 ｜ 跨文化内容创作者</strong><br />中山大学法语系毕业，以中英法三种语言工作，擅长用 AI 把文化洞察、商业策略与内容表达，整合成一套长期复利的系统。</p>
+          <h1><em>Finikz</em></h1>
+          <p><strong>AI 与营销战略顾问 ｜ 跨文化内容创作者</strong><br />张凤鸣，中山大学法语系毕业，以中英法三种语言工作，擅长用 AI 把文化洞察、商业策略与内容表达，整合成一套长期复利的系统。</p>
         </div>
         <aside className="hero-meta">企业 AI 战略咨询 / 营销战略咨询<br />跨文化内容创作 / 中英法三语翻译<br />中山大学广州校友会常务副秘书长<br />九维精酿-九维艺术联盟联合创办人</aside>
       </header>

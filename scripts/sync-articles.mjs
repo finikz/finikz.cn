@@ -1,11 +1,9 @@
 import { createHash } from "node:crypto";
-import { cp, mkdir, readFile, readdir, stat, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const source = process.env.FINIKZ_WRITINGS_DIR || "/Users/finikz/Library/Mobile Documents/iCloud~md~obsidian/Documents/Finikz Vault/raw/10 Projects/12 Finikz Writings";
-const rawMarker = `${path.sep}raw${path.sep}`;
-const rawIndex = source.indexOf(rawMarker);
-const vault = rawIndex >= 0 ? source.slice(0, rawIndex) : path.dirname(path.dirname(source));
+const source = process.env.FINIKZ_WRITINGS_DIR || "/Users/finikz/Library/Mobile Documents/iCloud~md~obsidian/Documents/Finikz Vault/raw/Finikz Writings";
+const vault = path.dirname(path.dirname(source));
 const output = path.resolve("content/articles.json");
 const assetOutput = path.resolve("public/articles/images");
 const collections = { "111 非你可思公众号": "非你可思", "112 智神AI战略": "智神AI", "奇遇作品": "奇遇作品", "非法教学": "非法教学" };
@@ -44,10 +42,6 @@ function titleFrom(file, body) {
   return heading || path.basename(file, ".md").replace(/^\d{6,8}[_\s-]*/, "").replace(/\s+\d+$/, "");
 }
 
-function normalizedTitle(title) {
-  return title.replace(/^【[^】]+】\s*/, "").trim();
-}
-
 function cleanBody(body) {
   return body
     .replace(/^公众号名称：.*\n|^作者名称：.*\n|^发布时间：.*\n/gm, "")
@@ -77,13 +71,10 @@ async function replaceEmbeds(body, articleDir) {
   return result;
 }
 
+await rm(assetOutput, { recursive: true, force: true });
 await mkdir(assetOutput, { recursive: true });
-let existingArticles = [];
-try { existingArticles = JSON.parse(await readFile(output, "utf8")); } catch {}
-const existingSlugs = new Set(existingArticles.map((article) => article.slug));
-const existingTitles = new Set(existingArticles.map((article) => `${article.collection}\0${normalizedTitle(article.title)}`));
 const files = await walk(source);
-const newArticles = [];
+const articles = [];
 for (const file of files) {
   const raw = await readFile(file, "utf8");
   const { data, body } = frontmatter(raw);
@@ -93,20 +84,16 @@ for (const file of files) {
   if (!clean) continue;
   const slug = createHash("sha1").update(relative).digest("hex").slice(0, 12);
   if (excludedArticleSlugs.has(slug)) continue;
-  const title = titleFrom(file, clean);
-  const collection = collections[collectionKey] || collectionKey;
-  if (existingSlugs.has(slug) || existingTitles.has(`${collection}\0${normalizedTitle(title)}`)) continue;
-  newArticles.push({
+  articles.push({
     slug,
-    title,
-    collection,
+    title: titleFrom(file, clean),
+    collection: collections[collectionKey] || collectionKey,
     date: articleDate(file, clean),
     sourceUrl: data.url || null,
     body: await replaceEmbeds(clean, path.dirname(file)),
   });
 }
-const articles = [...existingArticles, ...newArticles];
 articles.sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title, "zh-CN"));
 await mkdir(path.dirname(output), { recursive: true });
 await writeFile(output, `${JSON.stringify(articles, null, 2)}\n`);
-console.log(`Synced ${newArticles.length} new articles; ${articles.length} total.`);
+console.log(`Synced ${articles.length} articles and their referenced images.`);

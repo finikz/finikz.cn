@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SiteNav from "@/components/SiteNav";
 
 export const metadata: Metadata = {
@@ -58,7 +59,7 @@ export default function AboutPage() {
           {workstreams.map((item) => (
             <article className="about-stream" key={item.number}>
               <span>{item.number}</span>
-              <div><h3>{item.title}</h3><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul>{item.href && <a className="work-link" href={item.href}>我的译作 ↗</a>}</div>
+              <div><h3>{item.title}</h3><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul>{item.href && <Link className="work-link" href={item.href}>我的译作 ↗</Link>}</div>
             </article>
           ))}
         </div>

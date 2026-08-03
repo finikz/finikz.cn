@@ -2,8 +2,10 @@ import { createHash } from "node:crypto";
 import { cp, mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const source = process.env.FINIKZ_WRITINGS_DIR || "/Users/finikz/Library/Mobile Documents/iCloud~md~obsidian/Documents/Finikz Vault/raw/Finikz Writings";
-const vault = path.dirname(path.dirname(source));
+const source = process.env.FINIKZ_WRITINGS_DIR || "/Users/finikz/Library/Mobile Documents/iCloud~md~obsidian/Documents/Finikz Vault/raw/10 Projects/12 Finikz Writings";
+const rawMarker = `${path.sep}raw${path.sep}`;
+const rawIndex = source.indexOf(rawMarker);
+const vault = rawIndex >= 0 ? source.slice(0, rawIndex) : path.dirname(path.dirname(source));
 const output = path.resolve("content/articles.json");
 const assetOutput = path.resolve("public/articles/images");
 const collections = { "111 非你可思公众号": "非你可思", "112 智神AI战略": "智神AI", "奇遇作品": "奇遇作品", "非法教学": "非法教学" };

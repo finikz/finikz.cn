@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type SiteNavProps = {
   active?: "about" | "works" | "notes";
   home?: boolean;
@@ -6,13 +8,13 @@ type SiteNavProps = {
 export default function SiteNav({ active, home = false }: SiteNavProps) {
   return (
     <nav className="nav" aria-label="主导航">
-      <a className="brand" href={home ? "#top" : "/"}>
+      <Link className="brand" href={home ? "#top" : "/"}>
         FINIKZ
         <span className="brand-subtitle">AI, STRATEGY &amp; CULTURE</span>
-      </a>
+      </Link>
       <div className="nav-links">
-        <a className={active === "works" ? "active" : undefined} href="/works">Works</a>
-        <a className={active === "notes" ? "active" : undefined} href="/articles">Notes</a>
+        <Link className={active === "works" ? "active" : undefined} href="/works">Works</Link>
+        <Link className={active === "notes" ? "active" : undefined} href="/articles">Notes</Link>
       </div>
     </nav>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 
 type Summary = { slug: string; title: string; collection: string; date: string };
 
@@ -24,9 +25,9 @@ export default function ArticleIndex({ articles, collections }: { articles: Summ
     </div>
     <p className="result-count">{visible.length} 篇文章</p>
     <div className="archive-list">
-      {pagedArticles.map((article) => <a className="archive-item" href={`/articles/${article.slug}`} key={article.slug}>
+      {pagedArticles.map((article) => <Link className="archive-item" href={`/articles/${article.slug}`} key={article.slug}>
         <time>{article.date}</time><span className="archive-collection">{article.collection}</span><h2>{article.title}</h2>
-      </a>)}
+      </Link>)}
     </div>
     {totalPages > 1 && <nav className="archive-pagination" aria-label="文章分页"><button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)}>上一页</button><span>{currentPage} / {totalPages}</span><button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)}>下一页</button></nav>}
   </>;

@@ -6,7 +6,7 @@ import "./work-link.css";
 import "./consulting.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://finikz.github.io"),
+  metadataBase: new URL("https://finikz.cn"),
   title: "Finikz｜非你可思",
   description: "张凤鸣 Finikz：“智神AI”联合创办人，企业 AI 落地与营销战略顾问、跨文化内容创作者。",
   openGraph: {

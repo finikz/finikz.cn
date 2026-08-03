@@ -8,7 +8,7 @@ export default function ArticlesPage() {
   return <main className="archive-page">
     <SiteNav active="notes" />
     <header className="archive-hero"><p className="eyebrow"><span /> WRITING ARCHIVE · {articles.length}</p><h1>把看见的，<em>留下来。</em></h1><p>文化、技术、语言与工作现场的持续记录。</p></header>
-    <section className="archive-content"><ArticleIndex articles={articles.map(({ body, sourceUrl, ...article }) => article)} collections={collections} /></section>
+    <section className="archive-content"><ArticleIndex articles={articles.map(({ slug, title, collection, date }) => ({ slug, title, collection, date }))} collections={collections} /></section>
     <footer><p>© FINIKZ</p><p>AI · STRATEGY · CULTURE</p><a href="mailto:mail@finikz.com">MAIL@FINIKZ.COM ↗</a></footer>
   </main>;
 }

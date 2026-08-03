@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -27,10 +28,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <header className="article-header"><p className="eyebrow"><span /> {article.collection.toUpperCase()}</p><h1>{article.title}</h1><time>{article.date}</time>{article.sourceUrl && <a className="source-link" href={article.sourceUrl} target="_blank" rel="noreferrer">查看原始发布 ↗</a>}</header>
       <div className="article-body"><ReactMarkdown remarkPlugins={[remarkGfm]}>{article.body}</ReactMarkdown></div>
       <nav className="article-navigation" aria-label="文章导航">
-        {previousArticle ? <a href={`/articles/${previousArticle.slug}`}><span>上一篇</span><strong>{previousArticle.title}</strong></a> : <span />}
-        {nextArticle ? <a href={`/articles/${nextArticle.slug}`}><span>下一篇</span><strong>{nextArticle.title}</strong></a> : <span />}
+        {previousArticle ? <Link href={`/articles/${previousArticle.slug}`}><span>上一篇</span><strong>{previousArticle.title}</strong></Link> : <span />}
+        {nextArticle ? <Link href={`/articles/${nextArticle.slug}`}><span>下一篇</span><strong>{nextArticle.title}</strong></Link> : <span />}
       </nav>
     </article>
-    <footer><p>© FINIKZ</p><p>AI · STRATEGY · CULTURE</p><a href="/articles">返回文章库 ↗</a></footer>
+    <footer><p>© FINIKZ</p><p>AI · STRATEGY · CULTURE</p><Link href="/articles">返回文章库 ↗</Link></footer>
   </main>;
 }

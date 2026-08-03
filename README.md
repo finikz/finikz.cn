@@ -89,7 +89,8 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - `npm run dev`: start local development
 - `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
+- `npm run build:pages`: build the static artifact used by GitHub Pages
+- `npm test`: build the Pages artifact and verify key routes and assets
 - `npm run db:generate`: generate Drizzle migrations after schema changes
 
 ## Learn More

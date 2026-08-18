@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import CookieConsent from "@/components/CookieConsent";
 import "./globals.css";
 import "./editorial.css";
 import "./work-link.css";
@@ -19,5 +19,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="zh-CN"><body>{children}<Script src="https://www.googletagmanager.com/gtag/js?id=G-WWPWFYB8TE" strategy="afterInteractive" /><Script id="google-analytics" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-WWPWFYB8TE');`}</Script></body></html>;
+  return <html lang="zh-CN"><body>{children}<CookieConsent /></body></html>;
 }

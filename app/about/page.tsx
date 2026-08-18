@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 
 export const metadata: Metadata = {
@@ -82,7 +83,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <footer><p>© FINIKZ</p><p>AI · STRATEGY · CULTURE</p></footer>
+      <SiteFooter />
     </main>
   );
 }

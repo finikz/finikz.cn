@@ -9,7 +9,17 @@ const vault = rawIndex >= 0 ? source.slice(0, rawIndex) : path.dirname(path.dirn
 const output = path.resolve("content/articles.json");
 const assetOutput = path.resolve("public/articles/images");
 const collections = { "111 非你可思公众号": "非你可思", "112 智神AI战略": "智神AI", "奇遇作品": "奇遇作品", "非法教学": "非法教学" };
-const excludedArticleSlugs = new Set(["e4b76d5720b1", "f726d0cd197b", "32be52930e07"]);
+const excludedArticleSlugs = new Set([
+  "e4b76d5720b1",
+  "f726d0cd197b",
+  "32be52930e07",
+  "9ed80a386aac",
+  "69e1a877334b",
+  "6699bca3dc1f",
+  "baa12239a63a",
+  "d056fc10aa97",
+  "1f75f10889c2",
+]);
 
 async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -73,6 +83,19 @@ async function replaceEmbeds(body, articleDir) {
   return result;
 }
 
+async function removeMissingRootImages(body) {
+  const images = [...body.matchAll(/!\[[^\]]*\]\((\/[^)\s]+)(?:\s+"[^"]*")?\)/g)];
+  let result = body;
+  for (const image of images) {
+    const publicPath = path.resolve("public", decodeURIComponent(image[1].slice(1)));
+    try {
+      if ((await stat(publicPath)).isFile()) continue;
+    } catch {}
+    result = result.replace(image[0], "");
+  }
+  return result;
+}
+
 await rm(assetOutput, { recursive: true, force: true });
 await mkdir(assetOutput, { recursive: true });
 const files = await walk(source);
@@ -86,13 +109,14 @@ for (const file of files) {
   if (!clean) continue;
   const slug = createHash("sha1").update(relative).digest("hex").slice(0, 12);
   if (excludedArticleSlugs.has(slug)) continue;
+  const bodyWithEmbeds = await replaceEmbeds(clean, path.dirname(file));
   articles.push({
     slug,
     title: titleFrom(file, clean),
     collection: collections[collectionKey] || collectionKey,
     date: articleDate(file, clean),
     sourceUrl: data.url || null,
-    body: await replaceEmbeds(clean, path.dirname(file)),
+    body: await removeMissingRootImages(bodyWithEmbeds),
   });
 }
 articles.sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title, "zh-CN"));

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { articles } from "@/lib/articles";
+import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 
 export function generateStaticParams() { return articles.map((article) => ({ slug: article.slug })); }
@@ -32,6 +33,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         {nextArticle ? <Link href={`/articles/${nextArticle.slug}`}><span>下一篇</span><strong>{nextArticle.title}</strong></Link> : <span />}
       </nav>
     </article>
-    <footer><p>© FINIKZ</p><p>AI · STRATEGY · CULTURE</p><Link href="/articles">返回文章库 ↗</Link></footer>
+    <SiteFooter />
   </main>;
 }

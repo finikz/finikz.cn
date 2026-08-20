@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
+import { articles } from "@/lib/articles";
+import { works } from "@/lib/works";
 
 export const metadata: Metadata = {
   title: "Finikz｜非你可思",
@@ -41,6 +44,8 @@ const workstreams = [
   },
 ];
 
+const trilogyWorks = works.filter((work) => work.group === "酒神三部曲");
+
 export default function AboutPage() {
   return (
     <main className="about-page">
@@ -63,6 +68,35 @@ export default function AboutPage() {
               <div><h3>{item.title}</h3><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul>{item.href && <Link className="work-link" href={item.href}>我的译作 ↗</Link>}</div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="about-showcase about-translations" aria-labelledby="translations-title">
+        <div className="about-section-label"><p className="eyebrow">SELECTED TRANSLATIONS</p><h2 id="translations-title">我的译作</h2></div>
+        <div className="about-showcase-content">
+          <div className="about-work-cards">
+            {trilogyWorks.map((work) => <article className="about-work-card" key={work.url}>
+              <a className="about-work-cover" href={work.url} target="_blank" rel="noreferrer">
+                <Image src={work.cover} alt={`《${work.title}${work.subtitle ? `：${work.subtitle}` : ""}》封面`} fill sizes="(max-width: 720px) 42vw, 220px" />
+              </a>
+              <h3><a href={work.url} target="_blank" rel="noreferrer">《{work.title}{work.subtitle ? `：${work.subtitle}` : ""}》</a></h3>
+            </article>)}
+          </div>
+          <Link className="about-more-link" href="/works">查看更多 ↗</Link>
+        </div>
+      </section>
+
+      <section className="about-showcase about-writing" aria-labelledby="writing-title">
+        <div className="about-section-label"><p className="eyebrow">SELECTED WRITING</p><h2 id="writing-title">我的写作</h2></div>
+        <div className="about-showcase-content">
+          <div className="about-writing-list">
+            {articles.slice(0, 3).map((article) => <Link className="about-writing-item" href={`/articles/${article.slug}`} key={article.slug}>
+              <time dateTime={article.date}>{article.date.replaceAll("-", ".")}</time>
+              <h3>{article.title}</h3>
+              <span aria-hidden="true">↗</span>
+            </Link>)}
+          </div>
+          <Link className="about-more-link" href="/articles">查看更多 ↗</Link>
         </div>
       </section>
 

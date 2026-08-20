@@ -27,6 +27,15 @@ test("exports the deployed homepage metadata and content", async () => {
   assert.match(html, /<title>Finikz｜非你可思<\/title>/i);
   assert.match(html, /WORKSTREAMS/);
   assert.match(html, /智神AI/);
+  assert.ok(html.includes("我的译作"));
+  assert.ok(html.includes("我的写作"));
+  for (const title of ["风土之诗", "麦芽之歌", "自由之水"]) assert.ok(html.includes(title));
+  for (const article of articles.slice(0, 3)) {
+    assert.ok(html.includes(article.title));
+    assert.match(html, new RegExp(`href="/articles/${article.slug}/?"`));
+  }
+  assert.ok(html.indexOf("我的译作") < html.indexOf("欢迎合作"));
+  assert.ok(html.indexOf("我的写作") < html.indexOf("欢迎合作"));
   assert.match(html, /<link rel="alternate" type="application\/rss\+xml" href="https:\/\/finikz\.cn\/rss\.xml"\/>/i);
 });
 

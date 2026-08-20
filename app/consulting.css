@@ -287,3 +287,14 @@ footer a { color: #f2b19b; }
   .about-writing-item h3 { font-size: 17px; }
   .about-writing-item > span { font-size: 16px; }
 }
+
+main[class] {
+  display: flex;
+  flex-direction: column;
+}
+
+main[class] > .site-footer { margin-top: auto; }
+
+@supports (height: 100dvh) {
+  main[class] { min-height: 100dvh; }
+}

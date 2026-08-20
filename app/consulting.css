@@ -271,12 +271,12 @@ footer a { color: #f2b19b; }
   .about-writing { padding-bottom: 58px; }
 
   .about-work-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px 18px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px 10px;
     padding-top: 24px;
   }
 
-  .about-work-card h3 { margin-top: 13px; font-size: 17px; }
+  .about-work-card h3 { margin-top: 11px; font-size: 14px; line-height: 1.4; }
 
   .about-writing-item {
     grid-template-columns: 76px minmax(0, 1fr) 16px;

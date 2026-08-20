@@ -174,7 +174,11 @@ footer a { color: #f2b19b; }
   border-top: 1px solid var(--line);
 }
 
-.about-writing { padding-bottom: 72px; }
+.about-writing {
+  margin-top: 32px;
+  padding-bottom: 72px;
+  border-bottom: 1px solid var(--line);
+}
 
 .about-showcase-content { min-width: 0; }
 
@@ -267,7 +271,10 @@ footer a { color: #f2b19b; }
     padding: 42px 22px 0;
   }
 
-  .about-writing { padding-bottom: 58px; }
+  .about-writing {
+    margin-top: 24px;
+    padding-bottom: 58px;
+  }
 
   .about-work-cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));

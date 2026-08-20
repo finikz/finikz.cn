@@ -31,7 +31,6 @@ const workstreams = [
       "翻译过十几本书，指导多个品牌（包括潮玩和个人品牌）的内容输出。",
       "此前任「奇遇电影」主笔期间写过多篇 10万+，为南都《风尚周报》撰过专栏。",
     ],
-    href: "/works",
   },
   {
     number: "03",
@@ -64,15 +63,14 @@ export default function AboutPage() {
         <div className="about-stream-list">
           {workstreams.map((item) => (
             <article className="about-stream" key={item.number}>
-              <span>{item.number}</span>
-              <div><h3>{item.title}</h3><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul>{item.href && <Link className="work-link" href={item.href}>我的译作 ↗</Link>}</div>
+              <div><h3>{item.title}</h3><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul></div>
             </article>
           ))}
         </div>
       </section>
 
       <section className="about-showcase about-translations" aria-labelledby="translations-title">
-        <div className="about-section-label"><p className="eyebrow">SELECTED TRANSLATIONS</p><h2 id="translations-title">我的译作</h2></div>
+        <div className="about-section-label"><p className="eyebrow">MY WORKS</p><h2 id="translations-title">我的译作</h2></div>
         <div className="about-showcase-content">
           <div className="about-work-cards">
             {trilogyWorks.map((work) => <article className="about-work-card" key={work.url}>
@@ -87,7 +85,7 @@ export default function AboutPage() {
       </section>
 
       <section className="about-showcase about-writing" aria-labelledby="writing-title">
-        <div className="about-section-label"><p className="eyebrow">SELECTED WRITING</p><h2 id="writing-title">我的写作</h2></div>
+        <div className="about-section-label"><p className="eyebrow">MY WRITING</p><h2 id="writing-title">我的写作</h2></div>
         <div className="about-showcase-content">
           <div className="about-writing-list">
             {articles.slice(0, 3).map((article) => <Link className="about-writing-item" href={`/articles/${article.slug}`} key={article.slug}>

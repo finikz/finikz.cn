@@ -29,6 +29,9 @@ test("exports the deployed homepage metadata and content", async () => {
   assert.match(html, /智神AI/);
   assert.ok(html.includes("我的译作"));
   assert.ok(html.includes("我的写作"));
+  assert.ok(html.includes("MY WORKS"));
+  assert.ok(html.includes("MY WRITING"));
+  assert.equal(html.includes("我的译作 ↗"), false);
   for (const title of ["风土之诗", "麦芽之歌", "自由之水"]) assert.ok(html.includes(title));
   for (const article of articles.slice(0, 3)) {
     assert.ok(html.includes(article.title));

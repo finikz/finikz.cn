@@ -83,8 +83,7 @@ body {
 .about-workstreams { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 36px; }
 .about-section-label h2 { margin: 0; font-size: 31px; font-weight: 500; letter-spacing: -.05em; }
 .about-stream-list { border-top: 2px solid var(--ink); }
-.about-stream { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 25px; padding: 27px 0; border-bottom: 1px solid var(--line); }
-.about-stream>span { color: #385766; font: 700 12px Arial, "PingFang SC", sans-serif; letter-spacing: .12em; }
+.about-stream { display: block; padding: 27px 0; border-bottom: 1px solid var(--line); }
 .about-stream h3 { margin: 0 0 15px; font-size: 28px; font-weight: 500; letter-spacing: -.05em; }
 .about-stream ul { max-width: 720px; margin: 0; padding: 0; list-style: none; color: #4d5961; font-size: 16px; line-height: 1.95; }
 .about-stream li::before { content: "·"; display: inline-block; width: 1em; color: var(--red); }
@@ -147,7 +146,7 @@ footer a { color: #f2b19b; }
   .article-navigation strong { font-size: 15px; }
   .about-workstreams { display: block; padding: 42px 22px; }
   .about-section-label { margin-bottom: 24px; }
-  .about-stream { grid-template-columns: 42px minmax(0, 1fr); gap: 15px; padding: 24px 0; }
+  .about-stream { padding: 24px 0; }
   .about-stream h3 { font-size: 23px; }
   .about-stream p { font-size: 15px; }
   .archive-content { padding: 28px 22px 58px; }

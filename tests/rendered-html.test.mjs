@@ -25,6 +25,8 @@ async function htmlFiles(directory) {
 test("exports the deployed homepage metadata and content", async () => {
   const html = await page("index.html");
   assert.match(html, /<title>Finikz｜非你可思<\/title>/i);
+  assert.match(html, /AI, CULTURE &amp; STRATEGY/);
+  assert.doesNotMatch(html, /AI, STRATEGY &amp; CULTURE/);
   assert.match(html, /WORKSTREAMS/);
   assert.match(html, /智神AI/);
   assert.ok(html.includes("我的译作"));

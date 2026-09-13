@@ -22,14 +22,16 @@ async function htmlFiles(directory) {
   return nested.flat();
 }
 
-test("loads the AdSense library once from the root layout", async () => {
+test("renders the AdSense verification snippet in the document head", async () => {
   const routes = ["index.html", "about/index.html", "en/index.html", "en/about/index.html"];
   for (const route of routes) {
     const html = await page(route);
-    const loaders = html.match(/self\.__next_s[^<]*adsbygoogle\.js[^<]*/g) || [];
-    assert.equal(loaders.length, 1, `${route} should queue one AdSense loader`);
-    assert.match(loaders[0], /"async":true/);
-    assert.match(loaders[0], /"crossOrigin":"anonymous"/);
+    const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? "";
+    const scriptTags = head.match(/<script\b[^>]*>[\s\S]*?<\/script>/gi) || [];
+    const loaders = scriptTags.filter((tag) => tag.includes("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346776141251301"));
+    assert.equal(loaders.length, 1, `${route} should contain one AdSense script in <head>`);
+    assert.match(loaders[0], /\basync(?:=""|\s|>)/i);
+    assert.match(loaders[0], /\bcrossorigin="anonymous"/i);
   }
 });
 

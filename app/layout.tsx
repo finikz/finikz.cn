@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { LanguagePreference } from "@/components/LanguagePreference";
 import "./globals.css";
@@ -21,5 +20,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="zh-CN"><body><Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346776141251301" crossOrigin="anonymous" strategy="beforeInteractive" />{children}<LanguagePreference /><GoogleAnalytics /></body></html>;
+  return <html lang="zh-CN"><head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346776141251301" crossOrigin="anonymous"></script></head><body>{children}<LanguagePreference /><GoogleAnalytics /></body></html>;
 }

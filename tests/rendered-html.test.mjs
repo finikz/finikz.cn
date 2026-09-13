@@ -22,6 +22,17 @@ async function htmlFiles(directory) {
   return nested.flat();
 }
 
+test("loads the AdSense library once from the root layout", async () => {
+  const routes = ["index.html", "about/index.html", "en/index.html", "en/about/index.html"];
+  for (const route of routes) {
+    const html = await page(route);
+    const loaders = html.match(/self\.__next_s[^<]*adsbygoogle\.js[^<]*/g) || [];
+    assert.equal(loaders.length, 1, `${route} should queue one AdSense loader`);
+    assert.match(loaders[0], /"async":true/);
+    assert.match(loaders[0], /"crossOrigin":"anonymous"/);
+  }
+});
+
 test("exports the deployed homepage metadata and content", async () => {
   const html = await page("index.html");
   assert.match(html, /<title>Finikz｜非你可思<\/title>/i);

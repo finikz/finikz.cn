@@ -20,8 +20,8 @@ export default function SiteNav({ active, home = false, locale = "zh", languageH
         <span className="brand-subtitle">AI, CULTURE &amp; STRATEGY</span>
       </Link>
       <div className="nav-links">
-        <Link className={active === "works" ? "active" : undefined} href={`${root}/works`}>Works</Link>
-        <Link className={active === "notes" ? "active" : undefined} href="/articles" hrefLang={english ? "zh-CN" : undefined}>{english ? "Writing · 中文" : "Notes"}</Link>
+        <Link className={active === "works" ? "active" : undefined} href={`${root}/works`}>{english ? "Works" : "译作"}</Link>
+        <Link className={active === "notes" ? "active" : undefined} href="/articles" hrefLang={english ? "zh-CN" : undefined}>{english ? "Notes" : "写作"}</Link>
         <LanguageSwitch href={switchHref} locale={english ? "zh" : "en"}>{english ? "中" : "EN"}</LanguageSwitch>
       </div>
     </nav>

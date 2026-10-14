@@ -6,13 +6,18 @@ import remarkGfm from "remark-gfm";
 import { articles } from "@/lib/articles";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
+import { languageAlternates } from "@/lib/i18n";
 
 export function generateStaticParams() { return articles.map((article) => ({ slug: article.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const article = articles.find((item) => item.slug === slug);
-  return article ? { title: `${article.title}｜Finikz`, description: `${article.collection} · ${article.date}` } : {};
+  return article ? {
+    title: `${article.title}｜Finikz`,
+    description: `${article.collection} · ${article.date}`,
+    alternates: { canonical: `/articles/${article.slug}/`, languages: languageAlternates(`/articles/${article.slug}/`) },
+  } : {};
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -23,8 +28,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const articleIndex = chronologicalArticles.findIndex((item) => item.slug === article.slug);
   const previousArticle = chronologicalArticles[articleIndex - 1];
   const nextArticle = chronologicalArticles[articleIndex + 1];
-  return <main className="article-page">
-    <SiteNav active="notes" />
+  return <main className="article-page" lang="zh-CN">
+    <SiteNav active="notes" path={`/articles/${article.slug}/`} />
     <article className="article-shell">
       <header className="article-header"><p className="eyebrow"><span /> {article.collection.toUpperCase()}</p><h1>{article.title}</h1><time>{article.date}</time>{article.sourceUrl && <a className="source-link" href={article.sourceUrl} target="_blank" rel="noreferrer">查看原始发布 ↗</a>}</header>
       <div className="article-body"><ReactMarkdown remarkPlugins={[remarkGfm]}>{article.body}</ReactMarkdown></div>

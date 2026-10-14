@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   description: "Privacy Policy and Cookie information for finikz.cn.",
   alternates: {
     canonical: "/en/privacy/",
-    languages: { "zh-CN": "/privacy/", en: "/en/privacy/" },
+    languages: { "zh-CN": "/privacy/", en: "/en/privacy/", fr: "/fr/privacy/" },
   },
 };
 
 export default function EnglishPrivacyPage() {
   return (
     <main className="legal-page english-page" lang="en">
-      <SiteNav locale="en" languageHref="/privacy/" />
+      <SiteNav locale="en" path="/privacy/" />
       <article className="legal-content">
         <header><p className="eyebrow">PRIVACY POLICY</p><h1>Privacy Policy</h1><p>Last updated: August 24, 2026</p></header>
         <p>finikz.cn (the “Site”) is operated by Zhang Fengming (Finikz). This policy explains what visitor data may be processed, why it is processed and what choices you have.</p>

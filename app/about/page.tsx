@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "张凤鸣 Finikz：企业 AI 与营销战略顾问、跨文化内容创作者。",
   alternates: {
     canonical: "/about/",
-    languages: { "zh-CN": "/about/", en: "/en/about/" },
+    languages: { "zh-CN": "/about/", en: "/en/about/", fr: "/fr/about/" },
   },
 };
 
@@ -51,13 +51,13 @@ const workstreams = [
 const trilogyWorks = works.filter((work) => work.group === "酒神三部曲");
 
 type AboutPageContentProps = {
-  languageHref?: string;
+  path?: string;
 };
 
-export function AboutPageContent({ languageHref = "/en/about/" }: AboutPageContentProps) {
+export function AboutPageContent({ path = "/about/" }: AboutPageContentProps) {
   return (
-    <main className="about-page">
-      <SiteNav active="about" languageHref={languageHref} />
+    <main className="about-page" lang="zh-CN">
+      <SiteNav active="about" path={path} />
 
       <header className="page-hero about-hero">
         <div className="about-hero-copy">

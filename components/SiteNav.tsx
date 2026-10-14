@@ -1,28 +1,35 @@
 import Link from "next/link";
 import { LanguageSwitch } from "@/components/LanguagePreference";
+import { localizedPath, type Locale } from "@/lib/i18n";
 
 type SiteNavProps = {
   active?: "about" | "works" | "notes";
   home?: boolean;
-  locale?: "zh" | "en";
-  languageHref?: string;
+  locale?: Locale;
+  path?: string;
 };
 
-export default function SiteNav({ active, home = false, locale = "zh", languageHref }: SiteNavProps) {
-  const english = locale === "en";
-  const root = english ? "/en" : "";
-  const switchHref = languageHref ?? (english ? "/" : "/en/");
+const navigationLabels: Record<Locale, { aria: string; works: string; articles: string }> = {
+  zh: { aria: "主导航", works: "作品", articles: "文章" },
+  en: { aria: "Main navigation", works: "Works", articles: "Articles" },
+  fr: { aria: "Navigation principale", works: "Œuvres", articles: "Articles" },
+};
+
+export default function SiteNav({ active, home = false, locale = "zh", path }: SiteNavProps) {
+  const basePath = locale === "zh" ? "" : `/${locale}`;
+  const languagePath = path ?? (active === "works" ? "/works/" : active === "notes" ? "/articles/" : "/about/");
+  const labels = navigationLabels[locale];
 
   return (
-    <nav className="nav" aria-label={english ? "Main navigation" : "主导航"}>
-      <Link className="brand" href={home ? "#top" : `${root}/`}>
+    <nav className="nav" aria-label={labels.aria} lang={locale === "zh" ? "zh-CN" : locale}>
+      <Link className="brand" href={home ? "#top" : localizedPath(locale, "/")}>
         FINIKZ
         <span className="brand-subtitle">AI, CULTURE &amp; STRATEGY</span>
       </Link>
       <div className="nav-links">
-        <Link className={active === "works" ? "active" : undefined} href={`${root}/works`}>{english ? "Works" : "作品"}</Link>
-        <Link className={active === "notes" ? "active" : undefined} href="/articles" hrefLang={english ? "zh-CN" : undefined}>{english ? "Articles" : "文章"}</Link>
-        <LanguageSwitch href={switchHref} locale={english ? "zh" : "en"}>{english ? "中" : "EN"}</LanguageSwitch>
+        <Link className={active === "works" ? "active" : undefined} href={`${basePath}/works/`}>{labels.works}</Link>
+        <Link className={active === "notes" ? "active" : undefined} href={localizedPath(locale, "/articles/")}>{labels.articles}</Link>
+        <LanguageSwitch locale={locale} path={languagePath} />
       </div>
     </nav>
   );

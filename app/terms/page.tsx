@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   description: "访问和使用 finikz.cn 时适用的条款。",
   alternates: {
     canonical: "/terms/",
-    languages: { "zh-CN": "/terms/", en: "/en/terms/" },
+    languages: { "zh-CN": "/terms/", en: "/en/terms/", fr: "/fr/terms/" },
   },
 };
 
 export default function TermsPage() {
   return (
-    <main className="legal-page">
-      <SiteNav languageHref="/en/terms/" />
+    <main className="legal-page" lang="zh-CN">
+      <SiteNav path="/terms/" />
       <article className="legal-content">
         <header><p className="eyebrow">TERMS OF USE</p><h1>服务条款</h1><p>更新日期：2026 年 8 月 18 日</p></header>
         <p>欢迎访问 finikz.cn。继续浏览或使用本网站，即表示你同意以下条款。</p>

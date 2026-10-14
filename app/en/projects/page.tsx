@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Finikz's work across enterprise AI, marketing strategy and cross-cultural content.",
   alternates: {
     canonical: "/en/projects/",
-    languages: { "zh-CN": "/projects/", en: "/en/projects/" },
+    languages: { "zh-CN": "/projects/", en: "/en/projects/", fr: "/fr/projects/" },
   },
 };
 
@@ -21,7 +21,7 @@ const work = [
 export default function EnglishProjectsPage() {
   return (
     <main className="projects-page english-page" lang="en">
-      <SiteNav locale="en" languageHref="/projects/" />
+      <SiteNav locale="en" path="/projects/" />
       <header className="page-hero"><p className="eyebrow">WORK / IN PRACTICE</p><h1>Turn Experience<br /><em>into Systems.</em></h1><p>Enterprise AI, marketing strategy and content are not separate services. Together, they form a long-term capability that connects judgment with execution.</p></header>
       <section className="project-list">{work.map((item) => <article className="project-row" key={item.no}><span>{item.no}</span><h2>{item.title}</h2><p>{item.text}{item.link && <> <Link className="work-link" href={item.link}>Translation Works ↗</Link></>}</p><b>WORKSTREAM</b></article>)}</section>
       <SiteFooter locale="en" />

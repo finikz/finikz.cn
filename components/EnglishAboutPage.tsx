@@ -37,13 +37,13 @@ const workstreams = [
 const trilogyWorks = englishWorks.filter((work) => work.englishGroup === "The Dionysian Trilogy");
 
 type EnglishAboutPageProps = {
-  languageHref: string;
+  path: string;
 };
 
-export default function EnglishAboutPage({ languageHref }: EnglishAboutPageProps) {
+export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
   return (
     <main className="about-page english-page" lang="en">
-      <SiteNav active="about" locale="en" languageHref={languageHref} />
+      <SiteNav active="about" locale="en" path={path} />
 
       <header className="page-hero about-hero">
         <div className="about-hero-copy">
@@ -83,8 +83,8 @@ export default function EnglishAboutPage({ languageHref }: EnglishAboutPageProps
       <section className="about-showcase about-writing" aria-labelledby="en-writing-title">
         <div className="about-section-label"><p className="eyebrow">WRITING IN CHINESE</p><h2 id="en-writing-title">Selected Writing</h2></div>
         <div className="about-showcase-content">
-          <div className="about-writing-list"><div className="about-writing-note"><p>I write about AI adoption, culture, translation and the systems that connect them. My articles are currently published in Chinese.</p></div></div>
-          <Link className="about-more-link" href="/articles" hrefLang="zh-CN">Read in Chinese ↗</Link>
+          <div className="about-writing-list"><div className="about-writing-note"><p>I write about AI adoption, culture, translation and the systems that connect them. Browse selected writing in English.</p></div></div>
+          <Link className="about-more-link" href="/en/articles/">Read the articles ↗</Link>
         </div>
       </section>
 
@@ -95,11 +95,11 @@ export default function EnglishAboutPage({ languageHref }: EnglishAboutPageProps
           <p className="placeholder-copy">Enterprise AI and marketing strategy / Global brand and cross-cultural content / Arts and culture translation / Thoughtful interdisciplinary projects</p>
           <a href="mailto:mail@finikz.com">Email　mail@finikz.com</a>
           <div className="social-links">
-            <a href="https://mp.weixin.qq.com/mp/qrcode?scene=10000005&amp;size=102&amp;__biz=MjM5MzU0OTgyMw==&amp;mid=2652370389&amp;idx=1&amp;sn=f8a4a7adf5aee2d4d476fe52750ef66d&amp;send_time=" target="_blank" rel="noreferrer"><i className="social-icon wechat">微</i>WeChat: 非你可思</a>
-            <a href="https://www.douban.com/people/phoenixZ/" target="_blank" rel="noreferrer"><i className="social-icon douban">豆</i>Douban</a>
+            <a href="https://mp.weixin.qq.com/mp/qrcode?scene=10000005&amp;size=102&amp;__biz=MjM5MzU0OTgyMw==&amp;mid=2652370389&amp;idx=1&amp;sn=f8a4a7adf5aee2d4d476fe52750ef66d&amp;send_time=" target="_blank" rel="noreferrer"><i className="social-icon wechat">W</i>WeChat: Fei Ni Ke Si</a>
+            <a href="https://www.douban.com/people/phoenixZ/" target="_blank" rel="noreferrer"><i className="social-icon douban">D</i>Douban</a>
             <a href="https://instagram.com/finikz" target="_blank" rel="noreferrer"><i className="social-icon instagram">◎</i>Instagram</a>
             <a href="https://twitter.com/finikz" target="_blank" rel="noreferrer"><i className="social-icon x">𝕏</i>X / Twitter</a>
-            <a href="http://www.weibo.com/finikz" target="_blank" rel="noreferrer"><i className="social-icon weibo">博</i>Weibo</a>
+            <a href="http://www.weibo.com/finikz" target="_blank" rel="noreferrer"><i className="social-icon weibo">W</i>Weibo</a>
             <a href="https://www.linkedin.com/in/finikz" target="_blank" rel="noreferrer"><i className="social-icon linkedin">in</i>LinkedIn</a>
           </div>
         </div>

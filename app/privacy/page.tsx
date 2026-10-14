@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   description: "finikz.cn 的隐私政策与 Cookie 使用说明。",
   alternates: {
     canonical: "/privacy/",
-    languages: { "zh-CN": "/privacy/", en: "/en/privacy/" },
+    languages: { "zh-CN": "/privacy/", en: "/en/privacy/", fr: "/fr/privacy/" },
   },
 };
 
 export default function PrivacyPage() {
   return (
-    <main className="legal-page">
-      <SiteNav languageHref="/en/privacy/" />
+    <main className="legal-page" lang="zh-CN">
+      <SiteNav path="/privacy/" />
       <article className="legal-content">
         <header><p className="eyebrow">PRIVACY POLICY</p><h1>隐私政策</h1><p>更新日期：2026 年 8 月 24 日</p></header>
         <p>finikz.cn（以下简称“本网站”）由张凤鸣（Finikz）运营。本政策说明本网站会处理哪些访问数据、为何处理，以及你可以如何作出选择。</p>

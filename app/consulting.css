@@ -267,6 +267,10 @@ footer a { color: #f2b19b; }
 .about-writing-item:hover h3 { color: var(--red); }
 
 .english-page { font-family: Georgia, "Times New Roman", serif; }
+.french-page { font-family: Georgia, "Times New Roman", serif; }
+.language-switcher { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.nav-links .language-switcher a { padding: 0; color: var(--muted); font-size: 10px; }
+.nav-links .language-switcher a.active { color: var(--red); font-weight: 700; }
 .english-page .about-section-label h2 { line-height: 1.08; letter-spacing: -.035em; }
 .english-page .about-contact .placeholder-copy { max-width: 760px; white-space: normal; }
 .english-page .trilogy-hero h1 { font-size: clamp(60px, 7.2vw, 110px); letter-spacing: -.065em; }

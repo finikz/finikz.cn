@@ -8,28 +8,28 @@ const workstreams = [
   {
     title: "Enterprise AI & Marketing Strategy",
     points: [
-      "Co-founder of Pallas AI, advising businesses on practical AI adoption and marketing strategy.",
-      "Co-founded a content marketing company whose clients included Tencent Group Communications and the China International Fair for Investment & Trade.",
-      "Took a cross-border e-commerce product into Amazon’s top ten in its category.",
-      "Managed accounts with more than one million followers and helped a new-media network gain 300,000 followers in three months.",
+      "I co-founded Pallas AI and advise businesses on practical AI adoption and marketing strategy.",
+      "I co-founded a content marketing company whose clients included Tencent Group Communications and the China International Fair for Investment & Trade.",
+      "I took a cross-border e-commerce product into the top ten in its Amazon category.",
+      "I managed accounts with more than one million followers and helped a new-media network gain 300,000 followers in three months.",
     ],
   },
   {
     title: "Cross-Cultural Content",
     points: [
-      "Translated exhibitions and catalogues for the West Bund Museum × Centre Pompidou project, including Kandinsky, The Voice of Things and Paris Architecture.",
-      "Worked for several years at a French trading company, handling business communications and institutional writing across Chinese, English and French.",
-      "Translated more than a dozen books and guided content development for brands, including designer-toy and personal brands.",
-      "Former lead writer at Qiyu Film, where several articles exceeded 100,000 views; also contributed a column to Fengshang Weekly.",
+      "I translated exhibitions and catalogues for the West Bund Museum × Centre Pompidou project, including Kandinsky, The Voice of Things and Paris Architecture.",
+      "I worked for several years at a French trading company, handling business communications and institutional writing across Chinese, English and French.",
+      "I translated more than a dozen books and guided content development for brands, including designer-toy and personal brands.",
+      "I was lead writer at Qiyu Film, where several of my articles exceeded 100,000 views; I also contributed a column to Fengshang Weekly.",
     ],
   },
   {
     title: "Organizations & Communities",
     points: [
-      "Deputy Secretary-General of the Guangzhou Alumni Association of Sun Yat-sen University, overseeing communications.",
-      "Winner of Sun Yat-sen University’s inaugural English Singing Competition and a top-ten finalist in the 20th Venus Campus Singing Competition.",
-      "Co-founder of Jiuwei Craft Beer and the Jiuwei Art Alliance.",
-      "Founded Jiǔwō live house and presented performances by bands including Wutiaoren and Toy Captain.",
+      "I serve as Deputy Secretary-General of the Guangzhou Alumni Association of Sun Yat-sen University, overseeing communications.",
+      "I won Sun Yat-sen University’s inaugural English Singing Competition and was a top-ten finalist in the 20th Venus Campus Singing Competition.",
+      "I co-founded Jiuwei Craft Beer and the Jiuwei Art Alliance.",
+      "I founded Jiǔwō live house and presented performances by bands including Wutiaoren and Toy Captain.",
     ],
   },
 ];
@@ -48,9 +48,9 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
       <header className="page-hero about-hero">
         <div className="about-hero-copy">
           <h1><em>Finikz</em></h1>
-          <p><strong>AI &amp; Marketing Strategy Consultant | Cross-Cultural Content Creator</strong><br />Zhang Fengming (Finikz) graduated in French from Sun Yat-sen University. Working across Chinese, English and French, he brings together AI, cultural insight, business strategy and editorial craft to build systems that compound over time.</p>
+          <p><strong>AI &amp; Marketing Strategy Consultant | Cross-Cultural Content Creator</strong><br />I graduated with a degree in French from Sun Yat-sen University. Working across Chinese, English and French, I bring together AI, cultural insight, business strategy and editorial craft to build systems that compound over time.</p>
         </div>
-        <aside className="hero-meta">Enterprise AI Strategy / Marketing Strategy<br />Cross-Cultural Content / Chinese-English-French Translation<br />Deputy Secretary-General, SYSU Guangzhou Alumni Association<br />Co-founder, Jiuwei Craft Beer &amp; Jiuwei Art Alliance</aside>
+        <aside className="hero-meta">Enterprise AI Strategy / Marketing Strategy<br />Cross-Cultural Content / Chinese-English-French Translation<br />I serve as Deputy Secretary-General of the SYSU Guangzhou Alumni Association<br />I co-founded Jiuwei Craft Beer &amp; Jiuwei Art Alliance</aside>
       </header>
 
       <section className="about-workstreams" aria-labelledby="en-workstreams-title">

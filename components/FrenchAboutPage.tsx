@@ -8,28 +8,28 @@ const workstreams = [
   {
     title: "Stratégie d'entreprise, IA et marketing",
     points: [
-      "Co-fondateur de Pallas AI, où il accompagne les entreprises dans l'adoption concrète de l'IA et leur stratégie marketing.",
-      "A cofondé une agence de contenu dont les clients comptaient notamment Tencent Group Communications et la Foire internationale de l'investissement et du commerce de Chine.",
-      "A porté un produit de commerce transfrontalier parmi les dix premiers de sa catégorie sur Amazon.",
-      "A piloté des comptes suivis par plus d'un million de personnes et aidé un réseau de médias à gagner 300 000 abonnés en trois mois.",
+      "J'ai cofondé Pallas AI, où j'accompagne les entreprises dans l'adoption concrète de l'IA et leur stratégie marketing.",
+      "J'ai cofondé une agence de contenu dont les clients comptaient notamment Tencent Group Communications et la Foire internationale de l'investissement et du commerce de Chine.",
+      "J'ai porté un produit de commerce transfrontalier parmi les dix premiers de sa catégorie sur Amazon.",
+      "J'ai piloté des comptes suivis par plus d'un million de personnes et aidé un réseau de médias à gagner 300 000 abonnés en trois mois.",
     ],
   },
   {
     title: "Création de contenu interculturel",
     points: [
-      "A traduit des expositions et des catalogues pour le projet commun du Musée West Bund et du Centre Pompidou, notamment autour de Kandinsky, de la voix des choses et de l'architecture parisienne.",
-      "A travaillé plusieurs années dans une entreprise française, en assurant la communication commerciale et institutionnelle en chinois, en anglais et en français.",
-      "A traduit plus d'une dizaine de livres et accompagné la production éditoriale de marques, notamment dans le jouet de créateur et les marques personnelles.",
-      "Ancien rédacteur en chef chez Qiyu Film, il y a signé plusieurs articles dépassant les 100 000 vues et a également tenu une chronique pour Fengshang Weekly.",
+      "J'ai traduit des expositions et des catalogues pour le projet commun du Musée West Bund et du Centre Pompidou, notamment autour de Kandinsky, de La Voix des choses et de l'architecture parisienne.",
+      "J'ai travaillé plusieurs années dans une entreprise française, en assurant la communication commerciale et institutionnelle en chinois, en anglais et en français.",
+      "J'ai traduit plus d'une dizaine de livres et accompagné la production éditoriale de marques, notamment dans le jouet de créateur et les marques personnelles.",
+      "J'ai été rédacteur en chef chez Qiyu Film ; plusieurs de mes articles y ont dépassé les 100 000 vues, et j'ai également tenu une chronique pour Fengshang Weekly.",
     ],
   },
   {
     title: "Organisations et communautés",
     points: [
-      "Secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou, chargé de la communication.",
-      "Lauréat du premier concours de chant en anglais de l'Université Sun Yat-sen et finaliste parmi les dix premiers du 20e concours musical Venus du campus.",
-      "Co-fondateur de Jiuwei Craft Beer et de l'Alliance artistique Jiuwei.",
-      "A fondé la salle de concert Jiǔwō, où se sont produits des groupes comme Wutiaoren et Toy Captain.",
+      "Je suis secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou et m'occupe de sa communication.",
+      "J'ai remporté le premier concours de chant en anglais de l'Université Sun Yat-sen et figuré parmi les dix finalistes du 20e concours musical Venus du campus.",
+      "J'ai cofondé Jiuwei Craft Beer et l'Alliance artistique Jiuwei.",
+      "J'ai fondé la salle de concert Jiǔwō, où se sont produits des groupes comme Wutiaoren et Toy Captain.",
     ],
   },
 ];
@@ -43,9 +43,9 @@ export default function FrenchAboutPage({ path = "/about/" }: { path?: string })
       <header className="page-hero about-hero">
         <div className="about-hero-copy">
           <h1><em>Finikz</em></h1>
-          <p><strong>Conseil en stratégie IA et marketing | Création de contenu interculturel</strong><br />Zhang Fengming (Finikz), diplômé en français de l'Université Sun Yat-sen, travaille en chinois, en anglais et en français. Il associe l'IA, la compréhension culturelle, la stratégie d'entreprise et l'écriture pour bâtir des systèmes dont les effets se renforcent dans la durée.</p>
+          <p><strong>Conseil en stratégie IA et marketing | Création de contenu interculturel</strong><br />Je suis diplômé en études françaises de l'Université Sun Yat-sen. Je travaille en chinois, en anglais et en français, et j'associe l'IA, la compréhension culturelle, la stratégie d'entreprise et le savoir-faire éditorial pour bâtir des systèmes dont les effets se renforcent dans la durée.</p>
         </div>
-        <aside className="hero-meta">Stratégie IA / Stratégie marketing<br />Contenu interculturel / Traduction trilingue<br />Secrétaire général adjoint, Association des anciens de l'Université Sun Yat-sen à Guangzhou<br />Co-fondateur de Jiuwei Craft Beer et de l'Alliance artistique Jiuwei</aside>
+        <aside className="hero-meta">Stratégie IA / Stratégie marketing<br />Contenu interculturel / Traduction trilingue<br />Je suis secrétaire général adjoint de l'Association des anciens de l'Université Sun Yat-sen à Guangzhou<br />J'ai cofondé Jiuwei Craft Beer et l'Alliance artistique Jiuwei</aside>
       </header>
 
       <section className="about-workstreams" aria-labelledby="fr-workstreams-title">

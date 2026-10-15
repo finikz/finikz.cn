@@ -8,28 +8,28 @@ const workstreams = [
   {
     title: "Enterprise AI & Marketing Strategy",
     points: [
-      "I co-founded Pallas AI and advise businesses on practical AI adoption and marketing strategy.",
-      "I co-founded a content marketing company whose clients included Tencent Group Communications and the China International Fair for Investment & Trade.",
-      "I took a cross-border e-commerce product into the top ten in its Amazon category.",
-      "I managed accounts with more than one million followers and helped a new-media network gain 300,000 followers in three months.",
+      "Co-founded Pallas AI, advising businesses on practical AI adoption and marketing strategy.",
+      "Co-founded a content marketing company whose clients included Tencent Group Communications and the China International Fair for Investment & Trade.",
+      "Brought a cross-border e-commerce product into the top ten in its Amazon category.",
+      "Managed accounts with more than one million followers; helped a new-media network gain 300,000 followers in three months.",
     ],
   },
   {
     title: "Cross-Cultural Content",
     points: [
-      "I translated exhibitions and catalogues for the West Bund Museum × Centre Pompidou project, including Kandinsky, The Voice of Things and Paris Architecture.",
-      "I worked for several years at a French trading company, handling business communications and institutional writing across Chinese, English and French.",
-      "I translated more than a dozen books and guided content development for brands, including designer-toy and personal brands.",
-      "I was lead writer at Qiyu Film, where several of my articles exceeded 100,000 views; I also contributed a column to Fengshang Weekly.",
+      "Translated exhibitions and catalogues for the West Bund Museum × Centre Pompidou project, including Kandinsky, The Voice of Things and Paris Architecture.",
+      "Several years at a French trading company, handling business communications and institutional writing across Chinese, English and French.",
+      "Translated more than a dozen books and shaped editorial content for brands, including designer-toy and personal brands.",
+      "Lead writer at Qiyu Film, where several articles drew more than 100,000 views; also a columnist for Fengshang Weekly.",
     ],
   },
   {
     title: "Organizations & Communities",
     points: [
-      "I serve as Deputy Secretary-General of the Guangzhou Alumni Association of Sun Yat-sen University, overseeing communications.",
-      "I won Sun Yat-sen University’s inaugural English Singing Competition and was a top-ten finalist in the 20th Venus Campus Singing Competition.",
-      "I co-founded Jiuwei Craft Beer and the Jiuwei Art Alliance.",
-      "I founded Jiǔwō live house and presented performances by bands including Wutiaoren and Toy Captain.",
+      "Deputy Secretary-General of the Guangzhou Alumni Association of Sun Yat-sen University, overseeing communications.",
+      "Winner of Sun Yat-sen University’s inaugural English Singing Competition; top-ten finalist in the 20th Venus Campus Singing Competition.",
+      "Co-founded Jiuwei Craft Beer and the Jiuwei Art Alliance.",
+      "Founded Jiǔwō, a live-music venue that hosted bands including Wutiaoren and Toy Captain.",
     ],
   },
 ];
@@ -48,13 +48,13 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
       <header className="page-hero about-hero">
         <div className="about-hero-copy">
           <h1><em>Finikz</em></h1>
-          <p><strong>AI &amp; Marketing Strategy Consultant | Cross-Cultural Content Creator</strong><br />I graduated with a degree in French from Sun Yat-sen University. Working across Chinese, English and French, I bring together AI, cultural insight, business strategy and editorial craft to build systems that compound over time.</p>
+          <p><strong>AI &amp; Marketing Strategy Consultant | Cross-Cultural Content Creator</strong><br />With a degree in French from Sun Yat-sen University, I work across Chinese, English and French, bringing together AI, cultural insight, business strategy and editorial craft to build systems that compound over time.</p>
         </div>
-        <aside className="hero-meta">Enterprise AI Strategy / Marketing Strategy<br />Cross-Cultural Content / Chinese-English-French Translation<br />I serve as Deputy Secretary-General of the SYSU Guangzhou Alumni Association<br />I co-founded Jiuwei Craft Beer &amp; Jiuwei Art Alliance</aside>
+        <aside className="hero-meta">Enterprise AI &amp; Marketing Strategy<br />Cross-Cultural Content &amp; Chinese-English-French Translation<br />Deputy Secretary-General, SYSU Guangzhou Alumni Association<br />Co-founder, Jiuwei Craft Beer &amp; Jiuwei Art Alliance</aside>
       </header>
 
       <section className="about-workstreams" aria-labelledby="en-workstreams-title">
-        <div className="about-section-label"><p className="eyebrow">WORKSTREAMS</p><h2 id="en-workstreams-title">What I Do</h2></div>
+        <div className="about-section-label"><p className="eyebrow">FOCUS AREAS</p><h2 id="en-workstreams-title">What I Do</h2></div>
         <div className="about-stream-list">
           {workstreams.map((item) => (
             <article className="about-stream" key={item.title}>
@@ -65,7 +65,7 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
       </section>
 
       <section className="about-showcase about-translations" aria-labelledby="en-translations-title">
-        <div className="about-section-label"><p className="eyebrow">MY WORKS</p><h2 id="en-translations-title">Selected Translations</h2></div>
+        <div className="about-section-label"><p className="eyebrow">BOOK TRANSLATIONS</p><h2 id="en-translations-title">Selected Translations</h2></div>
         <div className="about-showcase-content">
           <div className="about-work-cards">
             {trilogyWorks.map((work) => <article className="about-work-card" key={work.url}>
@@ -76,14 +76,14 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
               {work.originalTitle && <p className="work-original-title">{work.originalTitle}</p>}
             </article>)}
           </div>
-          <Link className="about-more-link" href="/en/works">View More ↗</Link>
+          <Link className="about-more-link" href="/en/works">View all translations ↗</Link>
         </div>
       </section>
 
       <section className="about-showcase about-writing" aria-labelledby="en-writing-title">
-        <div className="about-section-label"><p className="eyebrow">WRITING IN CHINESE</p><h2 id="en-writing-title">Selected Writing</h2></div>
+        <div className="about-section-label"><p className="eyebrow">CHINESE-LANGUAGE WRITING</p><h2 id="en-writing-title">Selected Writing</h2></div>
         <div className="about-showcase-content">
-          <div className="about-writing-list"><div className="about-writing-note"><p>I write about AI adoption, culture, translation and the systems that connect them. Browse selected writing in English.</p></div></div>
+          <div className="about-writing-list"><div className="about-writing-note"><p>Essays on AI adoption, culture and translation—and on the systems that connect them. A selection of pieces in English.</p></div></div>
           <Link className="about-more-link" href="/en/articles/">Read the articles ↗</Link>
         </div>
       </section>
@@ -91,9 +91,9 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
       <section className="about-content" id="contact">
         <div className="about-contact">
           <p className="eyebrow">WORK WITH ME</p>
-          <h2>Let’s Work Together</h2>
-          <p className="placeholder-copy">Enterprise AI and marketing strategy / Global brand and cross-cultural content / Arts and culture translation / Thoughtful interdisciplinary projects</p>
-          <a href="mailto:mail@finikz.com">Email　mail@finikz.com</a>
+          <h2>Let’s Talk</h2>
+          <p className="placeholder-copy">Enterprise AI and marketing strategy · Global brand development and cross-cultural content · Arts and cultural translation · Interdisciplinary projects</p>
+          <a href="mailto:mail@finikz.com">Email: mail@finikz.com</a>
           <div className="social-links">
             <a href="https://mp.weixin.qq.com/mp/qrcode?scene=10000005&amp;size=102&amp;__biz=MjM5MzU0OTgyMw==&amp;mid=2652370389&amp;idx=1&amp;sn=f8a4a7adf5aee2d4d476fe52750ef66d&amp;send_time=" target="_blank" rel="noreferrer"><i className="social-icon wechat">W</i>WeChat: Fei Ni Ke Si</a>
             <a href="https://www.douban.com/people/phoenixZ/" target="_blank" rel="noreferrer"><i className="social-icon douban">D</i>Douban</a>

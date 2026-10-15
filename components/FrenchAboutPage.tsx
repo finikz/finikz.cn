@@ -6,30 +6,30 @@ import { frenchWorks } from "@/lib/works";
 
 const workstreams = [
   {
-    title: "Stratégie d'entreprise, IA et marketing",
+    title: "Stratégie IA et marketing d'entreprise",
     points: [
-      "J'ai cofondé Pallas AI, où j'accompagne les entreprises dans l'adoption concrète de l'IA et leur stratégie marketing.",
-      "J'ai cofondé une agence de contenu dont les clients comptaient notamment Tencent Group Communications et la Foire internationale de l'investissement et du commerce de Chine.",
-      "J'ai porté un produit de commerce transfrontalier parmi les dix premiers de sa catégorie sur Amazon.",
-      "J'ai piloté des comptes suivis par plus d'un million de personnes et aidé un réseau de médias à gagner 300 000 abonnés en trois mois.",
+      "Cofondateur de Pallas AI ; conseil aux entreprises sur l'adoption concrète de l'IA et la définition de leur stratégie marketing.",
+      "Cofondateur d'une agence de marketing de contenu, qui comptait parmi ses clients Tencent Group Communications et la Foire internationale de l'investissement et du commerce de Chine.",
+      "Produit de commerce transfrontalier classé dans le top 10 de sa catégorie sur Amazon.",
+      "Pilotage de comptes suivis par plus d'un million d'abonnés ; contribution à la croissance d'un réseau de médias (+300 000 abonnés en trois mois).",
     ],
   },
   {
     title: "Création de contenu interculturel",
     points: [
-      "J'ai traduit des expositions et des catalogues pour le projet commun du Musée West Bund et du Centre Pompidou, notamment autour de Kandinsky, de La Voix des choses et de l'architecture parisienne.",
-      "J'ai travaillé plusieurs années dans une entreprise française, en assurant la communication commerciale et institutionnelle en chinois, en anglais et en français.",
-      "J'ai traduit plus d'une dizaine de livres et accompagné la production éditoriale de marques, notamment dans le jouet de créateur et les marques personnelles.",
-      "J'ai été rédacteur en chef chez Qiyu Film ; plusieurs de mes articles y ont dépassé les 100 000 vues, et j'ai également tenu une chronique pour Fengshang Weekly.",
+      "Traduction d'expositions et de catalogues pour le projet du West Bund Museum × Centre Pompidou, notamment autour de Kandinsky, de La Voix des choses et de l'architecture parisienne.",
+      "Plusieurs années au sein d'une société de négoce française, en charge de la communication commerciale et de la rédaction institutionnelle en chinois, anglais et français.",
+      "Plus d'une dizaine de livres traduits ; accompagnement éditorial de marques, notamment dans l'univers du jouet de créateur et des marques personnelles.",
+      "Rédacteur en chef chez Qiyu Film, où plusieurs articles ont dépassé les 100 000 vues ; chroniqueur pour Fengshang Weekly.",
     ],
   },
   {
     title: "Organisations et communautés",
     points: [
-      "Je suis secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou et m'occupe de sa communication.",
-      "J'ai remporté le premier concours de chant en anglais de l'Université Sun Yat-sen et figuré parmi les dix finalistes du 20e concours musical Venus du campus.",
-      "J'ai cofondé Jiuwei Craft Beer et l'Alliance artistique Jiuwei.",
-      "J'ai fondé la salle de concert Jiǔwō, où se sont produits des groupes comme Wutiaoren et Toy Captain.",
+      "Secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou, chargé de la communication.",
+      "Lauréat du premier concours de chant en anglais de l'Université Sun Yat-sen ; classé parmi les dix premiers du 20e concours de chant Venus du campus.",
+      "Cofondateur de Jiuwei Craft Beer et de l'Alliance artistique Jiuwei.",
+      "Fondateur de la salle de concert Jiǔwō, qui a accueilli des groupes comme Wutiaoren et Toy Captain.",
     ],
   },
 ];
@@ -43,9 +43,9 @@ export default function FrenchAboutPage({ path = "/about/" }: { path?: string })
       <header className="page-hero about-hero">
         <div className="about-hero-copy">
           <h1><em>Finikz</em></h1>
-          <p><strong>Conseil en stratégie IA et marketing | Création de contenu interculturel</strong><br />Je suis diplômé en études françaises de l'Université Sun Yat-sen. Je travaille en chinois, en anglais et en français, et j'associe l'IA, la compréhension culturelle, la stratégie d'entreprise et le savoir-faire éditorial pour bâtir des systèmes dont les effets se renforcent dans la durée.</p>
+          <p><strong>Consultant en stratégie IA et marketing | Créateur de contenu interculturel</strong><br />Titulaire d'un diplôme en études françaises de l'Université Sun Yat-sen, je travaille en chinois, en anglais et en français. À la croisée de l'IA, de la compréhension culturelle, de la stratégie d'entreprise et du travail éditorial, je conçois des systèmes dont les effets se renforcent dans la durée.</p>
         </div>
-        <aside className="hero-meta">Stratégie IA / Stratégie marketing<br />Contenu interculturel / Traduction trilingue<br />Je suis secrétaire général adjoint de l'Association des anciens de l'Université Sun Yat-sen à Guangzhou<br />J'ai cofondé Jiuwei Craft Beer et l'Alliance artistique Jiuwei</aside>
+        <aside className="hero-meta">Stratégie IA et marketing<br />Contenu interculturel et traduction en chinois, anglais et français<br />Secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou<br />Cofondateur de Jiuwei Craft Beer et de l'Alliance artistique Jiuwei</aside>
       </header>
 
       <section className="about-workstreams" aria-labelledby="fr-workstreams-title">
@@ -60,7 +60,7 @@ export default function FrenchAboutPage({ path = "/about/" }: { path?: string })
       </section>
 
       <section className="about-showcase about-translations" aria-labelledby="fr-translations-title">
-        <div className="about-section-label"><p className="eyebrow">MES TRADUCTIONS</p><h2 id="fr-translations-title">Quelques livres</h2></div>
+        <div className="about-section-label"><p className="eyebrow">MES TRADUCTIONS</p><h2 id="fr-translations-title">Quelques ouvrages traduits</h2></div>
         <div className="about-showcase-content">
           <div className="about-work-cards">
             {trilogyWorks.map((work) => <article className="about-work-card" key={work.url}>
@@ -77,7 +77,7 @@ export default function FrenchAboutPage({ path = "/about/" }: { path?: string })
       <section className="about-showcase about-writing" aria-labelledby="fr-writing-title">
         <div className="about-section-label"><p className="eyebrow">ÉCRITURE</p><h2 id="fr-writing-title">Articles et idées</h2></div>
         <div className="about-showcase-content">
-          <p className="about-writing-note">Des textes sur l'IA, la culture, la traduction et les systèmes qui les relient, désormais disponibles en anglais et en français.</p>
+          <p className="about-writing-note">Des articles sur l'IA, la culture et la traduction — ainsi que sur les systèmes qui les relient. Sélection disponible en anglais et en français.</p>
           <Link className="about-more-link" href="/fr/articles/">Lire les articles ↗</Link>
         </div>
       </section>
@@ -86,8 +86,8 @@ export default function FrenchAboutPage({ path = "/about/" }: { path?: string })
         <div className="about-contact">
           <p className="eyebrow">TRAVAILLONS ENSEMBLE</p>
           <h2>Parlons de votre projet</h2>
-          <p className="placeholder-copy">Stratégie IA et marketing / Développement international des marques et contenu interculturel / Traduction dans les domaines de l'art et de la culture / Projets transversaux</p>
-          <a href="mailto:mail@finikz.com">E-mail　mail@finikz.com</a>
+          <p className="placeholder-copy">Stratégie IA et marketing · Développement international des marques et contenu interculturel · Traduction dans les domaines artistiques et culturels · Projets interdisciplinaires</p>
+          <a href="mailto:mail@finikz.com">E-mail : mail@finikz.com</a>
           <div className="social-links">
             <a href="https://mp.weixin.qq.com/mp/qrcode?scene=10000005&amp;size=102&amp;__biz=MjM5MzU0OTgyMw==&amp;mid=2652370389&amp;idx=1&amp;sn=f8a4a7adf5aee2d4d476fe52750ef66d&amp;send_time=" target="_blank" rel="noreferrer"><i className="social-icon wechat">W</i>WeChat : Fei Ni Ke Si</a>
             <a href="https://www.douban.com/people/phoenixZ/" target="_blank" rel="noreferrer"><i className="social-icon douban">D</i>Douban</a>

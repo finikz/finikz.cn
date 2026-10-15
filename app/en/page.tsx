@@ -3,7 +3,7 @@ import EnglishAboutPage from "@/components/EnglishAboutPage";
 
 export const metadata: Metadata = {
   title: "Finikz | AI, Culture & Strategy",
-  description: "I work across Chinese, English and French as an AI and marketing strategy consultant, translator and cross-cultural content creator.",
+  description: "I work across Chinese, English and French, combining AI and marketing strategy with translation and cross-cultural content.",
   alternates: {
     canonical: "/en/",
     languages: { "zh-CN": "/", en: "/en/", fr: "/fr/" },

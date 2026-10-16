@@ -551,7 +551,7 @@ footer a { color: var(--site-gold); }
 .project-row > span { color: #356fa4; }
 
 body, body *, body *::before, body *::after {
-  font-family: Arial, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  font-family: "Avenir Next", "PingFang SC", "Microsoft YaHei", sans-serif !important;
 }
 
 .trilogy-page { background: var(--paper); color: var(--ink); }

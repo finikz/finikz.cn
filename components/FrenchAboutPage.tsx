@@ -28,7 +28,7 @@ const workstreams = [
     points: [
       "Secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou, chargé de la communication.",
       "Lauréat du premier concours de chant en anglais de l'Université Sun Yat-sen ; classé parmi les dix premiers du 20e concours de chant Venus du campus.",
-      "Cofondateur de Jiuwei Craft Beer et de l'Alliance artistique Jiuwei.",
+      "Cofondateur de Jumpwire Craft Beer et de l'Alliance artistique Jumpwire.",
       "Fondateur de la salle de concert Jiǔwō, qui a accueilli des groupes comme Wutiaoren et Toy Captain.",
     ],
   },
@@ -45,7 +45,7 @@ export default function FrenchAboutPage({ path = "/about/" }: { path?: string })
           <h1><em>Finikz</em></h1>
           <p><strong>Consultant en stratégie IA et marketing | Créateur de contenu interculturel</strong><br />Titulaire d'un diplôme en études françaises de l'Université Sun Yat-sen, je travaille en chinois, en anglais et en français. À la croisée de l'IA, de la compréhension culturelle, de la stratégie d'entreprise et du travail éditorial, je conçois des systèmes dont les effets se renforcent dans la durée.</p>
         </div>
-        <aside className="hero-meta">Stratégie IA et marketing<br />Contenu interculturel et traduction en chinois, anglais et français<br />Secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou<br />Cofondateur de Jiuwei Craft Beer et de l'Alliance artistique Jiuwei</aside>
+        <aside className="hero-meta">Stratégie IA et marketing<br />Contenu interculturel et traduction en chinois, anglais et français<br />Secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou<br />Cofondateur de Jumpwire Craft Beer et de l'Alliance artistique Jumpwire</aside>
       </header>
 
       <section className="about-workstreams" aria-labelledby="fr-workstreams-title">

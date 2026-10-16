@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const work = [
   { no: "01", title: "Enterprise AI & Marketing Strategy", text: "Co-founder of Pallas AI, advising businesses on practical AI adoption and marketing strategy. Previously co-founded a content marketing company whose clients included Tencent Group Communications and the China International Fair for Investment & Trade; took a cross-border e-commerce product into Amazon’s top ten in its category; and managed accounts with more than one million followers." },
   { no: "02", title: "Cross-Cultural Content", text: "Translated exhibitions and catalogues for the West Bund Museum × Centre Pompidou project. Worked for several years at a French trading company, handling business communications across Chinese, English and French. Translated more than a dozen books and guided content development for brands.", link: "/en/works" },
-  { no: "03", title: "Organizations & Communities", text: "Deputy Secretary-General of the Guangzhou Alumni Association of Sun Yat-sen University, overseeing communications; co-founder of Jiuwei Craft Beer and the Jiuwei Art Alliance; and founder of Jiǔwō live house, which presented performances by bands including Wutiaoren and Toy Captain." },
+  { no: "03", title: "Organizations & Communities", text: "Deputy Secretary-General of the Guangzhou Alumni Association of Sun Yat-sen University, overseeing communications; co-founder of Jumpwire Craft Beer and the Jumpwire Art Alliance; and founder of Jiǔwō live house, which presented performances by bands including Wutiaoren and Toy Captain." },
 ];
 
 export default function EnglishProjectsPage() {

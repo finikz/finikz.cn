@@ -28,7 +28,7 @@ const workstreams = [
     points: [
       "Deputy Secretary-General of the Guangzhou Alumni Association of Sun Yat-sen University, overseeing communications.",
       "Winner of Sun Yat-sen University’s inaugural English Singing Competition; top-ten finalist in the 20th Venus Campus Singing Competition.",
-      "Co-founded Jiuwei Craft Beer and the Jiuwei Art Alliance.",
+      "Co-founded Jumpwire Craft Beer and the Jumpwire Art Alliance.",
       "Founded Jiǔwō, a live-music venue that hosted bands including Wutiaoren and Toy Captain.",
     ],
   },
@@ -50,7 +50,7 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
           <h1><em>Finikz</em></h1>
           <p><strong>AI &amp; Marketing Strategy Consultant | Cross-Cultural Content Creator</strong><br />With a degree in French from Sun Yat-sen University, I work across Chinese, English and French, bringing together AI, cultural insight, business strategy and editorial craft to build systems that compound over time.</p>
         </div>
-        <aside className="hero-meta">Enterprise AI &amp; Marketing Strategy<br />Cross-Cultural Content &amp; Chinese-English-French Translation<br />Deputy Secretary-General, SYSU Guangzhou Alumni Association<br />Co-founder, Jiuwei Craft Beer &amp; Jiuwei Art Alliance</aside>
+        <aside className="hero-meta">Enterprise AI &amp; Marketing Strategy<br />Cross-Cultural Content &amp; Chinese-English-French Translation<br />Deputy Secretary-General, SYSU Guangzhou Alumni Association<br />Co-founder, Jumpwire Craft Beer &amp; Jumpwire Art Alliance</aside>
       </header>
 
       <section className="about-workstreams" aria-labelledby="en-workstreams-title">

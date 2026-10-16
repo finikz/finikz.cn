@@ -113,6 +113,7 @@ export function AboutPageContent({ path = "/about/" }: AboutPageContentProps) {
           <h2>欢迎合作</h2>
           <p className="placeholder-copy">企业 AI 与营销战略咨询 ／ 品牌出海与跨文化内容 ／ 文化艺术类翻译 ／ 有意思的跨界项目</p>
           <a href="mailto:mail@finikz.com">邮箱　mail@finikz.com</a>
+          <a href="https://finikz.com/" target="_blank" rel="noreferrer">公司网站 ↗</a>
           <div className="social-links">
             <a href="https://mp.weixin.qq.com/mp/qrcode?scene=10000005&amp;size=102&amp;__biz=MjM5MzU0OTgyMw==&amp;mid=2652370389&amp;idx=1&amp;sn=f8a4a7adf5aee2d4d476fe52750ef66d&amp;send_time=" target="_blank" rel="noreferrer"><i className="social-icon wechat">微</i>微信公众号</a>
             <a href="https://www.douban.com/people/phoenixZ/" target="_blank" rel="noreferrer"><i className="social-icon douban">豆</i>豆瓣</a>

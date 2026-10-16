@@ -580,3 +580,27 @@ body, body *, body *::before, body *::after {
   .about-page .about-contact { padding-left: 16px; }
   .about-page .about-contact > a { margin-right: 6px; padding: 10px 12px; font-size: 12px; }
 }
+
+@media (min-width: 851px) and (max-width: 1400px) {
+  .about-page[lang="zh-CN"] .about-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 38%);
+    gap: 4vw;
+  }
+}
+
+@media (max-width: 850px) {
+  .about-page[lang="zh-CN"] .about-hero {
+    display: block;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .about-page[lang="zh-CN"] .about-hero .hero-meta {
+    width: 100%;
+    max-width: none;
+    margin-top: 30px;
+    padding: 14px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}

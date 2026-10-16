@@ -456,9 +456,9 @@ main[class] > .site-footer { margin-top: auto; }
   .about-page .about-contact { padding-left: 16px; }
 }
 
-:root { --paper: #f8f6f1; --ink: #173452; --muted: #657487; --red: #bd4955; --line: #d7e0e8; --card: #fffdf9; --site-night: #194e82; --site-gold: #ffafb1; --site-warm: #fbf8f3; --site-coral: #ef8790; }
+:root { --paper: #fbf8f3; --ink: #173452; --muted: #657487; --red: #b9515b; --line: #d7e0e8; --card: #fffdf9; --site-night: #0b2d5c; --site-gold: #e69da1; --site-warm: #fbf8f3; --site-coral: #d9858d; }
 
-.nav { background: rgba(25,78,130,.97); border-bottom-color: rgba(251,248,243,.2); color: var(--site-warm); }
+.nav { background: rgba(11,45,92,.97); border-bottom-color: rgba(251,248,243,.2); color: var(--site-warm); }
 .brand-subtitle, .nav-links .language-switcher a { color: #d4dfeb; }
 .nav-links a { color: rgba(251,248,243,.94); }
 .nav-links a:hover, .nav-links a.active, .nav-links .language-switcher a.active { color: var(--site-gold); }
@@ -466,23 +466,23 @@ main[class] > .site-footer { margin-top: auto; }
 
 .studio-hero, .page-hero:not(.about-hero), .archive-hero, .works-hero, .trilogy-hero {
   position: relative; isolation: isolate; overflow: hidden; border-bottom: 0; color: var(--site-warm);
-  background: radial-gradient(ellipse at 81% 38%,rgba(255,175,177,.2),transparent 28%),radial-gradient(ellipse at 23% 85%,rgba(251,248,243,.1),transparent 36%),linear-gradient(112deg,#194777 0%,#235f98 56%,#3477ae 100%);
+  background: radial-gradient(ellipse at 81% 38%,rgba(185,81,91,.14),transparent 28%),radial-gradient(ellipse at 23% 85%,rgba(251,248,243,.08),transparent 36%),linear-gradient(112deg,#071f43 0%,#0b2d5c 56%,#174578 100%);
 }
 .page-hero:not(.about-hero) h1, .archive-hero h1, .works-hero h1, .trilogy-hero h1, .studio-hero h1 { color: var(--site-warm); }
 .page-hero:not(.about-hero) h1 em, .archive-hero h1 em, .works-hero h1 em, .trilogy-hero h1 em, .studio-hero h1 em,
 .page-hero:not(.about-hero) .eyebrow, .archive-hero .eyebrow, .works-hero .eyebrow, .trilogy-hero .eyebrow, .studio-hero .eyebrow { color: var(--site-gold); }
 .page-hero:not(.about-hero) > p:last-child, .archive-hero > p:last-child, .works-hero > p:last-child, .trilogy-hero .trilogy-intro { color: #e4edf5; }
 
-.about-page { --about-deep: var(--site-night); --about-gold: var(--site-gold); --about-teal: #356fa4; --about-coral: var(--red); }
+.about-page { --about-deep: var(--site-night); --about-gold: var(--site-gold); --about-teal: #2b5b8e; --about-coral: var(--red); }
 .about-page .about-hero {
   position: relative; isolation: isolate; overflow: hidden; min-height: min(740px,calc(100vh - 70px)); align-items: center;
   padding-top: 70px; padding-bottom: 64px; border: 0; color: var(--site-warm);
-  background: radial-gradient(ellipse at 81% 38%,rgba(255,175,177,.2),transparent 28%),radial-gradient(ellipse at 23% 85%,rgba(251,248,243,.1),transparent 36%),linear-gradient(112deg,#194777 0%,#235f98 56%,#3477ae 100%);
+  background: radial-gradient(ellipse at 81% 38%,rgba(185,81,91,.14),transparent 28%),radial-gradient(ellipse at 23% 85%,rgba(251,248,243,.08),transparent 36%),linear-gradient(112deg,#071f43 0%,#0b2d5c 56%,#174578 100%);
 }
 .about-page .about-hero::before {
   position: absolute; z-index: 0; top: 50%; right: 11vw; width: min(42vw,600px); aspect-ratio: 1;
   border: 1px solid rgba(251,248,243,.38); border-radius: 50%;
-  background: radial-gradient(circle,transparent 58%,rgba(255,175,177,.22) 58.2%,transparent 58.5%);
+  background: radial-gradient(circle,transparent 58%,rgba(185,81,91,.16) 58.2%,transparent 58.5%);
   content: ""; transform: translateY(-50%);
 }
 .about-page .about-hero::after {
@@ -501,7 +501,7 @@ main[class] > .site-footer { margin-top: auto; }
 .about-page .about-hero-copy > p strong { color: var(--site-gold); }
 .about-page .about-hero .hero-meta {
   max-width: 370px; padding: 24px 25px; border: 1px solid rgba(251,248,243,.28); border-left: 3px solid var(--site-gold);
-  background: rgba(12,42,74,.58); box-shadow: 10px 10px 0 rgba(189,73,85,.22); color: var(--site-warm); line-height: 2;
+  background: rgba(4,20,44,.58); box-shadow: 10px 10px 0 rgba(185,81,91,.16); color: var(--site-warm); line-height: 2;
 }
 .about-page .about-workstreams .eyebrow::before { content: "01 / "; color: #356fa4; }
 .about-page .about-translations .eyebrow::before { content: "02 / "; color: #356fa4; }
@@ -530,7 +530,7 @@ main[class] > .site-footer { margin-top: auto; }
 .about-page .about-content { position: relative; isolation: isolate; display: block; overflow: hidden; padding: 82px 12vw 88px; background: var(--site-night); color: var(--site-warm); }
 .about-page .about-content::before {
   position: absolute; z-index: -1; top: -190px; right: -90px; width: 440px; height: 440px;
-  border: 1px solid rgba(251,248,243,.25); border-radius: 50%; box-shadow: 0 0 0 36px rgba(251,248,243,.06),0 0 0 90px rgba(189,73,85,.08); content: "";
+  border: 1px solid rgba(251,248,243,.25); border-radius: 50%; box-shadow: 0 0 0 36px rgba(251,248,243,.06),0 0 0 90px rgba(185,81,91,.06); content: "";
 }
 .about-page .about-contact { max-width: 900px; padding-left: 24px; border-left: 3px solid var(--site-gold); }
 .about-page .about-contact .eyebrow { color: var(--site-gold); }
@@ -562,7 +562,7 @@ body, body *, body *::before, body *::after {
 .trilogy-page .book-entry { border-bottom-color: var(--line); }
 .trilogy-page .book-index, .trilogy-page .book-publisher { color: #356fa4; }
 .trilogy-page .book-author { color: #5b6d80; }
-.trilogy-page .trilogy-statement { background: var(--red); color: var(--site-warm); }
+.trilogy-page .trilogy-statement { background: var(--site-night); color: var(--site-warm); }
 .trilogy-page .trilogy-statement span { color: var(--site-warm); }
 
 @media (max-width: 720px) {

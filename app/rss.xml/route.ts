@@ -38,7 +38,7 @@ export function GET() {
       <title>${escapeXml(article.title)}</title>
       <link>${link}</link>
       <guid isPermaLink="true">${link}</guid>
-      <pubDate>${rssDate(article.date)}</pubDate>
+${article.date ? `      <pubDate>${rssDate(article.date)}</pubDate>` : ""}
       <category>${escapeXml(article.collection)}</category>
       <description>${escapeXml(excerpt(article.body))}</description>
     </item>`;

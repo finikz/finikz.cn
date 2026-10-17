@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { LanguagePreference } from "@/components/LanguagePreference";
+import { languageRedirectScript } from "@/lib/language-redirect";
 import "./globals.css";
 import "./editorial.css";
 import "./work-link.css";
@@ -23,5 +24,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="zh-CN"><head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346776141251301" crossOrigin="anonymous"></script></head><body>{children}<LanguagePreference /><GoogleAnalytics /></body></html>;
+  return <html lang="zh-CN"><head><script dangerouslySetInnerHTML={{ __html: languageRedirectScript }} /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346776141251301" crossOrigin="anonymous"></script></head><body>{children}<LanguagePreference /><GoogleAnalytics /></body></html>;
 }

@@ -1,39 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
-import ServiceMap from "@/components/ServiceMap";
 import SiteNav from "@/components/SiteNav";
+import Workstreams from "@/components/Workstreams";
+import { frenchArticles } from "@/lib/localized-articles";
 import { frenchWorks } from "@/lib/works";
 
-const workstreams = [
-  {
-    title: "Entreprise AI-native et stratégie marketing",
-    points: [
-      "Cofondateur de Pallas AI ; j'aide les entreprises à devenir AI-native : non pas greffer l'IA sur d'anciens processus, mais reconstruire le travail autour d'elle.",
-      "Cofondateur d'une agence de marketing de contenu, qui comptait parmi ses clients Tencent Group Communications et la Foire internationale de l'investissement et du commerce de Chine.",
-      "Produit de commerce transfrontalier classé dans le top 10 de sa catégorie sur Amazon.",
-      "Pilotage de comptes suivis par plus d'un million d'abonnés ; contribution à la croissance d'un réseau de médias (+300 000 abonnés en trois mois).",
-    ],
-  },
-  {
-    title: "Création de contenu interculturel",
-    points: [
-      "Traduction d'expositions et de catalogues pour le projet du West Bund Museum × Centre Pompidou, notamment autour de Kandinsky, de La Voix des choses et de l'architecture parisienne.",
-      "Plusieurs années au sein d'une société de négoce française, en charge de la communication commerciale et de la rédaction institutionnelle en chinois, anglais et français.",
-      "Plus d'une dizaine de livres traduits ; accompagnement éditorial de marques, notamment dans l'univers du jouet de créateur et des marques personnelles.",
-      "Rédacteur en chef chez Qiyu Film, où plusieurs articles ont dépassé les 100 000 vues ; chroniqueur pour Fengshang Weekly.",
-    ],
-  },
-  {
-    title: "Organisations et communautés",
-    points: [
-      "Secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou, chargé de la communication.",
-      "Lauréat du premier concours de chant en anglais de l'Université Sun Yat-sen ; classé parmi les dix premiers du 20e concours de chant Venus du campus.",
-      "Cofondateur de Jumpwire Craft Beer et de l'Alliance artistique Jumpwire.",
-      "Fondateur de la salle de concert Jiǔwō, qui a accueilli des groupes comme Wutiaoren et Toy Captain.",
-    ],
-  },
-];
+const latestArticles = [...frenchArticles].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
+
 
 const trilogyWorks = frenchWorks.filter((work) => work.frenchGroup === "La trilogie dionysiaque");
 
@@ -46,24 +20,10 @@ export default function FrenchAboutPage({ path = "/about/" }: { path?: string })
           <h1><em>Finikz</em></h1>
           <p><strong>Consultant en stratégie AI-native et marketing | Créateur de contenu interculturel</strong><br />Titulaire d'un diplôme en études françaises de l'Université Sun Yat-sen, je travaille en chinois, en anglais et en français. À la croisée de l'IA, de la compréhension culturelle, de la stratégie d'entreprise et du travail éditorial, je conçois des systèmes dont les effets se renforcent dans la durée.</p>
         </div>
-        <aside className="hero-meta">Entreprise AI-native · Visibilité dans la recherche IA<br />Développement international et marketing interculturel · Traduction chinois, anglais, français<br />Secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou<br />Cofondateur de Jumpwire Craft Beer et de l'Alliance artistique Jumpwire</aside>
+        <aside className="hero-meta">AI-native et GEO<br />Marque et marketing interculturel<br />Culture, arts et communautés<br />Secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou<br />Cofondateur de Jumpwire Craft Beer et de l'Alliance artistique Jumpwire</aside>
       </header>
 
-      <section className="about-workstreams" aria-labelledby="fr-workstreams-title">
-        <div className="about-section-label"><p className="eyebrow">DOMAINES D'ACTIVITÉ</p><h2 id="fr-workstreams-title">Ce que je fais</h2></div>
-        <div className="about-showcase-content">
-          <div className="about-stream-list">
-            {workstreams.map((item) => (
-              <article className="about-stream" key={item.title}>
-                <div><h3>{item.title}</h3><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul></div>
-              </article>
-            ))}
-          </div>
-          <a className="about-more-link" href="https://finikz.com/fr/" target="_blank" rel="noreferrer">Site de l’entreprise ↗</a>
-        </div>
-      </section>
-
-      <ServiceMap locale="fr" />
+      <Workstreams locale="fr" />
 
       <section className="about-showcase about-translations" aria-labelledby="fr-translations-title">
         <div className="about-section-label"><p className="eyebrow">MES TRADUCTIONS</p><h2 id="fr-translations-title">Quelques ouvrages traduits</h2></div>
@@ -81,10 +41,16 @@ export default function FrenchAboutPage({ path = "/about/" }: { path?: string })
       </section>
 
       <section className="about-showcase about-writing" aria-labelledby="fr-writing-title">
-        <div className="about-section-label"><p className="eyebrow">ÉCRITURE</p><h2 id="fr-writing-title">Articles et idées</h2></div>
+        <div className="about-section-label"><p className="eyebrow">MES ÉCRITS</p><h2 id="fr-writing-title">Articles et idées</h2></div>
         <div className="about-showcase-content">
-          <p className="about-writing-note">Des articles sur l'IA, la culture et la traduction — ainsi que sur les systèmes qui les relient. Sélection disponible en anglais et en français.</p>
-          <Link className="about-more-link" href="/fr/articles/">Lire les articles ↗</Link>
+          <div className="about-writing-list">
+            {latestArticles.map((article) => <Link className="about-writing-item" href={`/fr/articles/${article.slug}/`} key={article.slug}>
+              <time dateTime={article.date}>{article.date.replaceAll("-", ".")}</time>
+              <h3>{article.title}</h3>
+              <span aria-hidden="true">↗</span>
+            </Link>)}
+          </div>
+          <Link className="about-more-link" href="/fr/articles/">Voir plus ↗</Link>
         </div>
       </section>
 
@@ -92,7 +58,7 @@ export default function FrenchAboutPage({ path = "/about/" }: { path?: string })
         <div className="about-contact">
           <p className="eyebrow">TRAVAILLONS ENSEMBLE</p>
           <h2>Parlons de votre projet</h2>
-          <p className="placeholder-copy">Entreprise AI-native · Visibilité dans la recherche IA (GEO) · Stratégie de marque et contenus · Développement international et marketing interculturel · Traduction d'art et de culture · Projets interdisciplinaires</p>
+          <p className="placeholder-copy">AI-native et GEO · Marque et marketing interculturel · Culture, arts et communautés · Projets interdisciplinaires</p>
           <a href="mailto:mail@finikz.com">E-mail : mail@finikz.com</a>
           <a href="https://finikz.com/" target="_blank" rel="noreferrer">Site de l’entreprise ↗</a>
           <div className="social-links">

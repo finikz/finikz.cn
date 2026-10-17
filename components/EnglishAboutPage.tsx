@@ -1,39 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
-import ServiceMap from "@/components/ServiceMap";
 import SiteNav from "@/components/SiteNav";
+import Workstreams from "@/components/Workstreams";
+import { englishArticles } from "@/lib/localized-articles";
 import { englishWorks } from "@/lib/works";
 
-const workstreams = [
-  {
-    title: "AI-Native Companies & Marketing Strategy",
-    points: [
-      "Co-founded Pallas AI, helping companies become AI-native: not bolting AI onto old processes, but rebuilding work around it.",
-      "Co-founded a content marketing company whose clients included Tencent Group Communications and the China International Fair for Investment & Trade.",
-      "Brought a cross-border e-commerce product into the top ten in its Amazon category.",
-      "Managed accounts with more than one million followers; helped a new-media network gain 300,000 followers in three months.",
-    ],
-  },
-  {
-    title: "Cross-Cultural Content",
-    points: [
-      "Translated exhibitions and catalogues for the West Bund Museum × Centre Pompidou project, including Kandinsky, The Voice of Things and Paris Architecture.",
-      "Several years at a French trading company, handling business communications and institutional writing across Chinese, English and French.",
-      "Translated more than a dozen books and shaped editorial content for brands, including designer-toy and personal brands.",
-      "Lead writer at Qiyu Film, where several articles drew more than 100,000 views; also a columnist for Fengshang Weekly.",
-    ],
-  },
-  {
-    title: "Organizations & Communities",
-    points: [
-      "Deputy Secretary-General of the Guangzhou Alumni Association of Sun Yat-sen University, overseeing communications.",
-      "Winner of Sun Yat-sen University’s inaugural English Singing Competition; top-ten finalist in the 20th Venus Campus Singing Competition.",
-      "Co-founded Jumpwire Craft Beer and the Jumpwire Art Alliance.",
-      "Founded Jiǔwō, a live-music venue that hosted bands including Wutiaoren and Toy Captain.",
-    ],
-  },
-];
+const latestArticles = [...englishArticles].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
+
 
 const trilogyWorks = englishWorks.filter((work) => work.englishGroup === "The Dionysian Trilogy");
 
@@ -51,24 +25,10 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
           <h1><em>Finikz</em></h1>
           <p><strong>AI-Native &amp; Marketing Strategy Consultant | Cross-Cultural Content Creator</strong><br />With a degree in French from Sun Yat-sen University, I work across Chinese, English and French, bringing together AI, cultural insight, business strategy and editorial craft to build systems that compound over time.</p>
         </div>
-        <aside className="hero-meta">Building AI-Native Companies · AI Search Visibility<br />Global Brand Expansion &amp; Cross-Cultural Marketing · Chinese-English-French Translation<br />Deputy Secretary-General, SYSU Guangzhou Alumni Association<br />Co-founder, Jumpwire Craft Beer &amp; Jumpwire Art Alliance</aside>
+        <aside className="hero-meta">AI-Native &amp; GEO<br />Brand &amp; Cross-Cultural Marketing<br />Arts, Culture &amp; Communities<br />Deputy Secretary-General, SYSU Guangzhou Alumni Association<br />Co-founder, Jumpwire Craft Beer &amp; Jumpwire Art Alliance</aside>
       </header>
 
-      <section className="about-workstreams" aria-labelledby="en-workstreams-title">
-        <div className="about-section-label"><p className="eyebrow">FOCUS AREAS</p><h2 id="en-workstreams-title">What I Do</h2></div>
-        <div className="about-showcase-content">
-          <div className="about-stream-list">
-            {workstreams.map((item) => (
-              <article className="about-stream" key={item.title}>
-                <div><h3>{item.title}</h3><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul></div>
-              </article>
-            ))}
-          </div>
-          <a className="about-more-link" href="https://finikz.com/en/" target="_blank" rel="noreferrer">Company website ↗</a>
-        </div>
-      </section>
-
-      <ServiceMap locale="en" />
+      <Workstreams locale="en" />
 
       <section className="about-showcase about-translations" aria-labelledby="en-translations-title">
         <div className="about-section-label"><p className="eyebrow">BOOK TRANSLATIONS</p><h2 id="en-translations-title">Selected Translations</h2></div>
@@ -79,7 +39,6 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
                 <Image src={work.cover} alt={`${work.englishTitle} Chinese edition cover`} fill sizes="(max-width: 720px) 30vw, 220px" />
               </a>
               <h3><a href={work.url} target="_blank" rel="noreferrer">{work.englishTitle}</a></h3>
-              {work.originalTitle && <p className="work-original-title">{work.originalTitle}</p>}
             </article>)}
           </div>
           <Link className="about-more-link" href="/en/works">View all translations ↗</Link>
@@ -87,10 +46,16 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
       </section>
 
       <section className="about-showcase about-writing" aria-labelledby="en-writing-title">
-        <div className="about-section-label"><p className="eyebrow">CHINESE-LANGUAGE WRITING</p><h2 id="en-writing-title">Selected Writing</h2></div>
+        <div className="about-section-label"><p className="eyebrow">MY WRITING</p><h2 id="en-writing-title">Selected Writing</h2></div>
         <div className="about-showcase-content">
-          <div className="about-writing-list"><div className="about-writing-note"><p>Essays on AI adoption, culture and translation—and on the systems that connect them. A selection of pieces in English.</p></div></div>
-          <Link className="about-more-link" href="/en/articles/">Read the articles ↗</Link>
+          <div className="about-writing-list">
+            {latestArticles.map((article) => <Link className="about-writing-item" href={`/en/articles/${article.slug}/`} key={article.slug}>
+              <time dateTime={article.date}>{article.date.replaceAll("-", ".")}</time>
+              <h3>{article.title}</h3>
+              <span aria-hidden="true">↗</span>
+            </Link>)}
+          </div>
+          <Link className="about-more-link" href="/en/articles/">View more ↗</Link>
         </div>
       </section>
 
@@ -98,7 +63,7 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
         <div className="about-contact">
           <p className="eyebrow">WORK WITH ME</p>
           <h2>Let’s Talk</h2>
-          <p className="placeholder-copy">Building AI-native companies · AI search visibility (GEO) · Brand strategy and content · Global brand expansion and cross-cultural marketing · Arts and culture translation · Interdisciplinary projects</p>
+          <p className="placeholder-copy">AI-native &amp; GEO · Brand &amp; cross-cultural marketing · Arts, culture &amp; communities · Interdisciplinary projects</p>
           <a href="mailto:mail@finikz.com">Email: mail@finikz.com</a>
           <a href="https://finikz.com/" target="_blank" rel="noreferrer">Company website ↗</a>
           <div className="social-links">

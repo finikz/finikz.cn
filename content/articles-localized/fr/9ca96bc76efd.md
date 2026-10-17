@@ -2,7 +2,7 @@
 
 > « L’automne est arrivé. Dans l’agréable vallée, les feuilles sont devenues jaunes, rouges et brunes. La petite ville thermale semblait enveloppée de flammes. » — Milan Kundera, *La Valse aux adieux*
 
-![Ville thermale](http://upload-images.jianshu.io/upload_images/3932-026f625638526deb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Ville thermale](/articles/remote/3d535a160c41bac1.webp)
 
 ## Karlovy Vary
 
@@ -16,7 +16,7 @@ Les liens de Karlovy Vary avec le cinéma remontent aux premiers temps du septi�
 
 Le Festival international du film de Karlovy Vary fait partie des cinq grands festivals internationaux reconnus par la Fédération internationale des associations de producteurs de films, aux côtés de Venise, Cannes, Berlin et Montréal. Il a été créé après Venise (1932) et Cannes (1939). En 1946, un an après la fin de la Seconde Guerre mondiale, des cinéastes actifs avant-guerre fondèrent le festival à Mariánské Lázně, en Tchéquie. La première édition, non compétitive, présenta des films de sept pays. La deuxième se tint dans la ville voisine de Karlovy Vary, où le festival a lieu depuis lors pendant la première quinzaine de juillet.
 
-![Karlovy Vary dans les années 1940](http://upload-images.jianshu.io/upload_images/3932-2e9bf88fbfc6d4d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Karlovy Vary dans les années 1940](/articles/remote/d21e10b551da84b5.webp)
 
 En février 1948, le Parti communiste de Tchécoslovaquie arriva au pouvoir et le festival fut placé sous la responsabilité du département national du cinéma. Pendant des décennies, Karlovy Vary devint un outil du bloc communiste pour rivaliser avec l’Occident sur le terrain du cinéma, notamment avec Venise et Cannes. Le choix des films, les prix et les invitations devaient servir la propagande communiste. La plupart des grands prix furent remportés par des films de pays socialistes.
 
@@ -24,13 +24,13 @@ Le festival se tint chaque année de 1946 à 1958, sauf en 1953 et 1955. En 1959
 
 Dans les années 1960, la Tchécoslovaquie connut un « dégel » idéologique et la Nouvelle Vague tchèque vit le jour. De nombreux grands films tchécoslovaques furent présentés à Karlovy Vary et brillèrent aussi dans des festivals occidentaux, comme Venise et Locarno. Plusieurs films occidentaux de premier plan participèrent également à Karlovy Vary.
 
-![Jiří Menzel reçoit un prix](http://upload-images.jianshu.io/upload_images/3932-5cf27cd7675f0f10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Jiří Menzel reçoit un prix](/articles/remote/fdd9748d4197951a.webp)
 
 Le festival de 1968 s’ouvrit dans le contexte du Printemps de Prague. L’esprit de réforme se retrouva aussi dans son règlement : il n’y eut pas de jury officiel, mais trois jurys internationaux évaluèrent séparément la création, l’interprétation et les qualités techniques. Le réalisateur tchèque de la Nouvelle Vague Jiří Menzel reçut le grand prix, le Globe de cristal, pour *Un été capricieux*. Son film *Trains étroitement surveillés* venait de remporter l’Oscar du meilleur film en langue étrangère cette même année.
 
 Mais l’accalmie fut de courte durée. Le 20 août 1968, les forces soviétiques envahirent Prague ; le lendemain, elles occupèrent toute la Tchécoslovaquie. Karlovy Vary continua d’accueillir des films du monde entier, mais dans les années 1970 et 1980, presque tous les lauréats venaient de pays communistes. Une exception notable : en 1988, lors de la 26e édition, le réalisateur chinois Xie Jin reçut le Globe de cristal pour *La Ville des hibiscus*.
 
-![L’invasion soviétique](http://upload-images.jianshu.io/upload_images/3932-eed0d8eda62a1e3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![L’invasion soviétique](/articles/remote/37ae8a894c0993a9.webp)
 
 Le festival a fonctionné sous la pression politique pendant quarante ans et a encore connu plusieurs années difficiles après la révolution de velours de 1989. En 1990, plusieurs films tchèques auparavant interdits furent autorisés à être projetés. Le public s’y intéressa peu, toutefois, et la manifestation ne parvint pas à effacer sa réputation désastreuse, ternie pendant des décennies.
 

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: articleExcerpt(article.body),
     locales: articleLocales(article.slug),
     type: "article",
-    publishedTime: article.date,
+    publishedTime: article.date || undefined,
   }) : {};
 }
 

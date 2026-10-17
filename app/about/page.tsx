@@ -3,8 +3,8 @@ import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
-import ServiceMap from "@/components/ServiceMap";
 import SiteNav from "@/components/SiteNav";
+import Workstreams from "@/components/Workstreams";
 import { articles } from "@/lib/articles";
 import { works } from "@/lib/works";
 
@@ -15,38 +15,6 @@ export const metadata: Metadata = pageMetadata({
   description: "张凤鸣 Finikz：帮企业建立 AI Native 的战略顾问、跨文化内容创作者。",
 });
 
-const workstreams = [
-  {
-    number: "01",
-    title: "AI Native 与营销战略",
-    points: [
-      "「智神AI」（Pallas AI）联合创办人，帮企业建立 AI Native：不是给旧流程加 AI，而是按 AI 的方式重建工作。",
-      "联合创办的内容营销公司服务过腾讯集团公关、中国国际投洽会等客户；",
-      "跨境电商操盘出过亚马逊品类前 10 爆品；",
-      "运营过百万粉丝账号，曾三个月为新媒体矩阵净增 30 万粉丝。",
-    ],
-  },
-  {
-    number: "02",
-    title: "跨文化内容创作",
-    points: [
-      "上海西岸美术馆 × 法国蓬皮杜中心合作项目翻译，经手《康定斯基》《万物的声音》《巴黎建筑》等大展及画册。",
-      "曾在法资贸易企业工作多年，长期处理中、英、法三种语言之间的商业传播与机构文本。",
-      "翻译过十几本书，指导多个品牌（包括潮玩和个人品牌）的内容输出。",
-      "此前任「奇遇电影」主笔期间写过多篇 10万+，为南都《风尚周报》撰过专栏。",
-    ],
-  },
-  {
-    number: "03",
-    title: "组织与社群",
-    points: [
-      "中山大学广州校友会常务副秘书长，主管宣传工作。",
-      "中山大学首届英文歌大赛冠军，20届维纳斯校园歌手大赛十强。",
-      "精酿文化空间「九维精酿」和艺术团体「九维艺术联盟」的联合创始人。",
-      "曾创办「酒窝」live house，举办过五条人、玩具船长等乐队的演出。",
-    ],
-  },
-];
 
 const trilogyWorks = works.filter((work) => work.group === "酒神三部曲");
 
@@ -64,24 +32,10 @@ export function AboutPageContent({ path = "/about/" }: AboutPageContentProps) {
           <h1><em>Finikz</em></h1>
           <p><strong>AI Native 与营销战略顾问 ｜ 跨文化内容创作者</strong><br />张凤鸣，中山大学法语系毕业，以中英法三种语言工作，擅长用 AI 把文化洞察、商业策略与内容表达，整合成一套长期复利的系统。</p>
         </div>
-        <aside className="hero-meta">AI Native 企业构建 / AI 搜索可见度<br />品牌出海与跨文化营销 / 中英法三语翻译<br />中山大学广州校友会常务副秘书长<br />九维精酿-九维艺术联盟联合创办人</aside>
+        <aside className="hero-meta">AI Native 与 GEO<br />品牌与跨文化营销<br />文化艺术与组织社群<br />中山大学广州校友会常务副秘书长<br />九维精酿-九维艺术联盟联合创办人</aside>
       </header>
 
-      <section className="about-workstreams" aria-labelledby="workstreams-title">
-        <div className="about-section-label"><p className="eyebrow">WORKSTREAMS</p><h2 id="workstreams-title">工作主线</h2></div>
-        <div className="about-showcase-content">
-          <div className="about-stream-list">
-            {workstreams.map((item) => (
-              <article className="about-stream" key={item.number}>
-                <div><h3>{item.title}</h3><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul></div>
-              </article>
-            ))}
-          </div>
-          <a className="about-more-link" href="https://finikz.com/" target="_blank" rel="noreferrer">公司网站 ↗</a>
-        </div>
-      </section>
-
-      <ServiceMap locale="zh" />
+      <Workstreams locale="zh" />
 
       <section className="about-showcase about-translations" aria-labelledby="translations-title">
         <div className="about-section-label"><p className="eyebrow">MY WORKS</p><h2 id="translations-title">我的译作</h2></div>
@@ -116,7 +70,7 @@ export function AboutPageContent({ path = "/about/" }: AboutPageContentProps) {
         <div className="about-contact">
           <p className="eyebrow">WORK WITH ME</p>
           <h2>欢迎合作</h2>
-          <p className="placeholder-copy">AI Native 企业构建 ／ AI 搜索可见度（GEO） ／ 品牌策略与内容 ／ 品牌出海与跨文化营销 ／ 文化艺术翻译 ／ 有意思的跨界项目</p>
+          <p className="placeholder-copy">AI Native 与 GEO ／ 品牌与跨文化营销 ／ 文化艺术与组织社群 ／ 有意思的跨界项目</p>
           <a href="mailto:mail@finikz.com">邮箱　mail@finikz.com</a>
           <a href="https://finikz.com/" target="_blank" rel="noreferrer">公司网站 ↗</a>
           <div className="social-links">

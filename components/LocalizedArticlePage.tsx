@@ -12,6 +12,13 @@ const copy = {
   fr: { source: "Voir la publication d'origine ↗", previous: "Article précédent", next: "Article suivant", nav: "Navigation entre les articles" },
 } as const;
 
+// Translations often start their section headings at ###; lift them so the top section level renders as h2, like the Chinese originals.
+function normalizeHeadings(markdown: string) {
+  const levels = [...markdown.matchAll(/^(#{2,6}) /gm)].map((match) => match[1].length);
+  const shift = levels.length ? Math.min(...levels) - 2 : 0;
+  return shift > 0 ? markdown.replace(/^(#{3,6}) /gm, (_, hashes: string) => `${hashes.slice(shift)} `) : markdown;
+}
+
 export default function LocalizedArticlePage({ article, articles, locale }: { article: Article; articles: Article[]; locale: Exclude<Locale, "zh"> }) {
   const language = copy[locale];
   const chronologicalArticles = [...articles].sort((a, b) => a.date.localeCompare(b.date) || a.title.localeCompare(b.title, locale));
@@ -25,8 +32,8 @@ export default function LocalizedArticlePage({ article, articles, locale }: { ar
       <ArticleJsonLd article={article} locale={locale} />
       <SiteNav active="notes" locale={locale} path={articlePath} />
       <article className="article-shell">
-        <header className="article-header"><p className="eyebrow">{article.collection.toLocaleUpperCase(locale)}</p><h1>{article.title}</h1><time dateTime={article.date}>{article.date}</time>{article.sourceUrl && <a className="source-link" href={article.sourceUrl} target="_blank" rel="noreferrer">{language.source}</a>}</header>
-        <div className="article-body"><ReactMarkdown remarkPlugins={[remarkGfm]}>{article.body}</ReactMarkdown></div>
+        <header className="article-header"><p className="eyebrow">{article.collection.toLocaleUpperCase(locale)}</p><h1>{article.title}</h1>{article.date && <time dateTime={article.date}>{article.date}</time>}{article.sourceUrl && <a className="source-link" href={article.sourceUrl} target="_blank" rel="noreferrer">{language.source}</a>}</header>
+        <div className="article-body"><ReactMarkdown remarkPlugins={[remarkGfm]}>{normalizeHeadings(article.body)}</ReactMarkdown></div>
         <nav className="article-navigation" aria-label={language.nav}>
           {previousArticle ? <Link href={localizedPath(locale, `/articles/${previousArticle.slug}/`)}><span>{language.previous}</span><strong>{previousArticle.title}</strong></Link> : <span />}
           {nextArticle ? <Link href={localizedPath(locale, `/articles/${nextArticle.slug}/`)}><span>{language.next}</span><strong>{nextArticle.title}</strong></Link> : <span />}

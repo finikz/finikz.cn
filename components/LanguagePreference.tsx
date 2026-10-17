@@ -2,32 +2,15 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
-import { languageAlternates, localeFromPath, localeTags, localizedPath, pathWithoutLocale, type Locale } from "@/lib/i18n";
+import { languageAlternates, localeFromPath, localeTags, localizedPath, type Locale } from "@/lib/i18n";
 
 const storageKey = "finikz-language";
 const localeLabels: Record<Locale, string> = { zh: "ZH", en: "EN", fr: "FR" };
 
+// Keeps <html lang> in step with the page; the language redirect itself runs inline in <head> (lib/language-redirect.ts).
 export function LanguagePreference() {
   useEffect(() => {
-    const pathname = window.location.pathname;
-    const locale = localeFromPath(pathname);
-    document.documentElement.lang = localeTags[locale];
-
-    if (pathname !== "/") return;
-
-    try {
-      const stored = window.localStorage.getItem(storageKey);
-      const browserLanguage = (navigator.languages?.[0] || navigator.language || "").toLowerCase();
-      const preferred: Locale = stored === "zh" || stored === "en" || stored === "fr"
-        ? stored
-        : browserLanguage.startsWith("fr") ? "fr" : browserLanguage.startsWith("en") ? "en" : "zh";
-      window.localStorage.setItem(storageKey, preferred);
-      if (preferred !== "zh") {
-        window.location.replace(`${localizedPath(preferred, "/")}${window.location.search}${window.location.hash}`);
-      }
-    } catch {
-      // Keep the requested page when browser storage is unavailable.
-    }
+    document.documentElement.lang = localeTags[localeFromPath(window.location.pathname)];
   }, []);
 
   return null;

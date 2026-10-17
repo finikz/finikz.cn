@@ -10,7 +10,7 @@ export default function ArticleJsonLd({ article, locale }: { article: Article; l
     "@type": "BlogPosting",
     headline: article.title,
     description: articleExcerpt(article.body),
-    datePublished: article.date,
+    ...(article.date ? { datePublished: article.date } : {}),
     inLanguage: localeTags[locale],
     url,
     mainEntityOfPage: url,

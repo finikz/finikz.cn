@@ -4,7 +4,7 @@ Source originale : [Global Beatles Day : célébrer le 25 juin](https://www.theb
 
 Le 25 juin porte désormais un nom plus retentissant : **Global Beatles Day**, la journée mondiale des Beatles.
 
-![Illustration](/articles/images/25eda02648d5407a.jpg)
+![Illustration](/articles/images/9a889a2921dc63cc.jpg)
 
 Le nom est un peu naïf, et assez mignon. On dirait que des fans se sont trouvé une excuse : aujourd’hui, on doit écouter les Beatles.
 
@@ -12,7 +12,7 @@ L’idée vient d’une fan, Faith Cohen. En 2009, elle a lancé le Global Beatl
 
 Par la suite, le petit drapeau brandi par les fans a reçu une réponse d’Apple Corps. Cette journée ne deviendra pas un jour férié officiel, mais ce qui est le plus touchant dans la culture populaire ne tient souvent pas à un sceau officiel : c’est le fait que certaines personnes acceptent de s’en souvenir, année après année.
 
-![Illustration](/articles/images/9451ef33fe9d2106.jpg)
+![Illustration](/articles/images/5669576e19a872f2.jpg)
 
 Pourquoi le 25 juin ? Parce que ce jour-là, en 1967, les Beatles sont entrés aux studios Abbey Road et ont interprété « **All You Need Is Love** » dans le cadre de l’émission mondiale en direct de la BBC, *Our World*. Selon le site du Global Beatles Day, plus de 400 millions de personnes dans 26 pays ont écouté la chanson en même temps.
 
@@ -30,7 +30,7 @@ Bien sûr, il ne peut résoudre ni la guerre, ni les inégalités, ni les petits
 
 Mais la musique ne sert pas toujours à « résoudre des problèmes ». Elle ressemble parfois à un coup frappé sur le bord d’un verre, qui tire quelqu’un de sa torpeur et le fait relever la tête.
 
-![Illustration](/articles/images/0d8f810231b80a33.jpg)
+![Illustration](/articles/images/d564a9a6ed838315.jpg)
 
 En 1967, le monde était loin d’être paisible. La guerre froide continuait, la guerre du Vietnam aussi ; les jeunes remettaient en cause l’ordre ancien ; la télévision et les retransmissions par satellite venaient de faire de la Terre une scène visible simultanément. Les Beatles ne se sont pas lancés dans un discours politique. Ils ont simplement chanté une chanson que tout le monde pouvait suivre.
 
@@ -54,7 +54,7 @@ Mais on ne peut pas vivre de lucidité seule. Il faut aussi, parfois, être embr
 
 C’est pourquoi nous écoutons encore des chansons vieilles de plusieurs décennies, pourquoi nous écoutons encore les Beatles. Pas pour revenir en 1967. Leur musique nous rappelle qu’à son meilleur, la culture populaire fait sortir les gens de leurs étiquettes et les réunit à nouveau.
 
-![Illustration](/articles/images/2e1e4aa57ad70e2c.jpg)
+![Illustration](/articles/images/4840ef1c77953b08.jpg)
 
 À l’ère de l’IA, cette idée mérite encore plus d’attention. Aujourd’hui, une mélodie, une image ou un article peut être généré rapidement par une machine. Le contenu se multiplie et ressemble de plus en plus à un brouillard. C’est justement dans un tel contexte que l’importance des Beatles se révèle : ils ont créé des souvenirs communs.
 
@@ -68,7 +68,7 @@ Le monde ne s’améliorera évidemment pas d’un coup grâce à une chanson, m
 
 C’est déjà suffisant.
 
-![Illustration](/articles/images/ea6afb163643cbe4.jpg)
+![Illustration](/articles/images/eee076829fb3a4cd.jpg)
 
 > 📹 La vidéo se trouve dans l’article original ; l’image ci-dessus en est la couverture. [La regarder dans l’article WeChat original](https://mp.weixin.qq.com/s?__biz=MjM5MzU0OTgyMw==&mid=2652370904&idx=1&sn=4ce90d2f434d58e4daf1110e6deddf02&chksm=bc96c9af9a70f6545c8e217cbd52697132a5781fe316d202e19fc7a3f61eecf90798939d43c9&mpshare=1&scene=1&srcid=0626MXCL0omNzymnXCIzciju&sharer_shareinfo=8e64607ae667470de7483beac834e442&sharer_shareinfo_first=8e64607ae667470de7483beac834e442#rd)
 

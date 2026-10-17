@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...pages.flatMap((path) => localizedEntries(path, ["", "/en", "/fr"])),
     ...articles.flatMap((article) => {
       const prefixes = ["", ...(englishSlugs.has(article.slug) ? ["/en"] : []), ...(frenchSlugs.has(article.slug) ? ["/fr"] : [])];
-      return localizedEntries(`/articles/${article.slug}/`, prefixes, article.date);
+      return localizedEntries(`/articles/${article.slug}/`, prefixes, article.date || undefined);
     }),
   ];
 }

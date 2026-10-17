@@ -2,7 +2,7 @@
 
 > “Autumn came. In the pleasant valley, the leaves turned yellow, red, and brown. The little spa town looked as if it were wrapped in flames.” — Milan Kundera, *The Farewell Party*
 
-![Spa Town](http://upload-images.jianshu.io/upload_images/3932-026f625638526deb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Spa Town](/articles/remote/3d535a160c41bac1.webp)
 
 ## Karlovy Vary
 
@@ -16,7 +16,7 @@ Karlovy Vary’s connection with cinema dates back to the earliest days of film.
 
 The Karlovy Vary International Film Festival is one of five major international festivals recognized by the International Federation of Film Producers Associations, alongside Venice, Cannes, Berlin, and Montreal. It was founded after only Venice (1932) and Cannes (1939). In 1946, the year after World War II ended, a group of filmmakers who had been active before the war established the festival in Mariánské Lázně, Czechia. The first edition was noncompetitive and screened films from seven countries. The second moved to nearby Karlovy Vary, where it has been held in the first half of July each year ever since.
 
-![Karlovy Vary in the 1940s](http://upload-images.jianshu.io/upload_images/3932-2e9bf88fbfc6d4d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Karlovy Vary in the 1940s](/articles/remote/d21e10b551da84b5.webp)
 
 In February 1948, Czechoslovakia’s Communist Party came to power, and the festival came under the country’s state film department. For decades, Karlovy Vary became a tool for the communist bloc to compete with the West in cinema, particularly with Venice and Cannes. Film selection, awards, and guest invitations all had to serve communist propaganda. Most of the major prizes went to films from socialist countries.
 
@@ -24,13 +24,13 @@ The festival was held every year from 1946 to 1958, except in 1953 and 1955. The
 
 In the 1960s, Czechoslovakia entered an ideological “thaw,” and the Czech New Wave emerged. Many outstanding Czechoslovak films screened at Karlovy Vary and won acclaim at Western festivals such as Venice and Locarno. A number of notable Western films also appeared at Karlovy Vary.
 
-![Jiří Menzel receives an award](http://upload-images.jianshu.io/upload_images/3932-5cf27cd7675f0f10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Jiří Menzel receives an award](/articles/remote/fdd9748d4197951a.webp)
 
 The 1968 festival opened during the Prague Spring. The spirit of reform shaped the festival rules too: there was no official jury; instead, three international juries judged creativity, performance, and technical achievement separately. Czech New Wave director Jiří Menzel won the top prize, the Crystal Globe, for *Capricious Summer*. His *Closely Watched Trains* had just won that year’s Academy Award for Best Foreign Language Film.
 
 But the thaw did not last. On August 20, 1968, Soviet forces invaded Prague; the next day they occupied all of Czechoslovakia. Karlovy Vary remained open to films from around the world, but in the 1970s and 1980s, almost all its prizewinners came from communist countries. One notable exception was the 1988 festival, when Chinese director Xie Jin won the Crystal Globe for *Hibiscus Town*.
 
-![The Soviet invasion](http://upload-images.jianshu.io/upload_images/3932-eed0d8eda62a1e3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![The Soviet invasion](/articles/remote/37ae8a894c0993a9.webp)
 
 The festival operated under political pressure for forty years and struggled for several years even after the Velvet Revolution of 1989. At the 1990 festival, several Czech films that had previously been banned were finally allowed to screen. The public showed little interest, however, and the event could not shake its reputation, tarnished over decades.
 

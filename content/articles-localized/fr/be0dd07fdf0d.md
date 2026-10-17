@@ -6,47 +6,47 @@ Aujourd’hui, le site canadien DVDBeaver.com, spécialiste des critiques de DVD
 
 Criterion avait déjà diffusé un court extrait des images restaurées et publié, avant-hier, des photos de la couverture et de l’emballage :
 
-![Illustration](/articles/images/de41f17ccb165dda.jpeg)
+![Illustration](/articles/images/8d96b864528c2cfe.jpeg)
 
 Mais découvrir ces images si nettes, inédites jusqu’ici, nous a tout de même donné des frissons :
 
-![Illustration](/articles/images/f767492fe1f7aaa2.jpeg)
+![Illustration](/articles/images/41ff8b458a851056.jpeg)
 
-![Illustration](/articles/images/38b02871dcd91d7a.jpeg)
+![Illustration](/articles/images/6b7813148df86b19.jpeg)
 
-![Illustration](/articles/images/beeb88db6f548f9c.jpeg)
+![Illustration](/articles/images/538ee092b8b967c6.jpeg)
 
-![Illustration](/articles/images/2d2874d58376914d.jpeg)
+![Illustration](/articles/images/33b279182e14b889.jpeg)
 
-![Illustration](/articles/images/aabdfc237de6bffe.jpeg)
+![Illustration](/articles/images/3316a04eba6ab925.jpeg)
 
-![Illustration](/articles/images/f1d43030c3a5da0c.jpeg)
+![Illustration](/articles/images/3fb7a66685f04c36.jpeg)
 
-![Illustration](/articles/images/9154d7affd5f01d8.jpeg)
+![Illustration](/articles/images/66677c4aca342c7e.jpeg)
 
-![Illustration](/articles/images/1c5dc388d9756d25.jpeg)
+![Illustration](/articles/images/ead3bb0d79b482ec.jpeg)
 
-![Illustration](/articles/images/8663dd57597f1b56.jpeg)
+![Illustration](/articles/images/8e17022542cb9668.jpeg)
 
-![Illustration](/articles/images/85be6b853c5075bb.jpeg)
+![Illustration](/articles/images/81a90675ac7a196f.jpeg)
 
-![Illustration](/articles/images/edbfcb086d0c1760.jpeg)
+![Illustration](/articles/images/ea367b40366b5863.jpeg)
 
 L’image restaurée diffère tellement de celle, très sombre, dont nous nous souvenons qu’on dirait un autre film. Voici une nouvelle comparaison avant/après :
 
-![Illustration](/articles/images/25c217a5309431dd.jpeg)Avant restauration (édition LaserDisc)
+![Illustration](/articles/images/f3103ff119f3157f.jpeg)Avant restauration (édition LaserDisc)
 
 ↓↓↓
 
-![Illustration](/articles/images/9c9f297b55f85837.jpeg)Après restauration (Blu-ray restauré en 4K)
+![Illustration](/articles/images/aa653f300165bc77.jpeg)Après restauration (Blu-ray restauré en 4K)
 
-![Illustration](/articles/images/aabbf8e3c24cd525.jpeg)
+![Illustration](/articles/images/0d25d0aee6e4c87c.jpeg)
 
 Avant restauration (édition LaserDisc)
 
 ↓↓↓
 
-![Illustration](/articles/images/dbcee7375263e652.jpeg)Après restauration (Blu-ray restauré en 4K)
+![Illustration](/articles/images/d2ae2a1941782c1f.jpeg)Après restauration (Blu-ray restauré en 4K)
 
 Sur Weibo, un ami ayant vu les captures d’écran s’est demandé si elles n’étaient pas surexposées — les scènes claires semblent même un peu délavées. Que se passe-t-il ?
 
@@ -66,13 +66,13 @@ Le 12 mars, M. Zheng Zihong, qui a participé à la restauration, viendra à She
 
 Voyons maintenant la critique de Gary Tooze, le webmaster de DVDBeaver.
 
-![Illustration](/articles/images/98ca182e4760b5e3.jpeg)
+![Illustration](/articles/images/24a6b4c71c17e5fb.jpeg)
 
 Texte de Gary Tooze
 
 Traduction de Zhang Fengming
 
-![Illustration](/articles/images/3231852f2af31768.jpeg)
+![Illustration](/articles/images/5e73363fa55f6f69.jpeg)
 
 ## Le coffret
 
@@ -82,7 +82,7 @@ Le disque 2 contient les suppléments.
 
 ## Menu du film
 
-![Illustration](/articles/images/507466ce1de971bf.jpeg)
+![Illustration](/articles/images/a4e0cd571a3d67c5.jpeg)
 
 ## Qualité d’image
 
@@ -90,13 +90,13 @@ Criterion propose une « nouvelle restauration numérique 4K ». Edward Yang ét
 
 ## Son
 
-![Illustration](/articles/images/051fa4268e35fbda.jpeg)
+![Illustration](/articles/images/0e981da1964846f1.jpeg)
 
 Le son est assez sobre. La piste PCM linéaire mono à 1 152 kb/s (24 bits) restitue clairement et de façon constante les dialogues en mandarin, mais aussi en taïwanais et en shanghaïen. À l’écoute, tout va bien. Le film n’a pas de musique originale, mais certaines scènes comportent de la musique « en direct » (voir ci-dessus). Des sous-titres anglais sont disponibles ; mon lecteur Oppo a identifié la zone A.
 
 ## Menu des suppléments
 
-![Illustration](/articles/images/5519d45ba3eeb7e9.jpeg)
+![Illustration](/articles/images/1e300ff3f62e8e08.jpeg)
 
 ## Suppléments
 
@@ -106,17 +106,17 @@ Le second Blu-ray comprend un entretien de onze minutes avec Chang Chen, encore 
 
 Le supplément principal est le documentaire de près de deux heures *Our Time, Our Story*, consacré aux vingt ans du Nouveau Cinéma taïwanais dans les années 1980 et 1990. Il comprend des entretiens avec Edward Yang, Hou Hsiao-hsien, Sylvia Chang et Tsai Ming-liang, entre autres. On y trouve aussi un enregistrement de mauvaise qualité de la pièce *If*, mise en scène par Edward Yang en 1992. Cette satire de 45 minutes montre son talent pour diriger de jeunes acteurs et son goût de la critique sociale, même si les sous-titres sont difficiles à lire (voir ci-dessous).
 
-![Illustration](/articles/images/b096c331cb3bf815.jpeg)
+![Illustration](/articles/images/a0594a117017b08c.jpeg)
 
-![Illustration](/articles/images/00d0222520e0a358.jpeg)
+![Illustration](/articles/images/1cff8e5f5da8d51f.jpeg)
 
-![Illustration](/articles/images/a4ceb946d7dedf79.jpeg)
+![Illustration](/articles/images/06300b9292797f13.jpeg)
 
-![Illustration](/articles/images/bb1a56dd16ac6fd7.jpeg)
+![Illustration](/articles/images/ecb6dae09706065e.jpeg)
 
-![Illustration](/articles/images/0034d0d7c8b1b8ef.jpeg)
+![Illustration](/articles/images/d1a1fe19bfbe924b.jpeg)
 
-![Illustration](/articles/images/7516609a0fc8c49c.jpeg)
+![Illustration](/articles/images/97b7752af95fe310.jpeg)
 
 Le coffret comprend aussi un livret avec un texte du critique Godfrey Cheshire et une déclaration publiée par Edward Yang en 1991.
 
@@ -124,6 +124,6 @@ Le coffret comprend aussi un livret avec un texte du critique Godfrey Cheshire e
 
 *A Brighter Summer Day* est indispensable : il faut l’acheter. Dans ses films, Edward Yang examine le conflit entre modernité et tradition, souvent au moyen de plans longs et d’un montage limité. Des détails importants sont souvent masqués par d’autres actions dans le cadre — apparemment de façon délibérée — et il faut observer patiemment pour les repérer. C’est à nous de les découvrir : c’est la seule façon de vraiment les percevoir. Le film est si riche qu’on peut le revoir toute sa vie. Les explications et les discussions du commentaire de Rayns lui donnent encore plus de valeur. Nous recommandons ce coffret Blu-ray sans réserve. Si vous ne devez acheter qu’un seul Blu-ray cette année, choisissez celui-ci.
 
-![Illustration](/articles/images/1b6398a4f4c57aac.gif)
+![Illustration](/articles/images/56053771ac12cd40.gif)
 
-![Illustration](/articles/images/169e25937316404c.jpeg)
+![Illustration](/articles/images/c8311f65cb60d734.jpeg)

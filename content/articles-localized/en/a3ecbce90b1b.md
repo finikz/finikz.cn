@@ -1,4 +1,4 @@
-![Illustration](https://mmbiz.qpic.cn/sz_mmbiz_png/nicsw7GnB0LKKof40sOU88mVdR8hBEJc9GEp1DXXCIQKj8gVm34Xt7BkEHzg4DLxIj546zFYicSka4JswA6nKxJze5AcNSEHWr4XH6QnfzcGA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0)
+![Illustration](/articles/remote/d841860184738647.webp)
 
 When you open a paper book again these days, you may feel a subtle discomfort. It is not because the content is difficult. It is because the pace feels too slow. It is like switching from an endless stream of short videos to a long take in a film: you know the latter has more depth, but your body resists it instinctively.
 
@@ -8,7 +8,7 @@ In the algorithm-driven world, every kind of content competes for the time you s
 
 Reading does the opposite. It asks you to give up one whole block of uninterrupted time. While big tech companies boast about how deeply their products understand human nature, reading is becoming more and more “against human nature.”
 
-![Illustration](https://mmbiz.qpic.cn/mmbiz_png/nicsw7GnB0LLKYjt5hLvJQpXmVDhOWTT2z2fq7lYGhibWUicP3CMOp2Wey6nyic49swUZIOSPwAk0hV1B5c6qAzTT7FLJ5mciao6H7BSib4Sg4aqQ/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=1)
+![Illustration](/articles/remote/33c33f0e2e075ad8.webp)
 
 This creates a paradox: the more we talk about “lifelong learning,” the fewer people actually stick with deep reading. The system no longer rewards sustained immersion. It rewards speed of reaction, the ability to pull information together and the quick detection of trends. Reading has shifted from a “basic skill” to a “scarce strategy.”
 
@@ -20,7 +20,7 @@ You can think of AI as a “knowledge distiller,” while reading is a “cognit
 
 The more useful framework is this: reading is a tool for cognitive differentiation.
 
-![Illustration](https://mmbiz.qpic.cn/mmbiz_png/nicsw7GnB0LIAyGibRicfzCPsjvTr94HPiaMEKxnkP37ucXltvOusKstELYpJbic6QqRSPFAAhHickZXxGVoI4iadEYUiaEE1dVZibBhhFcsynp7jKf8/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=2)
+![Illustration](/articles/remote/6d18a414d21b1972.webp)
 
 When everyone relies on the same information sources—short videos, AI summaries and popular opinions—your intellectual boundaries quickly converge with everyone else’s.
 
@@ -30,7 +30,7 @@ Books, especially niche and less popular ones, offer “non-consensus informatio
 
 At its core, this is a choice posed by the algorithmic era: are you still willing to preserve a block of time that is “not optimized”? There is no instant feedback, no likes and no growth in the numbers during that time. There is only you and a piece of writing that is not trying to flatter you. That may sound like a luxury, but it is precisely this luxury that gives reading new value.
 
-![Illustration](https://mmbiz.qpic.cn/sz_mmbiz_png/nicsw7GnB0LJA8GLZfgj7BXHAiaQ0ZMRrB2BUIXN4l7dcIUAKnnILicA9TCNc5ES8YYTXHliaUItM1l93Zic8j5UYKyXTVpluaHHr6KRAxDAiapJ4/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=3)
+![Illustration](/articles/remote/23ce2c04399c1e88.webp)
 
 People often ask how they should learn in the AI era. I usually do not answer directly, because the more important question is: what are you prepared to give up? Choose efficiency, and accept shallowness. Choose depth, and accept slowness. This has never been a question of methodology. It is a choice of path.
 

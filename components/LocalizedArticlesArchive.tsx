@@ -19,13 +19,14 @@ const copy = {
 
 export default function LocalizedArticlesArchive({ articles, locale }: { articles: Article[]; locale: Exclude<Locale, "zh"> }) {
   const language = copy[locale];
-  const collections = [...new Set(articles.map((article) => article.collection))];
+  // Same order as the Chinese archive: newest first, undated pieces last.
+  const sorted = [...articles].sort((a, b) => (b.date || "0").localeCompare(a.date || "0"));
 
   return (
     <main className={`archive-page ${locale}-page`} lang={locale}>
       <SiteNav active="notes" locale={locale} path="/articles/" />
       <header className="archive-hero"><p className="eyebrow">{language.eyebrow} · {articles.length}</p><h1>{language.title}</h1><p>{language.description}</p></header>
-      <section className="archive-content"><ArticleIndex articles={articles.map(({ slug, title, collection, date }) => ({ slug, title, collection, date }))} collections={collections} locale={locale} /></section>
+      <section className="archive-content"><ArticleIndex articles={sorted.map(({ slug, title, date }) => ({ slug, title, date }))} locale={locale} /></section>
       <SiteFooter locale={locale} />
     </main>
   );

@@ -37,7 +37,7 @@ test("renders the AdSense verification snippet in the document head", async () =
 
 test("exports the deployed homepage metadata and content", async () => {
   const html = await page("index.html");
-  assert.match(html, /<title>Finikz｜非你可思<\/title>/i);
+  assert.match(html, /<title>Finikz 非你可思｜企业 AI 与营销战略顾问<\/title>/i);
   assert.match(html, /AI, CULTURE &amp; STRATEGY/);
   assert.doesNotMatch(html, /AI, STRATEGY &amp; CULTURE/);
   assert.match(html, /WORKSTREAMS/);

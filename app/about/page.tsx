@@ -119,7 +119,7 @@ export function AboutPageContent({ path = "/about/" }: AboutPageContentProps) {
             <a href="https://www.douban.com/people/phoenixZ/" target="_blank" rel="noreferrer"><i className="social-icon douban">豆</i>豆瓣</a>
             <a href="https://instagram.com/finikz" target="_blank" rel="noreferrer"><i className="social-icon instagram">◎</i>Instagram</a>
             <a href="https://twitter.com/finikz" target="_blank" rel="noreferrer"><i className="social-icon x">𝕏</i>X / Twitter</a>
-            <a href="http://www.weibo.com/finikz" target="_blank" rel="noreferrer"><i className="social-icon weibo">博</i>微博</a>
+            <a href="https://www.weibo.com/finikz" target="_blank" rel="noreferrer"><i className="social-icon weibo">博</i>微博</a>
             <a href="https://www.linkedin.com/in/finikz" target="_blank" rel="noreferrer"><i className="social-icon linkedin">in</i>LinkedIn</a>
           </div>
         </div>

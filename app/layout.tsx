@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { types: { "application/rss+xml": "/rss.xml" } },
   openGraph: {
     type: "website",
-    siteName: "Finikz 非你可思",
+    siteName: "Finikz 张凤鸣",
     locale: "zh_CN",
     title: "Finikz｜AI Native 与营销战略顾问",
     description: "帮企业建立 AI Native 的战略顾问、跨文化内容创作者。",

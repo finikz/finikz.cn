@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 
-export const metadata: Metadata = {
-  title: "服务条款｜Finikz",
+export const metadata: Metadata = pageMetadata({
+  locale: "zh",
+  path: "/terms/",
+  title: "服务条款｜Finikz 张凤鸣",
   description: "访问和使用 finikz.cn 时适用的条款。",
-  alternates: {
-    canonical: "/terms/",
-    languages: { "zh-CN": "/terms/", en: "/en/terms/", fr: "/fr/terms/" },
-  },
-};
+});
 
 export default function TermsPage() {
   return (

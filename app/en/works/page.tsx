@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 import { englishWorks } from "@/lib/works";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  locale: "en",
+  path: "/works/",
   title: "Translation Works | Finikz",
   description: "Selected Chinese translations by Finikz, spanning literature, art, wine and sensory culture.",
-  alternates: {
-    canonical: "/en/works/",
-    languages: { "zh-CN": "/works/", en: "/en/works/", fr: "/fr/works/" },
-  },
-};
+});
 
 const groups = ["The Dionysian Trilogy", "West Bund Museum", "Other Translations"] as const;
 

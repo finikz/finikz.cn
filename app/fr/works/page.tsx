@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 import { frenchWorks } from "@/lib/works";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  locale: "fr",
+  path: "/works/",
   title: "Traductions | Finikz",
   description: "Les traductions de Zhang Fengming (Finikz), de la littérature et de l'art à la culture du vin et des spiritueux.",
-  alternates: {
-    canonical: "/fr/works/",
-    languages: { "zh-CN": "/works/", en: "/en/works/", fr: "/fr/works/" },
-  },
-};
+});
 
 const groups = ["La trilogie dionysiaque", "Musée West Bund", "Autres traductions"] as const;
 

@@ -1,23 +1,29 @@
 import type { Metadata } from "next";
+import { articleExcerpt, pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { articles } from "@/lib/articles";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
-import { languageAlternates } from "@/lib/i18n";
+import { articleLocales } from "@/lib/localized-articles";
 
 export function generateStaticParams() { return articles.map((article) => ({ slug: article.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const article = articles.find((item) => item.slug === slug);
-  return article ? {
-    title: `${article.title}｜Finikz`,
-    description: `${article.collection} · ${article.date}`,
-    alternates: { canonical: `/articles/${article.slug}/`, languages: languageAlternates(`/articles/${article.slug}/`) },
-  } : {};
+  return article ? pageMetadata({
+    locale: "zh",
+    path: `/articles/${article.slug}/`,
+    title: `${article.title}｜Finikz 张凤鸣`,
+    description: articleExcerpt(article.body),
+    locales: articleLocales(article.slug),
+    type: "article",
+    publishedTime: article.date,
+  }) : {};
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -29,6 +35,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const previousArticle = chronologicalArticles[articleIndex - 1];
   const nextArticle = chronologicalArticles[articleIndex + 1];
   return <main className="article-page" lang="zh-CN">
+    <ArticleJsonLd article={article} locale="zh" />
     <SiteNav active="notes" path={`/articles/${article.slug}/`} />
     <article className="article-shell">
       <header className="article-header"><p className="eyebrow"><span /> {article.collection.toUpperCase()}</p><h1>{article.title}</h1><time>{article.date}</time>{article.sourceUrl && <a className="source-link" href={article.sourceUrl} target="_blank" rel="noreferrer">查看原始发布 ↗</a>}</header>

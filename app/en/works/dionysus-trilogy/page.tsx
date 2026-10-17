@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { LanguageSwitch } from "@/components/LanguagePreference";
 import SiteFooter from "@/components/SiteFooter";
 
-export const metadata: Metadata = {
-  title: "The Dionysian Trilogy | Finikz Translation Project",
+export const metadata: Metadata = pageMetadata({
+  locale: "en",
+  path: "/works/dionysus-trilogy/",
+  title: "The Dionysian Trilogy: Wine, Beer & Rum | Translated by Finikz",
   description: "Three French books on wine, beer and rum, translated into Chinese by Finikz and published by Guangdong People's Publishing House in 2026.",
-  alternates: {
-    canonical: "/en/works/dionysus-trilogy/",
-    languages: { "zh-CN": "/works/dionysus-trilogy/", en: "/en/works/dionysus-trilogy/", fr: "/fr/works/dionysus-trilogy/" },
-  },
-};
+});
 
 const books = [
   { no: "I", title: "Another History of Wine", original: "Une autre histoire du vin", author: "Pierre Guigui & Sophie Brissaud", cover: "/works/covers/terroir.jpg", note: "A journey through land, climate and human craft—and through the many ways a glass of wine acquires a sense of place." },

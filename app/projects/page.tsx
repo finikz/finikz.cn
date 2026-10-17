@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 
-export const metadata: Metadata = {
-  title: "Work｜Finikz",
+export const metadata: Metadata = pageMetadata({
+  locale: "zh",
+  path: "/projects/",
+  title: "工作主线｜Finikz 张凤鸣",
   description: "张凤鸣的 AI Native 企业构建、营销战略与跨文化内容工作。",
-  alternates: {
-    canonical: "/projects/",
-    languages: { "zh-CN": "/projects/", en: "/en/projects/", fr: "/fr/projects/" },
-  },
-};
+});
 
 const work = [
   { no: "01", title: "AI Native 与营销战略", text: "“智神AI”（Pallas AI）联合创办人，帮企业建立 AI Native：不是给旧流程加 AI，而是按 AI 的方式重建工作。此前联合创办的内容营销公司服务过腾讯集团公关、中国国际投洽会等客户；跨境电商操盘出过亚马逊品类前 10 爆品；运营过百万粉丝账号，曾三个月为新媒体矩阵净增 30 万粉丝。" },

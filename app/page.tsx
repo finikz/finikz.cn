@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { AboutPageContent } from "./about/page";
 
-export const metadata: Metadata = {
-  title: "Finikz 非你可思｜AI Native 与营销战略顾问",
+export const metadata: Metadata = pageMetadata({
+  locale: "zh",
+  path: "/",
+  title: "张凤鸣 Finikz｜AI Native 与营销战略顾问",
   description: "张凤鸣 Finikz：帮企业建立 AI Native 的战略顾问、跨文化内容创作者。",
-  alternates: {
-    canonical: "/",
-    languages: { "zh-CN": "/", en: "/en/", fr: "/fr/" },
-    types: { "application/rss+xml": "/rss.xml" },
-  },
-};
+});
 
 const personJsonLd = {
   "@context": "https://schema.org",

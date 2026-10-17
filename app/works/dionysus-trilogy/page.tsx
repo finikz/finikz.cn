@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { LanguageSwitch } from "@/components/LanguagePreference";
 import SiteFooter from "@/components/SiteFooter";
 
-export const metadata: Metadata = {
-  title: "酒神三部曲｜Finikz 翻译作品",
+export const metadata: Metadata = pageMetadata({
+  locale: "zh",
+  path: "/works/dionysus-trilogy/",
+  title: "酒神三部曲：《风土之诗》《麦芽之歌》《自由之水》｜张凤鸣 译",
   description: "Finikz 译《风土之诗》《麦芽之歌》《自由之水》，广东人民出版社，2026。",
-  alternates: {
-    canonical: "/works/dionysus-trilogy/",
-    languages: { "zh-CN": "/works/dionysus-trilogy/", en: "/en/works/dionysus-trilogy/", fr: "/fr/works/dionysus-trilogy/" },
-  },
-};
+});
 
 const books = [
   { no: "I", title: "风土之诗", original: "Une autre histoire du vin", author: "皮埃尔·吉吉 / 索菲·布里索", cover: "/works/covers/terroir.jpg", note: "从土地、气候与人的手艺出发，重读一杯酒如何拥有自己的来处。" },

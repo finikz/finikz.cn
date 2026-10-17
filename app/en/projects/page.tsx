@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 
-export const metadata: Metadata = {
-  title: "Work | Finikz",
+export const metadata: Metadata = pageMetadata({
+  locale: "en",
+  path: "/projects/",
+  title: "Workstreams | Finikz",
   description: "Finikz's work across AI-native companies, marketing strategy and cross-cultural content.",
-  alternates: {
-    canonical: "/en/projects/",
-    languages: { "zh-CN": "/projects/", en: "/en/projects/", fr: "/fr/projects/" },
-  },
-};
+});
 
 const work = [
   { no: "01", title: "AI-Native Companies & Marketing Strategy", text: "Co-founder of Pallas AI, helping companies become AI-native: not bolting AI onto old processes, but rebuilding work around it. Previously co-founded a content marketing company whose clients included Tencent Group Communications and the China International Fair for Investment & Trade; took a cross-border e-commerce product into Amazon’s top ten in its category; and managed accounts with more than one million followers." },

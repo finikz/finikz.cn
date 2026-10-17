@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { works } from "@/lib/works";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 
-export const metadata: Metadata = {
-  title: "作品｜Finikz 张凤鸣",
+export const metadata: Metadata = pageMetadata({
+  locale: "zh",
+  path: "/works/",
+  title: "译作与作品｜Finikz 张凤鸣",
   description: "张凤鸣（Finikz）的翻译作品：酒神三部曲及艺术、文学译作。",
-  alternates: {
-    canonical: "/works/",
-    languages: { "zh-CN": "/works/", en: "/en/works/", fr: "/fr/works/" },
-  },
-};
+});
 
 export default function WorksPage() {
   const groups = ["酒神三部曲", "西岸美术馆", "其他译作"] as const;

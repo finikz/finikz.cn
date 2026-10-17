@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import FrenchAboutPage from "@/components/FrenchAboutPage";
 
-export const metadata: Metadata = {
-  title: "Finikz | IA, culture et stratégie",
+export const metadata: Metadata = pageMetadata({
+  locale: "fr",
+  path: "/",
+  title: "Zhang Fengming (Finikz) | Conseil en stratégie AI-native et marketing",
   description: "Je travaille en chinois, en anglais et en français, j'aide les entreprises à devenir AI-native, à la croisée de la stratégie marketing, de la traduction et du contenu interculturel.",
-  alternates: {
-    canonical: "/fr/",
-    languages: { "zh-CN": "/", en: "/en/", fr: "/fr/" },
-  },
-};
+});
 
 export default function FrenchHomePage() {
   return <FrenchAboutPage path="/" />;

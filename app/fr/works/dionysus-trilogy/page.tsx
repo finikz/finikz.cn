@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { LanguageSwitch } from "@/components/LanguagePreference";
 import SiteFooter from "@/components/SiteFooter";
 
-export const metadata: Metadata = {
-  title: "La trilogie dionysiaque | Traductions de Finikz",
+export const metadata: Metadata = pageMetadata({
+  locale: "fr",
+  path: "/works/dionysus-trilogy/",
+  title: "La trilogie dionysiaque : vin, bière et rhum | Traductions de Finikz",
   description: "Trois livres français sur le vin, la bière et le rhum, traduits en chinois par Zhang Fengming (Finikz) et publiés en 2026.",
-  alternates: {
-    canonical: "/fr/works/dionysus-trilogy/",
-    languages: { "zh-CN": "/works/dionysus-trilogy/", en: "/en/works/dionysus-trilogy/", fr: "/fr/works/dionysus-trilogy/" },
-  },
-};
+});
 
 const books = [
   { no: "I", title: "Une autre histoire du vin", author: "Pierre Guigui et Sophie Brissaud", cover: "/works/covers/terroir.jpg", note: "Un voyage à travers les terroirs, les climats et le savoir-faire humain, pour comprendre comment un verre de vin acquiert son caractère." },

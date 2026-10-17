@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  locale: "fr",
+  path: "/privacy/",
   title: "Politique de confidentialité | Finikz",
   description: "Politique de confidentialité et informations sur les cookies de finikz.cn.",
-  alternates: {
-    canonical: "/fr/privacy/",
-    languages: { "zh-CN": "/privacy/", en: "/en/privacy/", fr: "/fr/privacy/" },
-  },
-};
+});
 
 export default function FrenchPrivacyPage() {
   return (

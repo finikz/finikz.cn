@@ -1,3 +1,4 @@
+import ArticleJsonLd from "@/components/ArticleJsonLd";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -21,6 +22,7 @@ export default function LocalizedArticlePage({ article, articles, locale }: { ar
 
   return (
     <main className={`article-page ${locale}-page`} lang={locale}>
+      <ArticleJsonLd article={article} locale={locale} />
       <SiteNav active="notes" locale={locale} path={articlePath} />
       <article className="article-shell">
         <header className="article-header"><p className="eyebrow">{article.collection.toLocaleUpperCase(locale)}</p><h1>{article.title}</h1><time dateTime={article.date}>{article.date}</time>{article.sourceUrl && <a className="source-link" href={article.sourceUrl} target="_blank" rel="noreferrer">{language.source}</a>}</header>

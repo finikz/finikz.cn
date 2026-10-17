@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import ArticleIndex from "./ArticleIndex";
 import { articles, collections } from "@/lib/articles";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 
-export const metadata = { title: "文章｜Finikz", description: "Finikz 的文章、译作与观察。" };
+export const metadata: Metadata = pageMetadata({
+  locale: "zh",
+  path: "/articles/",
+  title: "文章：AI、营销与文化观察｜Finikz 张凤鸣",
+  description: "张凤鸣（Finikz）关于 AI Native、营销战略、跨文化与翻译的文章与观察。",
+});
 
 export default function ArticlesPage() {
   return <main className="archive-page" lang="zh-CN">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
@@ -7,14 +8,12 @@ import SiteNav from "@/components/SiteNav";
 import { articles } from "@/lib/articles";
 import { works } from "@/lib/works";
 
-export const metadata: Metadata = {
-  title: "Finikz｜非你可思",
+export const metadata: Metadata = pageMetadata({
+  locale: "zh",
+  path: "/",
+  title: "关于张凤鸣｜AI Native 与营销战略顾问",
   description: "张凤鸣 Finikz：帮企业建立 AI Native 的战略顾问、跨文化内容创作者。",
-  alternates: {
-    canonical: "/about/",
-    languages: { "zh-CN": "/about/", en: "/en/about/", fr: "/fr/about/" },
-  },
-};
+});
 
 const workstreams = [
   {

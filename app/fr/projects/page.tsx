@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  locale: "fr",
+  path: "/projects/",
   title: "Activités | Finikz",
   description: "Les activités de Zhang Fengming dans les domaines de l'entreprise AI-native, du marketing et du contenu interculturel.",
-  alternates: {
-    canonical: "/fr/projects/",
-    languages: { "zh-CN": "/projects/", en: "/en/projects/", fr: "/fr/projects/" },
-  },
-};
+});
 
 const work = [
   { no: "01", title: "Entreprise AI-native et stratégie marketing", text: "Co-fondateur de Pallas AI, Zhang Fengming aide les entreprises à devenir AI-native : non pas greffer l'IA sur d'anciens processus, mais reconstruire le travail autour d'elle. Il a auparavant cofondé une agence de contenu dont les clients comptaient notamment Tencent Group Communications et la Foire internationale de l'investissement et du commerce de Chine. Il a également classé un produit de commerce transfrontalier parmi les dix premiers de sa catégorie sur Amazon et piloté des comptes suivis par plus d'un million de personnes." },

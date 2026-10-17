@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 
-export const metadata: Metadata = {
-  title: "隐私政策｜Finikz",
+export const metadata: Metadata = pageMetadata({
+  locale: "zh",
+  path: "/privacy/",
+  title: "隐私政策｜Finikz 张凤鸣",
   description: "finikz.cn 的隐私政策与 Cookie 使用说明。",
-  alternates: {
-    canonical: "/privacy/",
-    languages: { "zh-CN": "/privacy/", en: "/en/privacy/", fr: "/fr/privacy/" },
-  },
-};
+});
 
 export default function PrivacyPage() {
   return (

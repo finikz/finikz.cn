@@ -5,7 +5,8 @@ import { englishArticles, frenchArticles } from "@/lib/localized-articles";
 export const dynamic = "force-static";
 
 const siteUrl = "https://finikz.cn";
-const pages = ["/", "/about/", "/works/", "/works/dionysus-trilogy/", "/articles/", "/projects/", "/privacy/", "/terms/"];
+// /about/ is left out: it canonicalises to the homepage.
+const pages = ["/", "/works/", "/works/dionysus-trilogy/", "/articles/", "/projects/", "/privacy/", "/terms/"];
 
 const englishSlugs = new Set(englishArticles.map((article) => article.slug));
 const frenchSlugs = new Set(frenchArticles.map((article) => article.slug));

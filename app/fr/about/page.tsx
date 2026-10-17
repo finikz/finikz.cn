@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import FrenchAboutPage from "@/components/FrenchAboutPage";
 
-export const metadata: Metadata = {
-  title: "À propos de Finikz | IA, culture et stratégie",
+export const metadata: Metadata = pageMetadata({
+  locale: "fr",
+  path: "/",
+  title: "À propos de Zhang Fengming | Stratégie AI-native et marketing",
   description: "Zhang Fengming (Finikz) : conseil en stratégie AI-native et marketing, traduction et création de contenu interculturel.",
-  alternates: {
-    canonical: "/fr/about/",
-    languages: { "zh-CN": "/about/", en: "/en/about/", fr: "/fr/about/" },
-  },
-};
+});
 
 export default function FrenchAboutRoute() {
   return <FrenchAboutPage />;

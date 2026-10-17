@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { articleExcerpt, pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import LocalizedArticlePage from "@/components/LocalizedArticlePage";
-import { languageAlternates, localizedPath } from "@/lib/i18n";
-import { englishArticles } from "@/lib/localized-articles";
+import { articleLocales, englishArticles } from "@/lib/localized-articles";
 
 export const dynamicParams = false;
 
@@ -13,14 +13,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const article = englishArticles.find((item) => item.slug === slug);
-  return article ? {
+  return article ? pageMetadata({
+    locale: "en",
+    path: `/articles/${article.slug}/`,
     title: `${article.title} | Finikz`,
-    description: `${article.collection} · ${article.date}`,
-    alternates: {
-      canonical: localizedPath("en", `/articles/${article.slug}/`),
-      languages: languageAlternates(`/articles/${article.slug}/`),
-    },
-  } : {};
+    description: articleExcerpt(article.body),
+    locales: articleLocales(article.slug),
+    type: "article",
+    publishedTime: article.date,
+  }) : {};
 }
 
 export default async function EnglishArticlePage({ params }: { params: Promise<{ slug: string }> }) {

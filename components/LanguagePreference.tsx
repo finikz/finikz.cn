@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { languageAlternates, localeFromPath, localeTags, localizedPath, type Locale } from "@/lib/i18n";
 
 const storageKey = "finikz-language";
-const localeLabels: Record<Locale, string> = { zh: "ZH", en: "EN", fr: "FR" };
+const localeLabels: Record<Locale, string> = { zh: "中文", en: "EN", fr: "FR" };
 
 // Keeps <html lang> in step with the page; the language redirect itself runs inline in <head> (lib/language-redirect.ts).
 export function LanguagePreference() {

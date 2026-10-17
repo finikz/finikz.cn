@@ -70,7 +70,7 @@ test("exports the English fixed pages and language navigation", async () => {
   assert.match(html, /AI-Native &amp; GEO/);
   assert.match(html, /MY WRITING/);
   assert.match(html, /class="about-writing-item" href="\/en\/articles\/[0-9a-f]{12}\/"/);
-  assert.match(html, /href="\/"[^>]*>ZH</);
+  assert.match(html, /href="\/"[^>]*>中文</);
   assert.match(html, /hrefLang="zh-CN" href="https:\/\/finikz\.cn\/"/i);
   assert.match(html, /href="\/en\/about\/?"[^>]*>About</);
   assert.match(html, /href="\/en\/privacy\/?"[^>]*>Privacy</);

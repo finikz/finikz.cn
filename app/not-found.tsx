@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 
@@ -13,7 +14,7 @@ export default function NotFound() {
       <SiteNav path="/" />
       <article className="legal-content">
         <header><p className="eyebrow">404 · PAGE NOT FOUND</p><h1>这一页不存在</h1><p>链接可能已经失效，或者文章换了地址。This page could not be found.</p></header>
-        <p><a href="/">回到首页 ↗</a>　<a href="/articles/">看看全部文章 ↗</a>　<a href="/en/">English ↗</a>　<a href="/fr/">Français ↗</a></p>
+        <p><Link href="/">回到首页 ↗</Link>　<Link href="/articles/">看看全部文章 ↗</Link>　<Link href="/en/">English ↗</Link>　<Link href="/fr/">Français ↗</Link></p>
       </article>
       <SiteFooter />
     </main>

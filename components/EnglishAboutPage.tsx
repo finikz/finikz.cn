@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
+import ServiceMap from "@/components/ServiceMap";
 import SiteNav from "@/components/SiteNav";
 import { englishWorks } from "@/lib/works";
 
 const workstreams = [
   {
-    title: "Enterprise AI & Marketing Strategy",
+    title: "AI-Native Companies & Marketing Strategy",
     points: [
-      "Co-founded Pallas AI, advising businesses on practical AI adoption and marketing strategy.",
+      "Co-founded Pallas AI, helping companies become AI-native: not bolting AI onto old processes, but rebuilding work around it.",
       "Co-founded a content marketing company whose clients included Tencent Group Communications and the China International Fair for Investment & Trade.",
       "Brought a cross-border e-commerce product into the top ten in its Amazon category.",
       "Managed accounts with more than one million followers; helped a new-media network gain 300,000 followers in three months.",
@@ -48,9 +49,9 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
       <header className="page-hero about-hero">
         <div className="about-hero-copy">
           <h1><em>Finikz</em></h1>
-          <p><strong>AI &amp; Marketing Strategy Consultant | Cross-Cultural Content Creator</strong><br />With a degree in French from Sun Yat-sen University, I work across Chinese, English and French, bringing together AI, cultural insight, business strategy and editorial craft to build systems that compound over time.</p>
+          <p><strong>AI-Native &amp; Marketing Strategy Consultant | Cross-Cultural Content Creator</strong><br />With a degree in French from Sun Yat-sen University, I work across Chinese, English and French, bringing together AI, cultural insight, business strategy and editorial craft to build systems that compound over time.</p>
         </div>
-        <aside className="hero-meta">Enterprise AI &amp; Marketing Strategy<br />Cross-Cultural Content &amp; Chinese-English-French Translation<br />Deputy Secretary-General, SYSU Guangzhou Alumni Association<br />Co-founder, Jumpwire Craft Beer &amp; Jumpwire Art Alliance</aside>
+        <aside className="hero-meta">Building AI-Native Companies · AI Search Visibility<br />Global Brand Expansion &amp; Cross-Cultural Marketing · Chinese-English-French Translation<br />Deputy Secretary-General, SYSU Guangzhou Alumni Association<br />Co-founder, Jumpwire Craft Beer &amp; Jumpwire Art Alliance</aside>
       </header>
 
       <section className="about-workstreams" aria-labelledby="en-workstreams-title">
@@ -63,6 +64,8 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
           ))}
         </div>
       </section>
+
+      <ServiceMap locale="en" />
 
       <section className="about-showcase about-translations" aria-labelledby="en-translations-title">
         <div className="about-section-label"><p className="eyebrow">BOOK TRANSLATIONS</p><h2 id="en-translations-title">Selected Translations</h2></div>
@@ -92,7 +95,7 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
         <div className="about-contact">
           <p className="eyebrow">WORK WITH ME</p>
           <h2>Let’s Talk</h2>
-          <p className="placeholder-copy">Enterprise AI and marketing strategy · Global brand development and cross-cultural content · Arts and cultural translation · Interdisciplinary projects</p>
+          <p className="placeholder-copy">Building AI-native companies · AI search visibility (GEO) · Brand strategy and content · Global brand expansion and cross-cultural marketing · Arts and culture translation · Interdisciplinary projects</p>
           <a href="mailto:mail@finikz.com">Email: mail@finikz.com</a>
           <a href="https://finikz.com/" target="_blank" rel="noreferrer">Company website ↗</a>
           <div className="social-links">

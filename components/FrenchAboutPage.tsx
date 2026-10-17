@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
+import ServiceMap from "@/components/ServiceMap";
 import SiteNav from "@/components/SiteNav";
 import { frenchWorks } from "@/lib/works";
 
 const workstreams = [
   {
-    title: "Stratégie IA et marketing d'entreprise",
+    title: "Entreprise AI-native et stratégie marketing",
     points: [
-      "Cofondateur de Pallas AI ; conseil aux entreprises sur l'adoption concrète de l'IA et la définition de leur stratégie marketing.",
+      "Cofondateur de Pallas AI ; j'aide les entreprises à devenir AI-native : non pas greffer l'IA sur d'anciens processus, mais reconstruire le travail autour d'elle.",
       "Cofondateur d'une agence de marketing de contenu, qui comptait parmi ses clients Tencent Group Communications et la Foire internationale de l'investissement et du commerce de Chine.",
       "Produit de commerce transfrontalier classé dans le top 10 de sa catégorie sur Amazon.",
       "Pilotage de comptes suivis par plus d'un million d'abonnés ; contribution à la croissance d'un réseau de médias (+300 000 abonnés en trois mois).",
@@ -43,9 +44,9 @@ export default function FrenchAboutPage({ path = "/about/" }: { path?: string })
       <header className="page-hero about-hero">
         <div className="about-hero-copy">
           <h1><em>Finikz</em></h1>
-          <p><strong>Consultant en stratégie IA et marketing | Créateur de contenu interculturel</strong><br />Titulaire d'un diplôme en études françaises de l'Université Sun Yat-sen, je travaille en chinois, en anglais et en français. À la croisée de l'IA, de la compréhension culturelle, de la stratégie d'entreprise et du travail éditorial, je conçois des systèmes dont les effets se renforcent dans la durée.</p>
+          <p><strong>Consultant en stratégie AI-native et marketing | Créateur de contenu interculturel</strong><br />Titulaire d'un diplôme en études françaises de l'Université Sun Yat-sen, je travaille en chinois, en anglais et en français. À la croisée de l'IA, de la compréhension culturelle, de la stratégie d'entreprise et du travail éditorial, je conçois des systèmes dont les effets se renforcent dans la durée.</p>
         </div>
-        <aside className="hero-meta">Stratégie IA et marketing<br />Contenu interculturel et traduction en chinois, anglais et français<br />Secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou<br />Cofondateur de Jumpwire Craft Beer et de l'Alliance artistique Jumpwire</aside>
+        <aside className="hero-meta">Entreprise AI-native · Visibilité dans la recherche IA<br />Développement international et marketing interculturel · Traduction chinois, anglais, français<br />Secrétaire général adjoint de l'Association des anciens élèves de l'Université Sun Yat-sen à Guangzhou<br />Cofondateur de Jumpwire Craft Beer et de l'Alliance artistique Jumpwire</aside>
       </header>
 
       <section className="about-workstreams" aria-labelledby="fr-workstreams-title">
@@ -58,6 +59,8 @@ export default function FrenchAboutPage({ path = "/about/" }: { path?: string })
           ))}
         </div>
       </section>
+
+      <ServiceMap locale="fr" />
 
       <section className="about-showcase about-translations" aria-labelledby="fr-translations-title">
         <div className="about-section-label"><p className="eyebrow">MES TRADUCTIONS</p><h2 id="fr-translations-title">Quelques ouvrages traduits</h2></div>
@@ -86,7 +89,7 @@ export default function FrenchAboutPage({ path = "/about/" }: { path?: string })
         <div className="about-contact">
           <p className="eyebrow">TRAVAILLONS ENSEMBLE</p>
           <h2>Parlons de votre projet</h2>
-          <p className="placeholder-copy">Stratégie IA et marketing · Développement international des marques et contenu interculturel · Traduction dans les domaines artistiques et culturels · Projets interdisciplinaires</p>
+          <p className="placeholder-copy">Entreprise AI-native · Visibilité dans la recherche IA (GEO) · Stratégie de marque et contenus · Développement international et marketing interculturel · Traduction d'art et de culture · Projets interdisciplinaires</p>
           <a href="mailto:mail@finikz.com">E-mail : mail@finikz.com</a>
           <a href="https://finikz.com/" target="_blank" rel="noreferrer">Site de l'entreprise ↗</a>
           <div className="social-links">

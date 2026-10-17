@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
+import ServiceMap from "@/components/ServiceMap";
 import SiteNav from "@/components/SiteNav";
 import { articles } from "@/lib/articles";
 import { works } from "@/lib/works";
 
 export const metadata: Metadata = {
   title: "Finikz｜非你可思",
-  description: "张凤鸣 Finikz：企业 AI 与营销战略顾问、跨文化内容创作者。",
+  description: "张凤鸣 Finikz：帮企业建立 AI Native 的战略顾问、跨文化内容创作者。",
   alternates: {
     canonical: "/about/",
     languages: { "zh-CN": "/about/", en: "/en/about/", fr: "/fr/about/" },
@@ -18,9 +19,9 @@ export const metadata: Metadata = {
 const workstreams = [
   {
     number: "01",
-    title: "企业 AI 与营销战略",
+    title: "AI Native 与营销战略",
     points: [
-      "「智神AI」（Pallas AI）联合创办人，面向企业提供 AI 落地与营销战略顾问服务。",
+      "「智神AI」（Pallas AI）联合创办人，帮企业建立 AI Native：不是给旧流程加 AI，而是按 AI 的方式重建工作。",
       "联合创办的内容营销公司服务过腾讯集团公关、中国国际投洽会等客户；",
       "跨境电商操盘出过亚马逊品类前 10 爆品；",
       "运营过百万粉丝账号，曾三个月为新媒体矩阵净增 30 万粉丝。",
@@ -62,9 +63,9 @@ export function AboutPageContent({ path = "/about/" }: AboutPageContentProps) {
       <header className="page-hero about-hero">
         <div className="about-hero-copy">
           <h1><em>Finikz</em></h1>
-          <p><strong>AI 与营销战略顾问 ｜ 跨文化内容创作者</strong><br />张凤鸣，中山大学法语系毕业，以中英法三种语言工作，擅长用 AI 把文化洞察、商业策略与内容表达，整合成一套长期复利的系统。</p>
+          <p><strong>AI Native 与营销战略顾问 ｜ 跨文化内容创作者</strong><br />张凤鸣，中山大学法语系毕业，以中英法三种语言工作，擅长用 AI 把文化洞察、商业策略与内容表达，整合成一套长期复利的系统。</p>
         </div>
-        <aside className="hero-meta">企业 AI 战略咨询 / 营销战略咨询<br />跨文化内容创作 / 中英法三语翻译<br />中山大学广州校友会常务副秘书长<br />九维精酿-九维艺术联盟联合创办人</aside>
+        <aside className="hero-meta">AI Native 企业构建 / AI 搜索可见度<br />品牌出海与跨文化营销 / 中英法三语翻译<br />中山大学广州校友会常务副秘书长<br />九维精酿-九维艺术联盟联合创办人</aside>
       </header>
 
       <section className="about-workstreams" aria-labelledby="workstreams-title">
@@ -77,6 +78,8 @@ export function AboutPageContent({ path = "/about/" }: AboutPageContentProps) {
           ))}
         </div>
       </section>
+
+      <ServiceMap locale="zh" />
 
       <section className="about-showcase about-translations" aria-labelledby="translations-title">
         <div className="about-section-label"><p className="eyebrow">MY WORKS</p><h2 id="translations-title">我的译作</h2></div>
@@ -111,7 +114,7 @@ export function AboutPageContent({ path = "/about/" }: AboutPageContentProps) {
         <div className="about-contact">
           <p className="eyebrow">WORK WITH ME</p>
           <h2>欢迎合作</h2>
-          <p className="placeholder-copy">企业 AI 与营销战略咨询 ／ 品牌出海与跨文化内容 ／ 文化艺术类翻译 ／ 有意思的跨界项目</p>
+          <p className="placeholder-copy">AI Native 企业构建 ／ AI 搜索可见度（GEO） ／ 品牌策略与内容 ／ 品牌出海与跨文化营销 ／ 文化艺术翻译 ／ 有意思的跨界项目</p>
           <a href="mailto:mail@finikz.com">邮箱　mail@finikz.com</a>
           <a href="https://finikz.com/" target="_blank" rel="noreferrer">公司网站 ↗</a>
           <div className="social-links">

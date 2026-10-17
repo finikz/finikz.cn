@@ -9,14 +9,14 @@ import "./consulting.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://finikz.cn"),
   title: "Finikz｜非你可思",
-  description: "张凤鸣 Finikz：“智神AI”联合创办人，企业 AI 落地与营销战略顾问、跨文化内容创作者。",
+  description: "张凤鸣 Finikz：“智神AI”联合创办人，帮企业建立 AI Native 的战略顾问、跨文化内容创作者。",
   alternates: { types: { "application/rss+xml": "/rss.xml" } },
   openGraph: {
     type: "website",
     siteName: "Finikz 非你可思",
     locale: "zh_CN",
-    title: "Finikz｜企业 AI 与营销战略顾问",
-    description: "企业 AI 落地与营销战略顾问、跨文化内容创作者。",
+    title: "Finikz｜AI Native 与营销战略顾问",
+    description: "帮企业建立 AI Native 的战略顾问、跨文化内容创作者。",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Finikz" }],
   },
   twitter: { card: "summary_large_image" },

@@ -56,12 +56,15 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
 
       <section className="about-workstreams" aria-labelledby="en-workstreams-title">
         <div className="about-section-label"><p className="eyebrow">FOCUS AREAS</p><h2 id="en-workstreams-title">What I Do</h2></div>
-        <div className="about-stream-list">
-          {workstreams.map((item) => (
-            <article className="about-stream" key={item.title}>
-              <div><h3>{item.title}</h3><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul></div>
-            </article>
-          ))}
+        <div className="about-showcase-content">
+          <div className="about-stream-list">
+            {workstreams.map((item) => (
+              <article className="about-stream" key={item.title}>
+                <div><h3>{item.title}</h3><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul></div>
+              </article>
+            ))}
+          </div>
+          <a className="about-more-link" href="https://finikz.com/en/" target="_blank" rel="noreferrer">Company website ↗</a>
         </div>
       </section>
 

@@ -37,7 +37,7 @@ test("renders the AdSense verification snippet in the document head", async () =
 
 test("exports the deployed homepage metadata and content", async () => {
   const html = await page("index.html");
-  assert.match(html, /<title>张凤鸣 Finikz｜AI Native 与营销战略顾问<\/title>/i);
+  assert.match(html, /<title>Finikz｜AI Native 与营销战略<\/title>/i);
   assert.match(html, /AI, CULTURE &amp; STRATEGY/);
   assert.doesNotMatch(html, /AI, STRATEGY &amp; CULTURE/);
   assert.match(html, /WORKSTREAMS/);
@@ -65,7 +65,7 @@ test("exports the English fixed pages and language navigation", async () => {
   for (const route of routes) await access(new URL(route, outputRoot));
 
   const html = await page("en/index.html");
-  assert.match(html, /<title>Zhang Fengming \(Finikz\) \| AI-Native &amp; Marketing Strategy Consultant<\/title>/i);
+  assert.match(html, /<title>Finikz \| AI-Native &amp; Marketing Strategy<\/title>/i);
   assert.match(html, /AI-Native Companies &amp; Marketing Strategy/);
   assert.match(html, /WRITING IN CHINESE/);
   assert.match(html, /Read in Chinese/);

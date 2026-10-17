@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Finikz 张凤鸣",
     locale: "zh_CN",
-    title: "Finikz｜AI Native 与营销战略顾问",
+    title: "Finikz｜AI Native 与营销战略",
     description: "帮企业建立 AI Native 的战略顾问、跨文化内容创作者。",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Finikz" }],
   },

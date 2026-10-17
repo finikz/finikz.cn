@@ -5,7 +5,7 @@ import { AboutPageContent } from "./about/page";
 export const metadata: Metadata = pageMetadata({
   locale: "zh",
   path: "/",
-  title: "张凤鸣 Finikz｜AI Native 与营销战略顾问",
+  title: "Finikz｜AI Native 与营销战略",
   description: "张凤鸣 Finikz：帮企业建立 AI Native 的战略顾问、跨文化内容创作者。",
 });
 

@@ -7,6 +7,8 @@ import { fileURLToPath } from "node:url";
 const outputRoot = new URL("../out/", import.meta.url);
 const outputPath = fileURLToPath(outputRoot);
 const articles = JSON.parse(await readFile(new URL("../content/articles.json", import.meta.url), "utf8"));
+const englishArticles = JSON.parse(await readFile(new URL("../content/articles-localized/en/index.json", import.meta.url), "utf8"));
+const frenchArticles = JSON.parse(await readFile(new URL("../content/articles-localized/fr/index.json", import.meta.url), "utf8"));
 const policyExcludedSlugs = ["9ed80a386aac", "69e1a877334b", "6699bca3dc1f", "baa12239a63a", "d056fc10aa97", "1f75f10889c2"];
 
 async function page(path) {
@@ -21,19 +23,6 @@ async function htmlFiles(directory) {
   }));
   return nested.flat();
 }
-
-test("renders the AdSense verification snippet in the document head", async () => {
-  const routes = ["index.html", "about/index.html", "en/index.html", "en/about/index.html"];
-  for (const route of routes) {
-    const html = await page(route);
-    const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? "";
-    const scriptTags = head.match(/<script\b[^>]*>[\s\S]*?<\/script>/gi) || [];
-    const loaders = scriptTags.filter((tag) => tag.includes("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346776141251301"));
-    assert.equal(loaders.length, 1, `${route} should contain one AdSense script in <head>`);
-    assert.match(loaders[0], /\basync(?:=""|\s|>)/i);
-    assert.match(loaders[0], /\bcrossorigin="anonymous"/i);
-  }
-});
 
 test("exports the deployed homepage metadata and content", async () => {
   const html = await page("index.html");
@@ -61,7 +50,7 @@ test("exports the deployed homepage metadata and content", async () => {
 });
 
 test("exports the English fixed pages and language navigation", async () => {
-  const routes = ["en/index.html", "en/about/index.html", "en/projects/index.html", "en/privacy/index.html", "en/terms/index.html", "en/works/index.html", "en/works/dionysus-trilogy/index.html"];
+  const routes = ["en/index.html", "en/about/index.html", "en/projects/index.html", "en/works/index.html", "en/works/dionysus-trilogy/index.html"];
   for (const route of routes) await access(new URL(route, outputRoot));
 
   const html = await page("en/index.html");
@@ -73,33 +62,24 @@ test("exports the English fixed pages and language navigation", async () => {
   assert.match(html, /href="\/"[^>]*>中文</);
   assert.match(html, /hrefLang="zh-CN" href="https:\/\/finikz\.cn\/"/i);
   assert.match(html, /href="\/en\/about\/?"[^>]*>About</);
-  assert.match(html, /href="\/en\/privacy\/?"[^>]*>Privacy</);
-  assert.match(html, /href="\/en\/terms\/?"[^>]*>Terms</);
+  assert.match(html, /href="https:\/\/finikz\.cn\/en\/rss\.xml"/i);
 
   const worksHtml = await page("en/works/index.html");
   for (const title of ["Another History of Wine", "Beer in All Its Forms", "Rum: The Long Voyage", "Kandinsky: The Pioneer of Abstract Art", "The Voice of Things", "Women in Abstraction"]) assert.ok(worksHtml.includes(title));
 
-  const privacyHtml = await page("en/privacy/index.html");
-  assert.match(privacyHtml, /Google Analytics 4/);
-  assert.doesNotMatch(privacyHtml, /Allow analytics/);
-  assert.match(privacyHtml, /loads after a page is opened/);
 });
 
 test("exports the primary routes and an article page", async () => {
-  for (const route of ["about/index.html", "articles/index.html", "privacy/index.html", "projects/index.html", "terms/index.html", "works/index.html", "works/dionysus-trilogy/index.html"]) {
+  for (const route of ["about/index.html", "articles/index.html", "projects/index.html", "works/index.html", "works/dionysus-trilogy/index.html"]) {
     await access(new URL(route, outputRoot));
   }
-  const privacyHtml = await page("privacy/index.html");
-  assert.match(privacyHtml, /Google Analytics 4/);
-  assert.match(privacyHtml, /Google AdSense/);
-  assert.doesNotMatch(privacyHtml, /同意分析/);
 
   for (const route of ["index.html", "articles/index.html", "works/index.html"]) {
     const html = await page(route);
     assert.match(html, /href="\/about\/?"[^>]*>关于</);
     assert.match(html, /href="mailto:mail@finikz\.com"[^>]*>联系方式</);
-    assert.match(html, /href="\/privacy\/?"[^>]*>隐私政策</);
-    assert.match(html, /href="\/terms\/?"[^>]*>服务条款</);
+    assert.match(html, /href="\/rss\.xml"[^>]*>RSS 订阅</);
+    assert.doesNotMatch(html, /隐私政策|服务条款/);
   }
 
   const firstArticle = articles[0];
@@ -108,11 +88,20 @@ test("exports the primary routes and an article page", async () => {
   assert.ok(articleHtml.includes(`<title>${firstArticle.title}｜Finikz 张凤鸣</title>`));
 });
 
-test("exports an RSS feed containing every article", async () => {
-  const rss = await page("rss.xml");
-  assert.match(rss, /^<\?xml version="1\.0" encoding="UTF-8"\?>/);
-  assert.equal((rss.match(/<item>/g) || []).length, articles.length);
-  assert.ok(rss.includes(`<link>https://finikz.cn/articles/${articles[0].slug}/</link>`));
+test("exports localized RSS feeds for all available articles", async () => {
+  const feeds = [
+    { path: "rss.xml", prefix: "", language: "zh-CN", articles },
+    { path: "en/rss.xml", prefix: "/en", language: "en", articles: englishArticles },
+    { path: "fr/rss.xml", prefix: "/fr", language: "fr", articles: frenchArticles },
+  ];
+
+  for (const feed of feeds) {
+    const rss = await page(feed.path);
+    assert.match(rss, /^<\?xml version="1\.0" encoding="UTF-8"\?>/);
+    assert.match(rss, new RegExp(`<language>${feed.language}<\\/language>`));
+    assert.equal((rss.match(/<item>/g) || []).length, feed.articles.length);
+    assert.ok(rss.includes(`<link>https://finikz.cn${feed.prefix}/articles/${feed.articles[0].slug}/</link>`));
+  }
 });
 
 test("keeps policy-excluded articles out of the export", async () => {

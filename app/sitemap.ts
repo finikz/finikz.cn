@@ -6,7 +6,7 @@ export const dynamic = "force-static";
 
 const siteUrl = "https://finikz.cn";
 // /about/ is left out: it canonicalises to the homepage.
-const pages = ["/", "/works/", "/works/dionysus-trilogy/", "/articles/", "/projects/", "/privacy/", "/terms/"];
+const pages = ["/", "/works/", "/works/dionysus-trilogy/", "/articles/", "/projects/"];
 
 const englishSlugs = new Set(englishArticles.map((article) => article.slug));
 const frenchSlugs = new Set(frenchArticles.map((article) => article.slug));

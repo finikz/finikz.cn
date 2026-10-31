@@ -27,7 +27,7 @@ export function pageMetadata({ locale, path, title, description, locales = allLo
   return {
     title,
     description,
-    alternates: { canonical: url, languages, types: { "application/rss+xml": "/rss.xml" } },
+    alternates: { canonical: url, languages, types: { "application/rss+xml": locale === "zh" ? "/rss.xml" : `/${locale}/rss.xml` } },
     openGraph: type === "article"
       ? { type, publishedTime, siteName: "Finikz 张凤鸣", locale: ogLocales[locale], url, title, description, images: [ogImage] }
       : { type, siteName: "Finikz 张凤鸣", locale: ogLocales[locale], url, title, description, images: [ogImage] },

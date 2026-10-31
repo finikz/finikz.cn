@@ -15,7 +15,7 @@ type WorkstreamsCopy = {
 export const workstreams: Record<Locale, WorkstreamsCopy> = {
   zh: {
     eyebrow: "WORKSTREAMS & EXPERIENCE",
-    heading: "工作主线与项目经验",
+    heading: "我的经验",
     intro: "以 AI Native 为核心：对内，帮企业按 AI 的方式重建工作；对外，让 AI 认识并推荐你的品牌。",
     companyLink: "公司网站 ↗",
     companyHref: "https://finikz.com/",
@@ -55,7 +55,7 @@ export const workstreams: Record<Locale, WorkstreamsCopy> = {
   },
   en: {
     eyebrow: "WORKSTREAMS & EXPERIENCE",
-    heading: "Workstreams & Experience",
+    heading: "My Experience",
     intro: "AI-native at the core: inside the company, we rebuild work around AI; outside, we make sure AI knows and recommends your brand.",
     companyLink: "Company website ↗",
     companyHref: "https://finikz.com/en/",

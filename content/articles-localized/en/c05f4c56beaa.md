@@ -26,7 +26,7 @@ AI can only take on a task if it has access to all of this. Without it, it can o
 
 So the employee comes back from training and runs into a strange wall: he knows what AI should do, but cannot explain the rules.
 
-![[raw/images/459616433c1f84033033f97b133326b4_MD5.png]]
+![Illustration](/articles/images/b7b5bcdb7b19461d.png)
 
 ## I used to be that hard-to-replace employee
 
@@ -60,7 +60,7 @@ But there is another thing they will not say out loud: after writing all that do
 
 This is not a moral issue. It is a very practical calculation. Anyone in that position would make it.
 
-![[raw/images/e90329025dd6b51c83f905b70ece1ddc_MD5.png]]
+![Illustration](/articles/images/eef352302e5a2149.png)
 
 ## There is another kind of employee. They have already written it down.
 
@@ -86,7 +86,7 @@ I have a system like that myself. I have turned the steps of translation that do
 
 Would I hand it over for nothing? I would not.
 
-![[raw/images/b9dfb5d30e021c878739d68aa3dac9fc_MD5.png]]
+![Illustration](/articles/images/afaf150ffe28417d.png)
 
 ## So this hurdle cannot be solved as a technical problem
 
@@ -114,4 +114,4 @@ Zhishen once put together a list of obstacles to putting AI to work in companies
 
 I chose it because it looks least like a technical problem and is the hardest to solve with money.
 
-![[raw/images/7ed6750065d24515136fac8947b7f595_MD5.png]]
+![Illustration](/articles/images/de20c64902c5406f.png)

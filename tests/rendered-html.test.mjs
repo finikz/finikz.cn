@@ -112,6 +112,27 @@ test("keeps policy-excluded articles out of the export", async () => {
   }
 });
 
+test("exports sitemap.xml with x-default hreflang and llms.txt", async () => {
+  const sitemap = await page("sitemap.xml");
+  assert.match(sitemap, /^<\?xml version="1\.0" encoding="UTF-8"\?>/);
+  assert.match(sitemap, /<loc>https:\/\/finikz\.cn\/<\/loc>/);
+  assert.match(sitemap, /hreflang="x-default" href="https:\/\/finikz\.cn\/"/);
+  assert.ok(sitemap.includes(`<loc>https://finikz.cn/articles/${articles[0].slug}/</loc>`));
+
+  const llms = await page("llms.txt");
+  assert.match(llms, /^# Finikz \(Zhang Fengming \/ 张凤鸣\)/);
+  assert.ok(llms.includes("https://finikz.cn/sitemap.xml"));
+  assert.ok(llms.includes(`https://finikz.cn/articles/${articles[0].slug}/`));
+});
+
+test("does not export raw Obsidian image embeds in any page", async () => {
+  const files = await htmlFiles(outputPath);
+  for (const file of files) {
+    const html = await readFile(file, "utf8");
+    assert.doesNotMatch(html, /!\[\[[^\]]+\]\]/, `Unparsed Obsidian embed found in ${path.relative(outputPath, file)}`);
+  }
+});
+
 test("does not export broken internal links or resources", async () => {
   const files = await htmlFiles(outputPath);
   const checked = new Set();

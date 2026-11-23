@@ -14,8 +14,9 @@ const frenchSlugs = new Set(frenchArticles.map((article) => article.slug));
 function localizedEntries(path: string, prefixes: string[], lastModified?: string): MetadataRoute.Sitemap {
   const languages: Record<string, string> = {};
   for (const prefix of prefixes) languages[prefix ? prefix.slice(1) : "zh-CN"] = `${siteUrl}${prefix}${path}`;
+  if (prefixes.length > 1 && prefixes.includes("")) languages["x-default"] = `${siteUrl}${path}`;
   const alternates = prefixes.length > 1 ? { languages } : undefined;
-  return Object.values(languages).map((url) => ({ url, lastModified, alternates }));
+  return prefixes.map((prefix) => ({ url: `${siteUrl}${prefix}${path}`, lastModified, alternates }));
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {

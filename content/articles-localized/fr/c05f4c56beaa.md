@@ -26,7 +26,7 @@ Pour reprendre une tâche, l’IA dépend entièrement de ce savoir. Si elle n�
 
 La personne revient donc de sa formation et se heurte à un mur étrange : elle sait ce que l’IA devrait faire, mais ne sait pas lui expliquer les règles.
 
-![[raw/images/459616433c1f84033033f97b133326b4_MD5.png]]
+![Illustration](/articles/images/b7b5bcdb7b19461d.png)
 
 ## Moi aussi, j’ai été cet employé expérimenté
 
@@ -60,7 +60,7 @@ Mais il y a autre chose qu’il ne dira pas : une fois ce savoir écrit et trans
 
 Ce n’est pas une question de morale, mais un calcul très concret. Toute personne à cette place ferait le même.
 
-![[raw/images/e90329025dd6b51c83f905b70ece1ddc_MD5.png]]
+![Illustration](/articles/images/eef352302e5a2149.png)
 
 ## Il y en a une autre catégorie : ceux qui l’ont déjà écrit
 
@@ -86,7 +86,7 @@ J’ai moi-même un système de ce genre. J’ai transformé en skills les étap
 
 Le céder gratuitement ? Moi non plus, je ne le ferais pas.
 
-![[raw/images/b9dfb5d30e021c878739d68aa3dac9fc_MD5.png]]
+![Illustration](/articles/images/afaf150ffe28417d.png)
 
 ## Ce cap ne peut donc pas être franchi comme s’il s’agissait d’un problème technique
 
@@ -114,4 +114,4 @@ Zhishen a déjà dressé une liste des obstacles à l’adoption de l’IA en en
 
 Je l’ai choisi parce qu’il ressemble le moins à un problème technique et qu’il est le plus difficile à résoudre avec de l’argent.
 
-![[raw/images/7ed6750065d24515136fac8947b7f595_MD5.png]]
+![Illustration](/articles/images/de20c64902c5406f.png)

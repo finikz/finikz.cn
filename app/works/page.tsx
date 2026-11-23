@@ -5,6 +5,7 @@ import Link from "next/link";
 import { works } from "@/lib/works";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
+import { WorksJsonLd } from "@/components/StructuredData";
 
 export const metadata: Metadata = pageMetadata({
   locale: "zh",
@@ -16,6 +17,7 @@ export const metadata: Metadata = pageMetadata({
 export default function WorksPage() {
   const groups = ["酒神三部曲", "西岸美术馆", "其他译作"] as const;
   return <main className="works-page" lang="zh-CN">
+    <WorksJsonLd locale="zh" />
     <SiteNav active="works" path="/works/" />
     <header className="works-hero"><p className="eyebrow">TRANSLATION / SELECTED WORKS</p><h1>翻译<em>作品</em></h1><p>从文学与艺术，到酒与感官文化。<br />在另一种语言中保存作品的质地、节奏与思想。</p></header>
     <section className="works-feature"><div><p className="eyebrow">FEATURED PROJECT · 2026</p><h2>酒神三部曲</h2><p>《风土之诗》《麦芽之歌》《自由之水》以葡萄酒、啤酒与朗姆酒为入口，展开关于风土、工艺、旅行与自由的文化漫游。</p><Link href="/works/dionysus-trilogy">阅读专题页 ↗</Link></div><span>III</span></section>

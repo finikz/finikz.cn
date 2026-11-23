@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { LanguageSwitch } from "@/components/LanguagePreference";
 import SiteFooter from "@/components/SiteFooter";
+import { WorksJsonLd } from "@/components/StructuredData";
 
 export const metadata: Metadata = pageMetadata({
   locale: "zh",
@@ -19,5 +20,5 @@ const books = [
 ];
 
 export default function DionysusTrilogyPage() {
-  return <main className="trilogy-page" lang="zh-CN"><nav className="nav" aria-label="主导航"><Link className="brand" href="/">FINIKZ</Link><div className="nav-links"><Link className="back-link" href="/works/">← 返回作品</Link><LanguageSwitch locale="zh" path="/works/dionysus-trilogy/" /></div></nav><header className="trilogy-hero"><p className="eyebrow"><span /> TRANSLATION PROJECT · 2026</p><p className="trilogy-kicker">广东人民出版社</p><h1>酒神<br /><em>三部曲</em></h1><div className="trilogy-intro"><p>三册法语译作，以酒为线索，却不止于酒：它们谈风土、工艺、旅行与自由，也谈人如何在感官中重新理解世界。</p><p>译者：张凤鸣 / Finikz</p></div></header><section className="book-shelf" aria-label="酒神三部曲书目">{books.map((book) => <article className="book-entry" key={book.no}><div className="book-cover"><Image className="book-cover-image" src={book.cover} alt={`《${book.title}》封面`} fill sizes="(max-width: 720px) 220px, 260px" /></div><div className="book-copy"><p className="book-index">VOLUME {book.no} / 2026</p><h2>{book.title}</h2><p className="book-author">[法] {book.author}</p><p>{book.note}</p><p className="book-publisher">广东人民出版社</p></div></article>)}</section><section className="trilogy-statement"><p>译者的工作，不只是把一门语言换成另一门语言；更是在保留质地、节奏与世界观的同时，为中文读者重新打开一种感受的方式。</p><span>张凤鸣 / Finikz</span></section><SiteFooter /></main>;
+  return <main className="trilogy-page" lang="zh-CN"><WorksJsonLd locale="zh" trilogyOnly /><nav className="nav" aria-label="主导航"><Link className="brand" href="/">FINIKZ</Link><div className="nav-links"><Link className="back-link" href="/works/">← 返回作品</Link><LanguageSwitch locale="zh" path="/works/dionysus-trilogy/" /></div></nav><header className="trilogy-hero"><p className="eyebrow"><span /> TRANSLATION PROJECT · 2026</p><p className="trilogy-kicker">广东人民出版社</p><h1>酒神<br /><em>三部曲</em></h1><div className="trilogy-intro"><p>三册法语译作，以酒为线索，却不止于酒：它们谈风土、工艺、旅行与自由，也谈人如何在感官中重新理解世界。</p><p>译者：张凤鸣 / Finikz</p></div></header><section className="book-shelf" aria-label="酒神三部曲书目">{books.map((book) => <article className="book-entry" key={book.no}><div className="book-cover"><Image className="book-cover-image" src={book.cover} alt={`《${book.title}》封面`} fill sizes="(max-width: 720px) 220px, 260px" /></div><div className="book-copy"><p className="book-index">VOLUME {book.no} / 2026</p><h2>{book.title}</h2><p className="book-author">[法] {book.author}</p><p>{book.note}</p><p className="book-publisher">广东人民出版社</p></div></article>)}</section><section className="trilogy-statement"><p>译者的工作，不只是把一门语言换成另一门语言；更是在保留质地、节奏与世界观的同时，为中文读者重新打开一种感受的方式。</p><span>张凤鸣 / Finikz</span></section><SiteFooter /></main>;
 }

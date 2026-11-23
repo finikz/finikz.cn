@@ -45,3 +45,16 @@ export function articleExcerpt(markdown: string, length = 110) {
     .trim();
   return text.length > length ? `${text.slice(0, length).trim()}…` : text;
 }
+
+// CommonMark flanking rules fail when CJK punctuation sits directly inside ** next to CJK characters.
+export function normalizeCjkBold(markdown: string) {
+  return markdown.replace(
+    /([\u3000-\u303F\uFF00-\uFFEF\u4E00-\u9FFF])?\*\*([^\n*]+?)\*\*([\u4E00-\u9FFF])?/g,
+    (match, before = "", inner: string, after = "") => {
+      const padBefore = before && /^[《（【「『“‘]/.test(inner) ? " " : "";
+      const padAfter = after && /[。！？，、；：）》」』】”’]$/.test(inner) ? " " : "";
+      if (!padBefore && !padAfter) return match;
+      return `${before}${padBefore}**${inner}**${padAfter}${after}`;
+    }
+  );
+}

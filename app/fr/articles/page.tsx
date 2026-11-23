@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import LocalizedArticlesArchive from "@/components/LocalizedArticlesArchive";
+import { ArticlesCollectionJsonLd } from "@/components/StructuredData";
 import { frenchArticles } from "@/lib/localized-articles";
 
 export const metadata: Metadata = pageMetadata({
@@ -11,5 +12,10 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function FrenchArticlesPage() {
-  return <LocalizedArticlesArchive articles={frenchArticles} locale="fr" />;
+  return (
+    <>
+      <ArticlesCollectionJsonLd locale="fr" articles={frenchArticles} />
+      <LocalizedArticlesArchive articles={frenchArticles} locale="fr" />
+    </>
+  );
 }

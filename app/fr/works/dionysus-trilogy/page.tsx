@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { LanguageSwitch } from "@/components/LanguagePreference";
 import SiteFooter from "@/components/SiteFooter";
+import { WorksJsonLd } from "@/components/StructuredData";
 
 export const metadata: Metadata = pageMetadata({
   locale: "fr",
@@ -21,6 +22,7 @@ const books = [
 export default function FrenchDionysusTrilogyPage() {
   return (
     <main className="trilogy-page french-page" lang="fr">
+      <WorksJsonLd locale="fr" trilogyOnly />
       <nav className="nav" aria-label="Navigation principale"><Link className="brand" href="/fr/">FINIKZ</Link><div className="nav-links"><Link className="back-link" href="/fr/works/">← Retour aux œuvres</Link><LanguageSwitch locale="fr" path="/works/dionysus-trilogy/" /></div></nav>
       <header className="trilogy-hero"><p className="eyebrow">PROJET DE TRADUCTION · 2026</p><p className="trilogy-kicker">Guangdong People's Publishing House</p><h1>La trilogie<br /><em>dionysiaque</em></h1><div className="trilogy-intro"><p>Trois livres traduits en chinois, où le vin et les spiritueux ouvrent une réflexion sur le terroir, le savoir-faire, le voyage et la liberté — et sur la façon dont les sens nous aident à comprendre le monde.</p><p>Traduction chinoise : Zhang Fengming / Finikz</p></div></header>
       <section className="book-shelf" aria-label="Les livres de la trilogie dionysiaque">{books.map((book) => <article className="book-entry" key={book.no}><div className="book-cover"><Image className="book-cover-image" src={book.cover} alt={`Couverture de l'édition chinoise : ${book.title}`} fill sizes="(max-width: 720px) 220px, 260px" /></div><div className="book-copy"><p className="book-index">VOLUME {book.no} / 2026</p><h2>{book.title}</h2><p className="book-author">{book.author}</p><p>{book.note}</p><p className="book-publisher">Guangdong People's Publishing House</p></div></article>)}</section>

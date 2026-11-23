@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { articleExcerpt, pageMetadata } from "@/lib/seo";
+import { articleExcerpt, normalizeCjkBold, pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
@@ -39,7 +39,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     <SiteNav active="notes" path={`/articles/${article.slug}/`} />
     <article className="article-shell">
       <header className="article-header"><p className="eyebrow"><span /> {article.collection.toUpperCase()}</p><h1>{article.title}</h1>{article.date && <time dateTime={article.date}>{article.date}</time>}{article.sourceUrl && <a className="source-link" href={article.sourceUrl} target="_blank" rel="noreferrer">查看原始发布 ↗</a>}</header>
-      <div className="article-body"><ReactMarkdown remarkPlugins={[remarkGfm]}>{article.body}</ReactMarkdown></div>
+      <div className="article-body"><ReactMarkdown remarkPlugins={[remarkGfm]}>{normalizeCjkBold(article.body)}</ReactMarkdown></div>
       <nav className="article-navigation" aria-label="文章导航">
         {previousArticle ? <Link href={`/articles/${previousArticle.slug}`}><span>上一篇</span><strong>{previousArticle.title}</strong></Link> : <span />}
         {nextArticle ? <Link href={`/articles/${nextArticle.slug}`}><span>下一篇</span><strong>{nextArticle.title}</strong></Link> : <span />}

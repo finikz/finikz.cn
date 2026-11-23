@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
+import { WorksJsonLd } from "@/components/StructuredData";
 import { frenchWorks } from "@/lib/works";
 
 export const metadata: Metadata = pageMetadata({
@@ -18,6 +19,7 @@ const groups = ["La trilogie dionysiaque", "Musée West Bund", "Autres traductio
 export default function FrenchWorksPage() {
   return (
     <main className="works-page french-page" lang="fr">
+      <WorksJsonLd locale="fr" />
       <SiteNav active="works" locale="fr" path="/works/" />
       <header className="works-hero"><p className="eyebrow">TRADUCTION / SÉLECTION</p><h1>Œuvres<br /><em>traduites</em></h1><p>De la littérature et de l'art à la culture du vin et des spiritueux.<br />Préserver le rythme, la matière et la pensée d'une œuvre lorsqu'elle passe en chinois.</p></header>
       <section className="works-feature"><div><p className="eyebrow">PROJET À LA UNE · 2026</p><h2>La trilogie dionysiaque</h2><p>Trois ouvrages français consacrés au vin, à la bière et au rhum : des voyages culturels autour du terroir, du savoir-faire, du voyage et de la liberté, traduits pour le lectorat chinois.</p><Link href="/fr/works/dionysus-trilogy/">Découvrir la trilogie ↗</Link></div><span>III</span></section>

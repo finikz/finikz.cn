@@ -41,7 +41,7 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
               <h3><a href={work.url} target="_blank" rel="noreferrer">{work.englishTitle}</a></h3>
             </article>)}
           </div>
-          <Link className="about-more-link" href="/en/works">View all translations ↗</Link>
+          <Link className="about-more-link" href="/en/works/">View all translations ↗</Link>
         </div>
       </section>
 
@@ -65,9 +65,9 @@ export default function EnglishAboutPage({ path }: EnglishAboutPageProps) {
           <h2>Let’s Talk</h2>
           <p className="placeholder-copy">AI-native &amp; GEO · Brand &amp; cross-cultural marketing · Arts, culture &amp; communities · Interdisciplinary projects</p>
           <a href="mailto:mail@finikz.com">Email: mail@finikz.com</a>
-          <a href="https://finikz.com/" target="_blank" rel="noreferrer">Company website ↗</a>
+          <a href="https://finikz.com/en/" target="_blank" rel="noreferrer">Company website ↗</a>
           <div className="social-links">
-            <a href="https://mp.weixin.qq.com/mp/qrcode?scene=10000005&amp;size=102&amp;__biz=MjM5MzU0OTgyMw==&amp;mid=2652370389&amp;idx=1&amp;sn=f8a4a7adf5aee2d4d476fe52750ef66d&amp;send_time=" target="_blank" rel="noreferrer"><i className="social-icon wechat">W</i>Wechat Official Acount</a>
+            <a href="https://mp.weixin.qq.com/mp/qrcode?scene=10000005&amp;size=102&amp;__biz=MjM5MzU0OTgyMw==&amp;mid=2652370389&amp;idx=1&amp;sn=f8a4a7adf5aee2d4d476fe52750ef66d&amp;send_time=" target="_blank" rel="noreferrer"><i className="social-icon wechat">W</i>WeChat Official Account</a>
             <a href="https://www.douban.com/people/phoenixZ/" target="_blank" rel="noreferrer"><i className="social-icon douban">D</i>Douban</a>
             <a href="https://instagram.com/finikz" target="_blank" rel="noreferrer"><i className="social-icon instagram">◎</i>Instagram</a>
             <a href="https://twitter.com/finikz" target="_blank" rel="noreferrer"><i className="social-icon x">𝕏</i>X / Twitter</a>

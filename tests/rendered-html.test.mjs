@@ -55,7 +55,7 @@ test("exports the English fixed pages and language navigation", async () => {
 
   const html = await page("en/index.html");
   assert.match(html, /<title>Finikz \| AI-Native &amp; Marketing Strategy<\/title>/i);
-  assert.match(html, /Workstreams &amp; Experience/);
+  assert.match(html, /Workstreams &amp; Experience/i);
   assert.match(html, /AI-Native &amp; GEO/);
   assert.match(html, /MY WRITING/);
   assert.match(html, /class="about-writing-item" href="\/en\/articles\/[0-9a-f]{12}\/"/);
@@ -130,6 +130,48 @@ test("does not export raw Obsidian image embeds in any page", async () => {
   for (const file of files) {
     const html = await readFile(file, "utf8");
     assert.doesNotMatch(html, /!\[\[[^\]]+\]\]/, `Unparsed Obsidian embed found in ${path.relative(outputPath, file)}`);
+  }
+});
+
+test("exports localized JSON-LD across core pages and articles", async () => {
+  for (const route of [
+    "index.html",
+    "en/index.html",
+    "fr/index.html",
+    "works/index.html",
+    "en/works/index.html",
+    "fr/works/index.html",
+    "works/dionysus-trilogy/index.html",
+    "en/works/dionysus-trilogy/index.html",
+    "fr/works/dionysus-trilogy/index.html",
+    "articles/index.html",
+    "en/articles/index.html",
+    "fr/articles/index.html",
+  ]) {
+    const html = await page(route);
+    assert.match(html, /<script type="application\/ld\+json">/, `Missing JSON-LD on ${route}`);
+  }
+
+  const enArticle = await page("en/articles/36865ed81c6b/index.html");
+  assert.ok(enArticle.includes('"name":"Zhang Fengming"'));
+  assert.ok(enArticle.includes("https://finikz.cn/articles/images/7c4a476798d351ca.png"));
+
+  const enHome = await page("en/index.html");
+  assert.ok(enHome.includes("WeChat Official Account"));
+  assert.doesNotMatch(enHome, /Wechat Official Acount/);
+  assert.ok(enHome.includes('href="https://finikz.com/en/"'));
+
+  const frHome = await page("fr/index.html");
+  assert.ok(frHome.includes("Compte officiel WeChat"));
+  assert.ok(frHome.includes('href="https://finikz.com/fr/"'));
+});
+
+test("does not leave unparsed CJK bold markdown in article pages", async () => {
+  const files = (await htmlFiles(outputPath)).filter((file) => file.includes(`${path.sep}articles${path.sep}`));
+  for (const file of files) {
+    const html = await readFile(file, "utf8");
+    const body = html.match(/<article[\s\S]*?<\/article>/)?.[0] || "";
+    assert.doesNotMatch(body, /\*\*[^<]{2,80}\*\*/, `Unparsed bold markdown found in ${path.relative(outputPath, file)}`);
   }
 });
 

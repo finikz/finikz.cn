@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
+import { WorksJsonLd } from "@/components/StructuredData";
 import { englishWorks } from "@/lib/works";
 
 export const metadata: Metadata = pageMetadata({
@@ -18,6 +19,7 @@ const groups = ["The Dionysian Trilogy", "West Bund Museum", "Other Translations
 export default function EnglishWorksPage() {
   return (
     <main className="works-page english-page" lang="en">
+      <WorksJsonLd locale="en" />
       <SiteNav active="works" locale="en" path="/works/" />
       <header className="works-hero"><p className="eyebrow">TRANSLATION / SELECTED WORKS</p><h1>Translation<br /><em>Works</em></h1><p>From literature and art to wine and sensory culture.<br />Preserving a work’s texture, rhythm and thought as it moves into Chinese.</p></header>
       <section className="works-feature"><div><p className="eyebrow">FEATURED PROJECT · 2026</p><h2>The Dionysian Trilogy</h2><p>Three French works on wine, beer and rum—cultural journeys through terroir, craft, travel and freedom, now available to Chinese readers.</p><Link href="/en/works/dionysus-trilogy">Explore the Trilogy ↗</Link></div><span>III</span></section>

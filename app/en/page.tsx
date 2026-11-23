@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import EnglishAboutPage from "@/components/EnglishAboutPage";
+import { PersonJsonLd } from "@/components/StructuredData";
 
 export const metadata: Metadata = pageMetadata({
   locale: "en",
@@ -10,5 +11,10 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function EnglishHomePage() {
-  return <EnglishAboutPage path="/" />;
+  return (
+    <>
+      <PersonJsonLd locale="en" />
+      <EnglishAboutPage path="/" />
+    </>
+  );
 }

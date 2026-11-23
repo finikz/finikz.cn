@@ -616,4 +616,31 @@ body, body *, body *::before, body *::after {
 .workstreams-services { margin: 0 0 14px; color: var(--about-coral); font-size: 14px; letter-spacing: .02em; }
 @media (max-width: 720px) {
   .workstreams-intro { font-size: 16px; }
+
+  .nav { padding-top: 6px; padding-bottom: 6px; }
+  .nav-links { gap: 4px; align-items: center; }
+  .nav-links > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 8px;
+  }
+  .nav-links .language-switcher { gap: 2px; }
+  .nav-links .language-switcher a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    min-height: 44px;
+    padding: 0 6px;
+  }
+  .nav-links a:hover::after, .nav-links a.active::after { bottom: 8px; }
+  .site-footer nav { gap: 4px 18px; }
+  .site-footer nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 4px;
+  }
 }

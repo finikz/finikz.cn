@@ -1,17 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { languageAlternates, localeFromPath, localeTags, localizedPath, type Locale } from "@/lib/i18n";
 
 const storageKey = "finikz-language";
 const localeLabels: Record<Locale, string> = { zh: "中文", en: "EN", fr: "FR" };
 
-// Keeps <html lang> in step with the page; the language redirect itself runs inline in <head> (lib/language-redirect.ts).
+// Keeps <html lang> in step with client-side route transitions; initial load is handled inline in <head> (lib/language-redirect.ts).
 export function LanguagePreference() {
+  const pathname = usePathname();
   useEffect(() => {
-    document.documentElement.lang = localeTags[localeFromPath(window.location.pathname)];
-  }, []);
+    document.documentElement.lang = localeTags[localeFromPath(pathname || window.location.pathname)];
+  }, [pathname]);
 
   return null;
 }

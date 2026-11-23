@@ -1,6 +1,7 @@
 import ArticleIndex from "@/app/articles/ArticleIndex";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
+import { classifyArticleTopic } from "@/lib/article-topics";
 import type { Article } from "@/lib/articles";
 import type { Locale } from "@/lib/i18n";
 
@@ -26,7 +27,7 @@ export default function LocalizedArticlesArchive({ articles, locale }: { article
     <main className={`archive-page ${locale}-page`} lang={locale}>
       <SiteNav active="notes" locale={locale} path="/articles/" />
       <header className="archive-hero"><p className="eyebrow">{language.eyebrow} · {articles.length}</p><h1>{language.title}</h1><p>{language.description}</p></header>
-      <section className="archive-content"><ArticleIndex articles={sorted.map(({ slug, title, date }) => ({ slug, title, date }))} locale={locale} /></section>
+      <section className="archive-content"><ArticleIndex articles={sorted.map(({ slug, title, date }) => ({ slug, title, date, topic: classifyArticleTopic(slug, title) }))} locale={locale} /></section>
       <SiteFooter locale={locale} />
     </main>
   );

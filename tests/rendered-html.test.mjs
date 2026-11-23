@@ -175,6 +175,33 @@ test("does not leave unparsed CJK bold markdown in article pages", async () => {
   }
 });
 
+test("exports topic filters, cleaned titles, and zero WeChat hotlinks", async () => {
+  const zhArchive = await page("articles/index.html");
+  for (const label of ["全部", "AI 与商业", "电影与音乐", "法语与语言", "酒与文化"]) {
+    assert.ok(zhArchive.includes(label), `Missing topic filter "${label}" on /articles/`);
+  }
+  assert.doesNotMatch(zhArchive, /\]\(http:\/\//);
+
+  const enArchive = await page("en/articles/index.html");
+  for (const label of ["All", "AI &amp; Strategy", "Film &amp; Music", "Language &amp; French", "Wine &amp; Culture"]) {
+    assert.ok(enArchive.includes(label), `Missing topic filter "${label}" on /en/articles/`);
+  }
+
+  const frArchive = await page("fr/articles/index.html");
+  for (const label of ["Tous", "IA &amp; Stratégie", "Cinéma &amp; Musique", "Langue &amp; Français", "Vin &amp; Culture"]) {
+    assert.ok(frArchive.includes(label), `Missing topic filter "${label}" on /fr/articles/`);
+  }
+
+  const cleanedArticle = await page("articles/544c9f6fabd0/index.html");
+  assert.ok(cleanedArticle.includes("<title>鲍勃·迪伦：《像一块滚石》｜Finikz 张凤鸣</title>"));
+
+  const files = await htmlFiles(outputPath);
+  for (const file of files) {
+    const html = await readFile(file, "utf8");
+    assert.doesNotMatch(html, /mmbiz\.qpic\.cn/, `WeChat hotlink image found in ${path.relative(outputPath, file)}`);
+  }
+});
+
 test("does not export broken internal links or resources", async () => {
   const files = await htmlFiles(outputPath);
   const checked = new Set();
